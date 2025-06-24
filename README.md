@@ -27,34 +27,30 @@ As much as Marh 2020 surge, we need to pay attention to drops in the last quarte
 
 * **Growth Volatiality:** Surprisingly, month-over-month growth rates were volatile each year, not just limited to the panedmic years. March 2020 recorded the highest growth rates of 50% and 46% in both revenue and order count while October 2022 the lowest growth rates of -55%, -16%, and -47% in all metrics, revenue, AOV, and order count. 
 
-* **Seasonality:** Both revenue and order count trends over months showed a similar seasonal pattern: they dropped in February, went up in September, dropped again in October and increased during November and December. Our top four products - 27in 4K gaming monitors, Apple Airpods Headphones, Macbook Air Laptops, and Lenovo ThinkPad Laptops - followed these trends. The high growth in September and December could be related to the school and holiday seasons.
+* **Seasonality:** Both revenue and order count trends over months showed a similar seasonal pattern: they dropped in February, increased through September, dropped again in October and increased again during November and December. Our top four products - 27in 4K gaming monitors, Apple Airpods Headphones, Macbook Air Laptops, and Lenovo ThinkPad Laptops - followed these trends. Also, these trends applied to region and loyalty program. The high growth in September and December could be related to the school and holiday seasons.
   
-[image: monthly, yearly trends + excel conditional formatting monthly table] 
+[image: monthly, yearly trends + excel conditional formatting monthly table] or [image - tableau: monthly yearly trends + same graph by product, region, and loyalty program]
  
 #### **Product Performance:**
 In 2020, YoY growth rates in both sales and order count were positive for all eight products, then a mix of positive and negative rates among the products in 2021, and in 2022, all products showed negative growth rate ranging from around -30% to -90%.
 * High Performance: 27in 4K gaming monitor maintained the highest revenue throughout the four years while Apple Airpods Headphones the highest order count. As for the YoY growth rate, Macbook Air Laptops showed the highest of 400% in revenue and order count in 2020, followed by Lenovo ThinkPad Laptops of 200%.
-* Worst Performance: Bose Soundsport Headphones, ever since it was brought into the product line in 2020, had had the highest negative growth rates in revenue and order count, ending up with only one order in 2022. We should consider replacing with other new products.
+* Worst Performance: Bose Soundsport Headphone, ever since it was brought into the product line in 2020, had had the highest negative growth rates in revenue and order count, ending up with only one order in 2022. We should consider replacing it with other new products.
+* also iphone's underperformance. why?
 
 #### **Regional Performance:** 
-North America had been the biggest market, accounting for 51-52% of order count and sales on avearage every year, followed by EMEA(Europe, the Middle East and Africa), LATAM(Latin America), and APAC(Asia Pacific). However, APAC had the highest average order value on average across the years, which means that customers from APAC purchased more expensive products.
+* **Overall Trends:** North America had been the biggest market, accounting for 51-52% of order count and sales on avearage every year, followed by EMEA(Europe, the Middle East and Africa), LATAM(Latin America), and APAC(Asia Pacific). However, APAC had the highest average order value on average across the years, which means that customers from APAC purchased more expensive products.
 
-In 2020, yearly growth rates in both reveunue and order count were positive across all regions with APAC and LATAM showing the highest of more than 200%, then revenue growth turned to negative in 2021 while order count growth remained positive during the same period, and in 2022, both metrics showed negative growth rates with LATAM, the highest negative growth rates.
+* **Growth Rate:** In 2020, yearly growth rates in both reveunue and order count were positive across all regions with APAC and LATAM showing the highest of more than 200%, then revenue growth turned to negative in 2021 while order count growth remained positive during the same period, and in 2022, both metrics showed negative growth rates with LATAM, the highest negative growth rates.
 
 [image?]
 
 #### **Loyalty Program Performance:**
+Our loyalty membership is given to a customer who creates an account and then purchases a certain number of orders. Out of 87,628 customers who ever made a purchase during 2019 through 2022, registered or not, 37% was loyalty members. 
+By its nature, since it took time to become a loyalty member, revenue and order count from loyalty members had been lower than those from non-loyalty members during the first two years and then loyalty members were catching up by growing five times more than non-loyalty members in 2020 and finally outperforming in both revenue and order count in 2021 and 2022 and AOV in 2022. However, when zooming into monthly trends, we see that in the last few months in 2022 the performance between the two groups reversed with loyalty members underperforming again in all metrics.
 
-loyalty group's total sales were much lower compared to non-loyalty group by 88%, but both increased dramatically by 613% for loyalty and 108% for nonloyalty from 2019 to 2020. 
-then non-loyalty group's sales started declining in 2021 while loyalty group's sales kept increasing by 63%.
-in 2022, loyalty group's sales started declining too but it stayed higher than non-loyalty group's sales, 21% higher than non-loyalty group's sales
+-- top 10 non-member, member's cumulative purchase
 
-from 2019 to 2021, non-loyalty emmbers spent more money but in 2022, it was the lotaylty members.
-non-loyalty members had higher aov than loyalty members until 2022 and made more orders until 2021. in short, in the recent two years, loyalty-members started making more orders or buying more expensive items.
-
-
-
->> we should continue loyalty program.
+we should continue loyalty program?
 
 
 #### **Return Rate for Apple Products:**
@@ -62,7 +58,7 @@ Three Apple products - Airpod headphones, Macbook Air laptops, and iPhone - acco
 
 Specifically among Apple products, it turned out that the more expensive the product was, the higher the refund rate was: Macbook Air laptops (AOV $1,588) > iPhone (AOV $736) > Airpod headphones (AOV $159). This is because a high-ticket purchase has a high finanicial risk so custoemrs are more likely to seek a refund despite inconvience.
 
-The data showed no refunds in 2022. This needs to be checked and validated with the operations team.
+The data showed no refunds in 2022. Whether it's accurate or an error needs to be checked with the operations team.
 
 [image?]
 
@@ -75,6 +71,9 @@ The data showed no refunds in 2022. This needs to be checked and validated with 
 
 
 ## Recommendations
-
+* introduce new items for each price tier (less expensive, something you can have more than one or gift without financial risk)
+* bring more customers through direct marketing & referral promotion?
+* for customers who purchased gaming monitor and laptop few years ago, send promotion for new monitor.
+* 
 ## Caveats
 refund data for 2022.
