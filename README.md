@@ -1,18 +1,18 @@
 # Elist Electronics Pandemic Sales Analysis 
 *company name will be changed and company logo will be added.
 
-Founded in 2018, Elist is an e-commerce company that sells popular electronics products and has since expanded to a global customer base. This project aims *to understand Elist's performance during the period from 2019 to 2022, around the pandemic, and deliver insights on improvements* across the company, including finance, sales, product, and marketing. The *metrics* in this analysis were *revenue, average order value, and order count*.
+Founded in 2018, Elist is an e-commerce company that sells popular electronics products and has since expanded to a global customer base. This project aims to understand Elist's performance during the period from 2019 to 2022, around the pandemic, and deliver insights on improvements* across the company, including finance, sales, product, and marketing. The *metrics* used in this analysis were revenue, average order value, and order count*. <-- niche
 
 
 **< Stakeholder Questions >**
-* What were the overall trends in sales during this time in regards?
+* What were the overall trends in sales during this time?
 * What were our monthly and yearly growth rates?
 * How was the new loyalty program performing? Should we keep using it?
 * What were our refund rates for Apple Products?
 
 ## About Data 
 
-The database structure, as seen below, consists of four tables: orders, customers, geo_lookup, and order_status. This project analyzed a total of 108,127 records from the table, which was consolidated from the above four tables.
+The database structure, as seen below, consists of four tables: orders, customers, geo_lookup, and order_status. This project analyzed a total of 108,127 records from the table, which was consolidated from the above tables.
 
 <img src="ERD.png" alt="Image" width="60%">
 
@@ -25,9 +25,9 @@ As much as Marh 2020 surge, we need to pay attention to drops in the last quarte
 
 [image]
 
-* **Growth Volatiality:** Surprisingly, month-over-month growth rates were volatile each year, not just limited to the panedmic years. March 2020 recorded the highest growth rates of 50% and 46% in both revenue and order count while October 2022 the lowest growth rates of -55%, -16%, and -47% in all metrics, revenue, AOV, and order count. 
+* **Growth Volatility:** Surprisingly, month-over-month growth rates were volatile each year, not just limited to the panedmic years. March 2020 recorded the highest growth rates of 50% and 46% in both revenue and order count while October 2022 the lowest growth rates of -55%, -16%, and -47% in all metrics, revenue, AOV, and order count. 
 
-* **Seasonality:** Both revenue and order count trends over months showed a similar seasonal pattern: they dropped in February, increased through September, dropped again in October and increased again during November and December. Our top four products - 27in 4K gaming monitors, Apple Airpods Headphones, Macbook Air Laptops, and Lenovo ThinkPad Laptops - followed these trends. Also, these trends applied to region and loyalty program. The high growth in September and December could be related to the school and holiday seasons.
+* **Seasonality:** Both revenue and order count showed a similar seasonal pattern: they dropped in February, increased through September, dropped again in October and increased again during November and December. Our top four products - 27in 4K gaming monitors, Apple Airpods Headphones, Macbook Air Laptops, and Lenovo ThinkPad Laptops - followed these trends. Also, these trends applied to region and loyalty program. The high growth in September and December could be related to the school and holiday seasons.
   
 [image: monthly, yearly trends + excel conditional formatting monthly table] or [image - tableau: monthly yearly trends + same graph by product, region, and loyalty program]
  
@@ -48,7 +48,6 @@ In 2020, YoY growth rates in both sales and order count were positive for all ei
 Our loyalty membership is given to a customer who creates an account and then purchases a certain number of orders. Out of 87,628 customers who ever made a purchase during 2019 through 2022, registered or not, 37% was loyalty members. 
 By its nature, since it took time to become a loyalty member, revenue and order count from loyalty members had been lower than those from non-loyalty members during the first two years and then loyalty members were catching up by growing five times more than non-loyalty members in 2020 and finally outperforming in both revenue and order count in 2021 and 2022 and AOV in 2022. However, when zooming into monthly trends, we see that in the last few months in 2022 the performance between the two groups reversed with loyalty members underperforming again in all metrics.
 
--- top 10 non-member, member's cumulative purchase
 
 we should continue loyalty program?
 
@@ -65,15 +64,37 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
 ## Tableau Interactive Dashboard
 
 ## Deep Dive Insights on Underperformance in Q4 2022.
-* replacement span:
-* less new customers?
-* how about existing customers' behavior? buying only 1 item?
+
+[image - monthly sales graph by year]
+
+#### Hypothesis 1. were existing customers no longer active over time?
+
+> **Factors to consider**
+> * long replacement window/lifespan for key products:** during this period, 69% of sales came from gaming monitors (AOV $421) and laptops (Macbook Air Laptop $1,588, Lenovo > ThinkPad Laptop $1,100), which had a lifespan of at least 3-5 years. It's critical to our sales for customers who bought these products to buy the other products over time > as well. But only 29% of these customers bought the other products beside laptops or monitors. 
+> * how to keep them engaged. it's not amazon where you can buy groceries and everything at one place. it's not everyday needs.
+
+* **Low repeat purchase rate within year:** number of orders per customer distribution + repeat rate
+* how many total orders (overlap with repeat purchase) and different items did they buy? (variety of purchases)
+* inactive customers: 1) those who signed up but didn't purchase, 2) hiatus as of 1/1/2023: within 3, 4-6, 7-12, 12+ months (need to query)
+[this one, just SQL? image?]
+
+``` sql
+
+```
+
+#### Hypothesis 2. were fewer customers coming in over time?
+* decline in number of customers
+* direct marketing:
+  
+
 
 
 ## Recommendations
-* introduce new items for each price tier (less expensive, something you can have more than one or gift without financial risk)
+* introduce new items for each price tier (less expensive, something you can have more than one or gift without financial risk): laptop case,
 * bring more customers through direct marketing & referral promotion?
 * for customers who purchased gaming monitor and laptop few years ago, send promotion for new monitor.
-* 
+* embrace volatility and take advangage of seasonal promotions.
+* content creation to keep customers engaged: recommendation on how to maintain your appliance. create more vlaues.
+* invest in the marketing platform we did best at: direct marketing.
 ## Caveats
 refund data for 2022.
