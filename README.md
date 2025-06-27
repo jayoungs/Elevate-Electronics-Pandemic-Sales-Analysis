@@ -1,7 +1,7 @@
 # Elist Electronics Pandemic Sales Analysis 
 *company name will be changed and company logo will be added.
 
-Founded in 2018, Elist is an e-commerce company that sells popular electronics products and has since expanded to a global customer base. This project aims to understand Elist's performance during the period from 2019 to 2022, around the pandemic, and deliver insights on improvements* across the company, including finance, sales, product, and marketing. The *metrics* used in this analysis were revenue, average order value, and order count*. <-- niche
+Founded in 2018, Elist is an e-commerce company that sells selective electronics products at competitive price and has since expanded to a global customer base in -- countries. This project aims to understand Elist's performance during the period from 2019 to 2022, around the pandemic, and deliver insights on improvements* across the company, including finance, sales, product, and marketing. The *metrics* used in this analysis were revenue, average order value, and order count*. <-- niche products, how many countries?
 
 
 **< Stakeholder Questions >**
@@ -63,19 +63,30 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
 
 ## Tableau Interactive Dashboard
 
-## Deep Dive Insights on Underperformance in Q4 2022.
+## Deep Dive Insights on Underperformance in Q4 2022. -- make funnel chart?
 
 [image - monthly sales graph by year]
 
 #### Hypothesis 1. were existing customers no longer active over time?
 
 > **Factors to consider**
-> * long replacement window/lifespan for key products:** during this period, 69% of sales came from gaming monitors (AOV $421) and laptops (Macbook Air Laptop $1,588, Lenovo > ThinkPad Laptop $1,100), which had a lifespan of at least 3-5 years. It's critical to our sales for customers who bought these products to buy the other products over time > as well. But only 29% of these customers bought the other products beside laptops or monitors. 
+> * long lifespan of electronic products:** during this period, 69% of sales came from gaming monitors (AOV $421) and laptops (Macbook Air Laptop $1,588, Lenovo > ThinkPad Laptop $1,100), which had a lifespan of at least 3-5 years. It's critical to our sales for customers who bought these products to buy the other products over time > as well. But only 29% of these customers bought the other products beside laptops or monitors. 
 > * how to keep them engaged. it's not amazon where you can buy groceries and everything at one place. it's not everyday needs.
 
-* **Low repeat purchase rate within year:** number of orders per customer distribution + repeat rate
+* **Low repeat purchase rate within year keep declining:** number of orders per customer distribution + repeat rate
 * how many total orders (overlap with repeat purchase) and different items did they buy? (variety of purchases)
 * inactive customers: 1) those who signed up but didn't purchase, 2) hiatus as of 1/1/2023: within 3, 4-6, 7-12, 12+ months (need to query)
+
+funnel:
+
+website/app visitors (no info)
+
+customers, registered or not,who purchased
+
+custoemrs who purchased AND signed up (either order)
+
+customers who are loyalty members
+
 [this one, just SQL? image?]
 
 ``` sql
@@ -96,5 +107,9 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
 * embrace volatility and take advangage of seasonal promotions.
 * content creation to keep customers engaged: recommendation on how to maintain your appliance. create more vlaues.
 * invest in the marketing platform we did best at: direct marketing.
+* promotion for inactive customers.
+* sell pair products: gaming keyboard or headset, mouse. mac accessories. air tag.
+* potential opportunity for business customers? who bought more than 3?
+* how to position ourselves unique in this market.
 ## Caveats
 refund data for 2022.
