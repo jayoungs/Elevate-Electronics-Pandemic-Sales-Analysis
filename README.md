@@ -103,6 +103,7 @@ customers who are loyalty members
 ## Recommendations
 * introduce new items for each price tier (less expensive, something you can have more than one or gift without financial risk): laptop case,
 * bring more customers through direct marketing & referral promotion?
+* analyze user journey including page visits
 * for customers who purchased gaming monitor and laptop few years ago, send promotion for new monitor.
 * embrace volatility and take advangage of seasonal promotions.
 * content creation to keep customers engaged: recommendation on how to maintain your appliance. create more vlaues.
