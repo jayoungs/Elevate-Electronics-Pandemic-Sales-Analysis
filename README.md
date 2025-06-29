@@ -79,7 +79,7 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
     * **Long purchase hiatus** between last purchase and 1/1/2023: 78.9% of customers hadn't purchased anything since at least 24 months ago.
 
     <details>
-    <summary>Click to expand</summary>
+    <summary><small>Click to expand</small></summary>
 
     ```sql
 
