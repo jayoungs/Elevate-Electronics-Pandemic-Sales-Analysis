@@ -79,7 +79,7 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
     * *Long purchase hiatus* between last purchase and January 1, 2023: 78.9% of customers hadn't purchased anything since at least 24 months ago.
 
     <details>
-    <sub><summary>Click to expand</summary></sub> 
+    <summary><sub>Click to expand</sub></summary> 
 
     ```sql
 
@@ -123,7 +123,7 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
 * *Declining repeat purchase rate* over the years: 20% (2019) > 19% (2020) > 18% (2021) > 15% (2022). 
 
     <details>
-    <sub><summary>Click to expand</summary></sub> 
+    <summary><sub>Click to expand</sub></summary> 
     
     ```sql
     
@@ -161,7 +161,7 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
 * *Low variety-seeking customer behavior*: 94.6% of our customers only purchased one unique product and 5.2% two unique products.
 
     <details>
-    <sub><summary>Click to expand</summary></sub> 
+    <summary><sub>Click to expand</sub></summary> 
     
     ```sql
     
@@ -191,7 +191,7 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
 * *Declining number of registered customers* in an accelerated pace during 2021 and 2022: hit low at 36 in December 2022.
 
     <details>
-    <sub><summary>Click to expand</summary></sub> 
+    <summary><sub>Click to expand</sub></summary> 
     
     ```sql
     
@@ -207,7 +207,7 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
 * direct marketing:
   
     <details>
-    <sub><summary>Click to expand</summary></sub> 
+    <summary><sub>Click to expand</sub></summary> 
     
     ```sql
     
