@@ -72,14 +72,14 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
 > **Factors to consider**: electronic products such as our top products - gaming monitor and latops - have **a long lifespan** of at least 3-5 years. Hence, whether existing customers stay active - by buying different products or revisitng often - and introducing new customers to our platform is crucial.
 > (how to keep them engaged and have them revisit when needed. it's not amazon where you can buy groceries and everything at one place. it's not everyday needs.)
 
-#### Hypothesis 1. were existing customers no longer active over time?
+#### Hypothesis 1. Were existing customers no longer active over time?
 
 * *Inactive customers and low customer engagement* were confirmed:
     * 269 registered customers with no purchase history.
     * *Long purchase hiatus* between last purchase and January 1, 2023: 78.9% of customers hadn't purchased anything since at least 24 months ago.
 
-    <sub><details>
-    <summary>Click to expand</summary></sub> 
+    <details>
+    <sub><summary>Click to expand</summary></sub> 
 
     ```sql
 
@@ -122,8 +122,8 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
  
 * *Declining repeat purchase rate* over the years: 20% (2019) > 19% (2020) > 18% (2021) > 15% (2022). 
 
-    <sub><details>
-    <summary>Click to expand</summary></sub> 
+    <details>
+    <sub><summary>Click to expand</summary></sub> 
     
     ```sql
     
@@ -160,8 +160,8 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
 
 * *Low variety-seeking customer behavior*: 94.6% of our customers only purchased one unique product and 5.2% two unique products.
 
-    <sub><details>
-    <summary>Click to expand</summary></sub> 
+    <details>
+    <sub><summary>Click to expand</summary></sub> 
     
     ```sql
     
@@ -187,11 +187,11 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
     
     ```
 
-#### Hypothesis 2. were fewer newly registered customers coming in over time?
+#### Hypothesis 2. Were fewer newly registered customers coming in over time?
 * *Declining number of registered customers* in an accelerated pace during 2021 and 2022: hit low at 36 in December 2022.
 
-    <sub><details>
-    <summary>Click to expand</summary></sub> 
+    <details>
+    <sub><summary>Click to expand</summary></sub> 
     
     ```sql
     
@@ -206,8 +206,8 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
   
 * direct marketing:
   
-    <sub><details>
-    <summary>Click to expand</summary></sub> 
+    <details>
+    <sub><summary>Click to expand</summary></sub> 
     
     ```sql
     
