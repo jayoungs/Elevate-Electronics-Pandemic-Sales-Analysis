@@ -69,10 +69,10 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
 
 ## Deep Dive Insights on Underperformance in Q4 2022. 
 
-#### Hypothesis 1. were existing customers no longer active over time?
-
 > **Factors to consider**: electronic products such as our top products - gaming monitor and latops - have **a long lifespan** of at least 3-5 years. Hence, whether existing customers stay active - by buying different products or revisitng often - and introducing new customers to our platform is crucial.
 > (how to keep them engaged and have them revisit when needed. it's not amazon where you can buy groceries and everything at one place. it's not everyday needs.)
+
+#### Hypothesis 1. were existing customers no longer active over time?
 
 * **Inactive customers and low customer engagement** were confirmed:
     * 269 registered customers with no purchase history.
@@ -241,5 +241,6 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
 * sell pair products: gaming keyboard or headset, mouse. mac accessories. air tag.
 * potential opportunity for business customers? who bought more than 3?
 * how to position ourselves unique in this market.
+
 ## Caveats
 refund data for 2022.
