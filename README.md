@@ -74,12 +74,12 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
 
 #### Hypothesis 1. were existing customers no longer active over time?
 
-* **Inactive customers and low customer engagement** were confirmed:
+* *Inactive customers and low customer engagement* were confirmed:
     * 269 registered customers with no purchase history.
-    * **Long purchase hiatus** between last purchase and 1/1/2023: 78.9% of customers hadn't purchased anything since at least 24 months ago.
+    * *Long purchase hiatus* between last purchase and 1/1/2023: 78.9% of customers hadn't purchased anything since at least 24 months ago.
 
     <details>
-    <summary> <small>Click to expand</small> </summary>
+    <summary> <sub>Click to expand</sub> </summary>
 
     ```sql
 
@@ -120,7 +120,7 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
 
     ```
  
-* **Declining repeat purchase rate** over the years: 20% (2019) > 19% (2020) > 18% (2021) > 15% (2022). 
+* *Declining repeat purchase rate* over the years: 20% (2019) > 19% (2020) > 18% (2021) > 15% (2022). 
 
     <details>
     <summary>Click to expand</summary>
@@ -158,7 +158,7 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
     
     ```
 
-* **Low variety-seeking customer behavior**: 94.6% of our customers only purchased one unique product and 5.2% two unique products.
+* *Low variety-seeking customer behavior*: 94.6% of our customers only purchased one unique product and 5.2% two unique products.
 
     <details>
     <summary>Click to expand</summary>
@@ -188,7 +188,7 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
     ```
 
 #### Hypothesis 2. were fewer newly registered customers coming in over time?
-* **Declining number of registered customers** in an accelerated pace during 2021 and 2022: hit low at 36 in December 2022.
+* *Declining number of registered customers* in an accelerated pace during 2021 and 2022: hit low at 36 in December 2022.
 
     <details>
     <summary>Click to expand</summary>
