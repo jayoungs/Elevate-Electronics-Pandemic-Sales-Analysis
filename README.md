@@ -67,15 +67,12 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
 
 ## Tableau Interactive Dashboard
 
-## Deep Dive Insights on Underperformance in Q4 2022. -- make funnel chart?
-
-[image - monthly sales graph by year]
+## Deep Dive Insights on Underperformance in Q4 2022. 
 
 #### Hypothesis 1. were existing customers no longer active over time?
 
-> **Factors to consider**
-> * **Long lifespan of electronic products:** especially, our top products - gaming monitor and latops - have a lifespan of at least 3-5 years and 69% of our revenue came from them.
-> * **Hence, **keeping customers engaged and having them revisit us for electronic products when needed** is crucial. (it's not amazon where you can buy groceries and everything at one place. it's not everyday needs.)
+> **Factors to consider**: electronic products such as our top products - gaming monitor and latops - have **a long lifespan** of at least 3-5 years. Hence, **keeping
+> customers engaged and having them revisit us when needed** is crucial. (it's not amazon where you can buy groceries and everything at one place. it's not everyday needs.)
 
 * **Inactive customers and low customer engagement** were confirmed:
     * 269 registered customers with no purchase history.
@@ -92,7 +89,7 @@ FROM core.customers
 WHERE NOT EXISTS (
   SELECT orders.customer_id
   FROM core.orders 
-  WHERE customers.id = orders.customer_id);
+  WHERE customers.id = orders.customer_id); -- 269
 
 -- calculate purchase hiatus
 WITH calculate_inactivity AS (
@@ -161,7 +158,7 @@ ORDER BY year;
 
 ```
 
-* **low variety-seeking customer behavior**: 94.6% of our customers only purchased one unique product and 5.2% two unique products.
+* **Low variety-seeking customer behavior**: 94.6% of our customers only purchased one unique product and 5.2% two unique products.
 
 <details>
 <summary>Click to expand</summary>
@@ -190,11 +187,46 @@ ORDER BY 1 DESC;
 
 ```
 
-#### Hypothesis 2. were fewer customers coming in over time?
-* decline in number of customers
+#### Hypothesis 2. were fewer newly registered customers coming in over time?
+* **Declining number of registered customers** in an accelerated pace during 2021 and 2022: hit low at 36 in December 2022.
+
+<details>
+<summary>Click to expand</summary>
+
+```sql
+
+SELECT DATE_TRUNC(created_on, month) AS month,
+  COUNT(DISTINCT id) AS unique_customer_count
+FROM core.customers 
+WHERE EXTRACT(YEAR FROM created_on) BETWEEN 2019 AND 2022
+GROUP BY 1
+ORDER BY 1;
+
+```
+  
 * direct marketing:
   
+<details>
+<summary>Click to expand</summary>
 
+```sql
+
+WITH customers_cleaned AS (
+  SELECT 
+    id,
+    COALESCE(marketing_channel, "unknown") AS marketing_channel_cleaned,
+    created_on
+  FROM core.customers
+  WHERE EXTRACT(YEAR FROM created_on) BETWEEN 2019 AND 2022)
+
+SELECT marketing_channel_cleaned,
+  DATE_TRUNC(created_on, month) AS month,
+  COUNT(DISTINCT id) AS unique_customer_count
+FROM customers_cleaned
+GROUP BY 1, 2
+ORDER BY 1, 2;
+
+```
 
 
 ## Recommendations
