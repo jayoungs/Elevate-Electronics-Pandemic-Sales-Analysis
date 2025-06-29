@@ -71,162 +71,162 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
 
 #### Hypothesis 1. were existing customers no longer active over time?
 
-> **Factors to consider**: electronic products such as our top products - gaming monitor and latops - have **a long lifespan** of at least 3-5 years. Hence, **keeping
-> customers engaged and having them revisit us when needed** is crucial. (it's not amazon where you can buy groceries and everything at one place. it's not everyday needs.)
+> **Factors to consider**: electronic products such as our top products - gaming monitor and latops - have **a long lifespan** of at least 3-5 years. Hence, whether existing customers stay active - by buying different products or revisitng often - and introducing new customers to our platform is crucial.
+> (how to keep them engaged and have them revisit when needed. it's not amazon where you can buy groceries and everything at one place. it's not everyday needs.)
 
 * **Inactive customers and low customer engagement** were confirmed:
     * 269 registered customers with no purchase history.
-    * **Long purchase hiatus** between last purchase and 1/1/2023: as of 1/1/2023: 78.9% of customers hadn't purchased anything since at least 24 months ago.
+    * **Long purchase hiatus** between last purchase and 1/1/2023: 78.9% of customers hadn't purchased anything since at least 24 months ago.
 
-<details>
-<summary>Click to expand</summary>
+    <details>
+    <summary>Click to expand</summary>
 
-```sql
+    ```sql
 
--- calculate the number of inactive customers
-SELECT COUNT(DISTINCT customers.id) AS customer_no_purchase
-FROM core.customers 
-WHERE NOT EXISTS (
-  SELECT orders.customer_id
-  FROM core.orders 
-  WHERE customers.id = orders.customer_id); -- 269
+    -- calculate the number of inactive customers
+    SELECT COUNT(DISTINCT customers.id) AS customer_no_purchase
+    FROM core.customers 
+    WHERE NOT EXISTS (
+      SELECT orders.customer_id
+      FROM core.orders 
+      WHERE customers.id = orders.customer_id); -- 269
 
--- calculate purchase hiatus
-WITH calculate_inactivity AS (
-  SELECT customer_id,
-    MAX(purchase_ts) AS latest_purchase,
-    DATE_DIFF('2023-01-01', MAX(purchase_ts), MONTH) AS inactive_period
-  FROM core.orders
-  GROUP BY 1),
-aggregate_customer_num AS (
-  SELECT (CASE 
-    WHEN inactive_period <=3 THEN '3 months'
-    WHEN inactive_period BETWEEN 4 AND 6 THEN '6 months'
-    WHEN inactive_period BETWEEN 7 AND 12 THEN '12 months'
-    WHEN inactive_period BETWEEN 13 AND 24 THEN '24 months'
-    ELSE '24+ months'
-    END) AS inactive_period_category,
-    COUNT(customer_id) AS num_customers
-  FROM calculate_inactivity
-  GROUP BY 1
-  ORDER BY 1)
+    -- calculate purchase hiatus
+    WITH calculate_inactivity AS (
+      SELECT customer_id,
+        MAX(purchase_ts) AS latest_purchase,
+        DATE_DIFF('2023-01-01', MAX(purchase_ts), MONTH) AS inactive_period
+      FROM core.orders
+      GROUP BY 1),
+    aggregate_customer_num AS (
+      SELECT (CASE 
+        WHEN inactive_period <=3 THEN '3 months'
+        WHEN inactive_period BETWEEN 4 AND 6 THEN '6 months'
+        WHEN inactive_period BETWEEN 7 AND 12 THEN '12 months'
+        WHEN inactive_period BETWEEN 13 AND 24 THEN '24 months'
+        ELSE '24+ months'
+        END) AS inactive_period_category,
+        COUNT(customer_id) AS num_customers
+      FROM calculate_inactivity
+      GROUP BY 1
+      ORDER BY 1)
 
-SELECT inactive_period_category,
-  num_customers,
-  SUM(num_customers) OVER () AS total_num,
-  ROUND(100.00 * num_customers / SUM(num_customers) OVER (), 2) AS percentage
-FROM aggregate_customer_num
-ORDER BY 1;
+    SELECT inactive_period_category,
+      num_customers,
+      SUM(num_customers) OVER () AS total_num,
+      ROUND(100.00 * num_customers / SUM(num_customers) OVER (), 2) AS percentage
+    FROM aggregate_customer_num
+    ORDER BY 1;
 
-```
+    ```
  
 * **Declining repeat purchase rate** over the years: 20% (2019) > 19% (2020) > 18% (2021) > 15% (2022). 
 
-<details>
-<summary>Click to expand</summary>
-
-```sql
-
-WITH customers_per_year AS (
-  SELECT 
-    EXTRACT(YEAR FROM purchase_ts) AS year,
-    COUNT(DISTINCT customer_id) AS total_num_customers
-  FROM core.orders
-  GROUP BY 1),
-repeat_purchase_customer AS (
-  SELECT EXTRACT(YEAR FROM purchase_ts) AS year,
-    customer_id,
-    COUNT(DISTINCT id) AS order_count
-  FROM core.orders
-  GROUP BY 1, 2
-  HAVING order_count >= 2
-),
-joined_table AS (
-  SELECT repeat_purchase_customer.year,
-    total_num_customers,
-    COUNT(DISTINCT customer_id) AS num_customer_repeat_purchase
-  FROM repeat_purchase_customer
-  LEFT JOIN customers_per_year
-    ON repeat_purchase_customer.year = customers_per_year.year
-  GROUP BY 1, 2
-  ORDER BY 1)
-
-SELECT *,
-  ROUND(100.00 * num_customer_repeat_purchase / total_num_customers, 2) AS percentage
-FROM joined_table
-ORDER BY year;
-
-```
+    <details>
+    <summary>Click to expand</summary>
+    
+    ```sql
+    
+    WITH customers_per_year AS (
+      SELECT 
+        EXTRACT(YEAR FROM purchase_ts) AS year,
+        COUNT(DISTINCT customer_id) AS total_num_customers
+      FROM core.orders
+      GROUP BY 1),
+    repeat_purchase_customer AS (
+      SELECT EXTRACT(YEAR FROM purchase_ts) AS year,
+        customer_id,
+        COUNT(DISTINCT id) AS order_count
+      FROM core.orders
+      GROUP BY 1, 2
+      HAVING order_count >= 2
+    ),
+    joined_table AS (
+      SELECT repeat_purchase_customer.year,
+        total_num_customers,
+        COUNT(DISTINCT customer_id) AS num_customer_repeat_purchase
+      FROM repeat_purchase_customer
+      LEFT JOIN customers_per_year
+        ON repeat_purchase_customer.year = customers_per_year.year
+      GROUP BY 1, 2
+      ORDER BY 1)
+    
+    SELECT *,
+      ROUND(100.00 * num_customer_repeat_purchase / total_num_customers, 2) AS percentage
+    FROM joined_table
+    ORDER BY year;
+    
+    ```
 
 * **Low variety-seeking customer behavior**: 94.6% of our customers only purchased one unique product and 5.2% two unique products.
 
-<details>
-<summary>Click to expand</summary>
-
-```sql
-
-WITH cleaned_table AS (
-  SELECT customer_id, 
-    (CASE
-    WHEN product_name LIKE "27%" THEN "27in 4K Gaming Monitor"
-    WHEN product_name LIKE "bose%" THEN INITCAP(product_name)
-    ELSE product_name
-    END) AS product_name_cleaned
-FROM core.orders),
-product_per_customer AS (
-  SELECT customer_id,
-    COUNT(DISTINCT product_name_cleaned) AS num_unique_product_purchased
-  FROM cleaned_table
-  GROUP BY 1) 
-
-SELECT num_unique_product_purchased,
-  COUNT(customer_id) AS num_customers
-FROM product_per_customer
-GROUP BY 1 
-ORDER BY 1 DESC;
-
-```
+    <details>
+    <summary>Click to expand</summary>
+    
+    ```sql
+    
+    WITH cleaned_table AS (
+      SELECT customer_id, 
+        (CASE
+        WHEN product_name LIKE "27%" THEN "27in 4K Gaming Monitor"
+        WHEN product_name LIKE "bose%" THEN INITCAP(product_name)
+        ELSE product_name
+        END) AS product_name_cleaned
+    FROM core.orders),
+    product_per_customer AS (
+      SELECT customer_id,
+        COUNT(DISTINCT product_name_cleaned) AS num_unique_product_purchased
+      FROM cleaned_table
+      GROUP BY 1) 
+    
+    SELECT num_unique_product_purchased,
+      COUNT(customer_id) AS num_customers
+    FROM product_per_customer
+    GROUP BY 1 
+    ORDER BY 1 DESC;
+    
+    ```
 
 #### Hypothesis 2. were fewer newly registered customers coming in over time?
 * **Declining number of registered customers** in an accelerated pace during 2021 and 2022: hit low at 36 in December 2022.
 
-<details>
-<summary>Click to expand</summary>
-
-```sql
-
-SELECT DATE_TRUNC(created_on, month) AS month,
-  COUNT(DISTINCT id) AS unique_customer_count
-FROM core.customers 
-WHERE EXTRACT(YEAR FROM created_on) BETWEEN 2019 AND 2022
-GROUP BY 1
-ORDER BY 1;
-
-```
+    <details>
+    <summary>Click to expand</summary>
+    
+    ```sql
+    
+    SELECT DATE_TRUNC(created_on, month) AS month,
+      COUNT(DISTINCT id) AS unique_customer_count
+    FROM core.customers 
+    WHERE EXTRACT(YEAR FROM created_on) BETWEEN 2019 AND 2022
+    GROUP BY 1
+    ORDER BY 1;
+    
+    ```
   
 * direct marketing:
   
-<details>
-<summary>Click to expand</summary>
-
-```sql
-
-WITH customers_cleaned AS (
-  SELECT 
-    id,
-    COALESCE(marketing_channel, "unknown") AS marketing_channel_cleaned,
-    created_on
-  FROM core.customers
-  WHERE EXTRACT(YEAR FROM created_on) BETWEEN 2019 AND 2022)
-
-SELECT marketing_channel_cleaned,
-  DATE_TRUNC(created_on, month) AS month,
-  COUNT(DISTINCT id) AS unique_customer_count
-FROM customers_cleaned
-GROUP BY 1, 2
-ORDER BY 1, 2;
-
-```
+    <details>
+    <summary>Click to expand</summary>
+    
+    ```sql
+    
+    WITH customers_cleaned AS (
+      SELECT 
+        id,
+        COALESCE(marketing_channel, "unknown") AS marketing_channel_cleaned,
+        created_on
+      FROM core.customers
+      WHERE EXTRACT(YEAR FROM created_on) BETWEEN 2019 AND 2022)
+    
+    SELECT marketing_channel_cleaned,
+      DATE_TRUNC(created_on, month) AS month,
+      COUNT(DISTINCT id) AS unique_customer_count
+    FROM customers_cleaned
+    GROUP BY 1, 2
+    ORDER BY 1, 2;
+    
+    ```
 
 
 ## Recommendations
