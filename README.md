@@ -79,12 +79,14 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
 
 * **Inactive customers and low customer engagement** were confirmed:
     * 269 registered customers with no purchase history.
+    * **Long purchase hiatus** between last purchase and 1/1/2023: as of 1/1/2023: 78.9% of customers hadn't purchased anything since at least 24 months ago.
 
 <details>
 <summary>Click to expand</summary>
 
 ```sql
 
+-- calculate the number of inactive customers
 SELECT COUNT(DISTINCT customers.id) AS customer_no_purchase
 FROM core.customers 
 WHERE NOT EXISTS (
@@ -92,13 +94,7 @@ WHERE NOT EXISTS (
   FROM core.orders 
   WHERE customers.id = orders.customer_id);
 
-```
-   * **Long purchase hiatus** between last purchase date and 1/1/2023: as of 1/1/2023: 78.9% of customers hadn't purchased anything since at least 24 months ago.
-<details>
-<summary>Click to expand</summary>
-
-```sql
-
+-- calculate purchase hiatus
 WITH calculate_inactivity AS (
   SELECT customer_id,
     MAX(purchase_ts) AS latest_purchase,
@@ -126,7 +122,7 @@ FROM aggregate_customer_num
 ORDER BY 1;
 
 ```
-
+ 
 * **Declining repeat purchase rate** over the years: 20% (2019) > 19% (2020) > 18% (2021) > 15% (2022). 
 
 <details>
@@ -191,25 +187,6 @@ SELECT num_unique_product_purchased,
 FROM product_per_customer
 GROUP BY 1 
 ORDER BY 1 DESC;
-
-```
-
-* 
-
-
-funnel:
-
-website/app visitors (no info)
-
-customers, registered or not,who purchased
-
-custoemrs who purchased AND signed up (either order)
-
-customers who are loyalty members
-
-[this one, just SQL? image?]
-
-``` sql
 
 ```
 
