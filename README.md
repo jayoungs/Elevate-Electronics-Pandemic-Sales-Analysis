@@ -1,9 +1,8 @@
-# PicoTech Electronics Pandemic Sales Analysis 
-*company name will be changed and company logo will be added.
+<img src="https://github.com/user-attachments/assets/cfe088a1-4680-46fe-aa52-82aaec17f745">
 
-Founded in 2018, PicoTech Electronics is an e-commerce company that sells popular electronics products and accessories at a competitive price and has since expanded to a global customer base from 192 countries. This project aims to:
-* understand PicoTech Electronics' performance during the period from 2019 to 2022, around the pandemic,
-* deliver insights on improvements across the company, including finance, sales, product and marketing, and
+Founded in 2018, Elevate Electronics is a fictional e-commerce company that sells popular electronics products and accessories at a competitive price and has since expanded to a global customer base from 192 countries. This project aims to:
+* understand Elevate Electronics' performance during the period from 2019 to 2022, around the pandemic,
+* deliver insights on improvements across the company, including sales, product, marketing, IT and customer support team, and
 * find a niche in the market to curate selective products based on the needs of our expanded customers.
 
 **< Stakeholder Questions >**
@@ -12,11 +11,11 @@ Founded in 2018, PicoTech Electronics is an e-commerce company that sells popula
 * How was the new loyalty program performing? Should we keep using it?
 * What were our refund rates for Apple Products?
 
-**The metrics used in this analysis: revenue, average order value, and order count**
+The metrics used in this analysis were revenue, average order value, and order count. 
 
 ## About Data and Tools
 
-The database structure, as seen below, consists of four tables: orders, customers, geo_lookup, and order_status. This project analyzed a total of 108,127 records from the table, which was consolidated from the above tables, using Excel and BigQuery SQL.
+The database structure, as seen below, consists of four tables: orders, customers, geo_lookup, and order_status. The main table for this analysis was consolidated from these four tables with a total of 108,127 records and Excel and SQL(BigQuery) were used as analysis tools.
 
 <img src="ERD.png" alt="Image" width="60%">
 
@@ -62,22 +61,32 @@ Three Apple products - Airpod headphones, Macbook Air laptops, and iPhone - acco
 
 Specifically among Apple products, it turned out that the more expensive the product was, the higher the refund rate was: Macbook Air laptops (AOV $1,588) > iPhone (AOV $736) > Airpod headphones (AOV $159). This is because a high-ticket purchase has a high finanicial risk so custoemrs are more likely to seek a refund despite inconvience.
 
+time_to_return.
+
 The data showed no refunds in 2022. Whether it's accurate or an error needs to be checked with the operations team.
 
 [image?]
+
+#### Customer Behavior Analysis
+
+* Top 5 Customer Behavior (untapped potential): each of them all purchased 3-4 laptops within 4 years. there might be a possibility that they were  small businesses. Investigate further to determine and develop B2B strategies.
+* how many registered customers? how many customers, registered or not, purchased? 
+* Inactive customers and low customer engagement confirmed:
+    * 83% of customers who created accounts purchased products within three months, including 13% of those who did in less than one month.
+    * 269 registered customers with no purchase history yet. 
 
 ## Tableau Interactive Dashboard
 
 ## Deep Dive Insights on Underperformance in Q4 2022. 
 
-> **Factors to consider**: electronic products such as our top products - gaming monitor and latops - have **a long lifespan** of at least 3-5 years. Hence, whether existing customers stay active - by revisitng to buying different products - and introducing new customers to our platform is crucial.
-> (how to keep them engaged and have them revisit when needed. it's not amazon where you can buy groceries and everything at one place. it's not everyday needs.)
+> **Factors to consider**:  
+> Electronic products, such as our top products - gaming monitor and latops -, have **a long lifespan** of at least 3-5 years. Hence,
+> whether existing customers stay active - by revisiting and buying different products - and introducing new customers to our
+> platform is crucial. (how to keep them engaged and have them revisit when needed. it's not amazon where you can buy groceries and
+> everything at one place. it's not everyday needs.)
 
 #### Hypothesis 1. Were existing customers no longer active over time?
-
-* Inactive customers and low customer engagement confirmed:
-    * 269 registered customers with no purchase history. --% of customers bought products within -- months.
-    * Long purchase hiatus between last purchase and January 1, 2023: 78.9% of customers hadn't purchased anything since at least 24 months ago.
+* Long purchase hiatus between last purchase and January 1, 2023: 78.9% of customers hadn't purchased anything since at least 24 months ago.
       (table?)
 * Declining repeat purchase rate over the years: 20% (2019) > 19% (2020) > 18% (2021) > 15% (2022).
 * Low variety-seeking customer behavior: 94.6% of our customers only purchased one unique product and 5.2% two unique products.
@@ -86,8 +95,41 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
     <summary><sub>Click to expand</sub></summary> 
     
     ```sql
-    
-     -- calculate the number of inactive customers
+    -- calculate the distribution of how long it took for customers who created accounts to place their first order
+    WITH earliest_purchase AS (
+      SELECT DISTINCT customers.id,
+        customers.created_on,
+        MIN(orders.purchase_ts) AS earliest_purchase_date
+      FROM core.customers 
+      LEFT JOIN core.orders 
+        ON customers.id = orders.customer_id
+      WHERE customers.created_on <= orders.purchase_ts AND EXTRACT(YEAR FROM customers.created_on) BETWEEN 2019 AND 2022
+      GROUP BY 1, 2), -- 61664
+    cal_month_diff AS (
+      SELECT id,
+        DATE_DIFF(earliest_purchase_date, created_on, MONTH) AS month_diff
+      FROM earliest_purchase),
+    recategorized AS (
+        SELECT id,
+          (CASE
+            WHEN month_diff = 0 THEN "1) less than 1 month"
+            WHEN month_diff BETWEEN 1 AND 3 THEN "2) 1 to 3 months"
+            WHEN month_diff BETWEEN 4 AND 6 THEN "3) 4 to 6 months"
+            WHEN month_diff BETWEEN 6 AND 12 THEN  "4) 6 to 12 months"
+            ELSE "5) 12+ months" 
+            END) AS month_to_purchase,
+          COUNT(id) OVER () AS total_num_customers
+        FROM cal_month_diff)
+      
+      SELECT month_to_purchase,
+        total_num_customers,
+        COUNT(month_to_purchase) AS num_customers,
+        ROUND(100.00 * COUNT(month_to_purchase) / total_num_customers, 2) AS percentage
+      FROM recategorized
+      GROUP BY 1, 2
+      ORDER BY 1; 
+
+    -- calculate the number of inactive customers who created accounts but hadn't yet purchased anything.
     SELECT COUNT(DISTINCT customers.id) AS customer_no_purchase
     FROM core.customers 
     WHERE NOT EXISTS (
@@ -210,7 +252,7 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
     ORDER BY 1, 2;
     
     ```
-#### Top Customer Behavior (untapped potential)
+
 
 ## Recommendations: how to position ourselves unique in this market.
 #### Product Team
@@ -218,6 +260,7 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
 * Curate products pairing with our top-selling gaming moniotors and Macbook Air laptops, such as gaming keyboards/headsets or laptop case, so that customers who bought/are buying the monitors and laptops could be tempted to buy their accessories.
 * Remove Bose Soundsport Headphones from our product line because of its underperformance in every metric across the years.
 * Bring more variety into Apple iPhone or more recent iPhone model. We have only one model/color/storage capacity which might be a reason for its underperformance compared to the other Apple products.
+* display reviews
   
 #### Marketing Team
 * Improve seasonal promotions for the school and holiday season to take advantage of seasonal growth volatility.
@@ -227,16 +270,19 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
 * Further investigate on why our best marketing channel, direct marketing, failed to bring more new customers and invest more resources into it if necessary.
 
 (* content creation to keep customers engaged: recommendation on how to maintain your appliance. create more vlaues.
-* potential opportunity for business customers? who bought more than 3?)
 
-#### Data Analytics Team
+
+#### Sales Team
+* potential opportunity for business customers? who bought more than 3?) B2B? review our pricing strategies.
+* 
+#### Customer Experience/Support Team
 * Conduct customer research targeted for top customers and loyalty members to further surface insights on improvements and opportunities.
+
+#### IT Team
 * Check possible data integrity issues suggested in Caveats and improve data integrity.
 
-#### customer support team
 
 ## Caveats
-* The main matric used in this analysis was sales revenue, not profits. Further analysis based on profits should be followed.
-*
-
+* The main matric used in this analysis was sales revenue, not profits. Further analysis based on profits is recommended.
+* 
 2023-2024 data, profit data rather than sales, data quality (refund data for 2022)
