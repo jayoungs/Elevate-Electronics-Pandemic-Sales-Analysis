@@ -61,7 +61,7 @@ Three Apple products - Airpod headphones, Macbook Air laptops, and iPhone - acco
 
 Specifically among Apple products, it turned out that the more expensive the product was, the higher the refund rate was: Macbook Air laptops (AOV $1,588) > iPhone (AOV $736) > Airpod headphones (AOV $159). This is because a high-ticket purchase has a high finanicial risk so custoemrs are more likely to seek a refund despite inconvience.
 
-time_to_return.
+laptops 11% > iphone 8% -> have to do something with laptops
 
 The data showed no refunds in 2022. Whether it's accurate or an error needs to be checked with the operations team.
 
