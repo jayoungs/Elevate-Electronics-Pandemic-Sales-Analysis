@@ -40,7 +40,8 @@ In 2020, YoY growth rates in both sales and order count were positive for all ei
 * High Performance: 27in 4K gaming monitor maintained the highest revenue throughout the four years while Apple Airpods Headphones the highest order count. As for the YoY growth rate, Macbook Air Laptops showed the highest of 400% in revenue and order count in 2020, followed by Lenovo ThinkPad Laptops of 200%.
 * Worst Performance: Bose Soundsport Headphone, ever since it was brought into the product line in 2020, had had the highest negative growth rates in revenue and order count, ending up with only one order in 2022. We should consider replacing it with other new products.
 * also iphone's underperformance. why?
-
+* product variety:
+  
 #### **Regional Performance:** 
 * **Overall Trends:** North America had been the biggest market, accounting for 51-52% of order count and sales on avearage every year, followed by EMEA(Europe, the Middle East and Africa), LATAM(Latin America), and APAC(Asia Pacific). However, APAC had the highest average order value on average across the years, which means that customers from APAC purchased more expensive products.
 
@@ -69,21 +70,24 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
 
 ## Deep Dive Insights on Underperformance in Q4 2022. 
 
-> **Factors to consider**: electronic products such as our top products - gaming monitor and latops - have **a long lifespan** of at least 3-5 years. Hence, whether existing customers stay active - by buying different products or revisitng often - and introducing new customers to our platform is crucial.
+> **Factors to consider**: electronic products such as our top products - gaming monitor and latops - have **a long lifespan** of at least 3-5 years. Hence, whether existing customers stay active - by revisitng to buying different products - and introducing new customers to our platform is crucial.
 > (how to keep them engaged and have them revisit when needed. it's not amazon where you can buy groceries and everything at one place. it's not everyday needs.)
 
 #### Hypothesis 1. Were existing customers no longer active over time?
 
-* *Inactive customers and low customer engagement* were confirmed:
-    * 269 registered customers with no purchase history.
-    * *Long purchase hiatus* between last purchase and January 1, 2023: 78.9% of customers hadn't purchased anything since at least 24 months ago.
+* Inactive customers and low customer engagement confirmed:
+    * 269 registered customers with no purchase history. --% of customers bought products within -- months.
+    * Long purchase hiatus between last purchase and January 1, 2023: 78.9% of customers hadn't purchased anything since at least 24 months ago.
+      (table?)
+* Declining repeat purchase rate over the years: 20% (2019) > 19% (2020) > 18% (2021) > 15% (2022).
+* Low variety-seeking customer behavior: 94.6% of our customers only purchased one unique product and 5.2% two unique products.
 
-    <sub<details></sub>
+    <details>
     <summary><sub>Click to expand</sub></summary> 
-
+    
     ```sql
-
-    -- calculate the number of inactive customers
+    
+     -- calculate the number of inactive customers
     SELECT COUNT(DISTINCT customers.id) AS customer_no_purchase
     FROM core.customers 
     WHERE NOT EXISTS (
@@ -118,15 +122,7 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
     FROM aggregate_customer_num
     ORDER BY 1;
 
-    ```
- 
-* *Declining repeat purchase rate* over the years: 20% (2019) > 19% (2020) > 18% (2021) > 15% (2022). 
-
-    <details>
-    <summary><sub>Click to expand</sub></summary> 
-    
-    ```sql
-    
+    -- calculate repeat purchase rate per year
     WITH customers_per_year AS (
       SELECT 
         EXTRACT(YEAR FROM purchase_ts) AS year,
@@ -155,16 +151,8 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
       ROUND(100.00 * num_customer_repeat_purchase / total_num_customers, 2) AS percentage
     FROM joined_table
     ORDER BY year;
-    
-    ```
 
-* *Low variety-seeking customer behavior*: 94.6% of our customers only purchased one unique product and 5.2% two unique products.
-
-    <details>
-    <summary><sub>Click to expand</sub></summary> 
-    
-    ```sql
-    
+    -- the number of unique products customers purchased
     WITH cleaned_table AS (
       SELECT customer_id, 
         (CASE
@@ -188,13 +176,16 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
     ```
 
 #### Hypothesis 2. Were fewer newly registered customers coming in over time?
-* *Declining number of registered customers* in an accelerated pace during 2021 and 2022: hit low at 36 in December 2022.
-
+==(graphs showing both?)==
+* Declining number of registered customers in an accelerated pace during 2021 and 2022: hit low at 36 in December 2022.
+* Customers from the most successful channel, direct marketing, showed the similar pattern with a plummet in its effect from March 2022 on.
+  
     <details>
     <summary><sub>Click to expand</sub></summary> 
     
     ```sql
-    
+
+    -- how many customers created accounts per year
     SELECT DATE_TRUNC(created_on, month) AS month,
       COUNT(DISTINCT id) AS unique_customer_count
     FROM core.customers 
@@ -202,15 +193,7 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
     GROUP BY 1
     ORDER BY 1;
     
-    ```
-  
-* direct marketing:
-  
-    <details>
-    <summary><sub>Click to expand</sub></summary> 
-    
-    ```sql
-    
+    -- how would the results be different by marketing channel?
     WITH customers_cleaned AS (
       SELECT 
         id,
@@ -227,20 +210,33 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
     ORDER BY 1, 2;
     
     ```
+#### Top Customer Behavior (untapped potential)
 
+## Recommendations: how to position ourselves unique in this market.
+#### Product Team
+* Introduce new products in lower price range (under $100 and $100 - $500) that customers could purchase with less hesitation and financial risk for themsevles and gifts like Apple Airpods. <- shorter lifespan or easy to lose item
+* Curate products pairing with our top-selling gaming moniotors and Macbook Air laptops, such as gaming keyboards/headsets or laptop case, so that customers who bought/are buying the monitors and laptops could be tempted to buy their accessories.
+* Remove Bose Soundsport Headphones from our product line because of its underperformance in every metric across the years.
+* Bring more variety into Apple iPhone or more recent iPhone model. We have only one model/color/storage capacity which might be a reason for its underperformance compared to the other Apple products.
+  
+#### Marketing Team
+* Improve seasonal promotions for the school and holiday season to take advantage of seasonal growth volatility.
+* Send customers who purchased gaming monitors and laptops in our first few years a tailored marketing email for upgraded products as replacement options.
+* Introduce a referral program so that our customers would be motivated to attract new customers.
+* promotion for inactive customers?
+* Further investigate on why our best marketing channel, direct marketing, failed to bring more new customers and invest more resources into it if necessary.
 
-## Recommendations
-* introduce new items for each price tier (less expensive, something you can have more than one or gift without financial risk): laptop case,
-* bring more customers through direct marketing & referral promotion?
-* analyze user journey including page visits
-* for customers who purchased gaming monitor and laptop few years ago, send promotion for new monitor.
-* embrace volatility and take advangage of seasonal promotions.
-* content creation to keep customers engaged: recommendation on how to maintain your appliance. create more vlaues.
-* invest in the marketing platform we did best at: direct marketing.
-* promotion for inactive customers.
-* sell pair products: gaming keyboard or headset, mouse. mac accessories. air tag.
-* potential opportunity for business customers? who bought more than 3?
-* how to position ourselves unique in this market.
+(* content creation to keep customers engaged: recommendation on how to maintain your appliance. create more vlaues.
+* potential opportunity for business customers? who bought more than 3?)
+
+#### Data Analytics Team
+* Conduct customer research targeted for top customers and loyalty members to further surface insights on improvements and opportunities.
+* Check possible data integrity issues suggested in Caveats and improve data integrity.
+
+#### customer support team
 
 ## Caveats
-refund data for 2022.
+* The main matric used in this analysis was sales revenue, not profits. Further analysis based on profits should be followed.
+*
+
+2023-2024 data, profit data rather than sales, data quality (refund data for 2022)
