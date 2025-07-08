@@ -1,7 +1,7 @@
 <img align="left" src="https://github.com/user-attachments/assets/4dc8bae9-5640-4614-bc6a-92272de9a069" alt="Company Logo" width="20%" length="20%">
 
 
-Founded in 2018, Elevate Electronics is a fictional e-commerce company that sells popular electronics products and accessories at a competitive price and has since expanded to a global customer base from 192 countries. This project aims to:
+Founded in 2018, Elevate Electronics is a fictional e-commerce company that sells popular electronics products and accessories at a competitive price and has since expanded to a global customer base for 192 countries. This project aims to:
   * understand Elevate Electronics' performance during the period from 2019 to 2022, around the pandemic,
   * deliver insights on improvements across the company, including sales, product, marketing, IT and customer support team, and
   * find a niche in the market to curate selective products based on the needs of our expanded customers.
@@ -12,7 +12,7 @@ Founded in 2018, Elevate Electronics is a fictional e-commerce company that sell
 * How was the new loyalty program performing? Should we keep using it?
 * What were our refund rates for Apple Products?
 
-The metrics used in this analysis were revenue, average order value, and order count. 
+The key metrics used in this analysis were revenue, average order value, and order count. 
 
 ## About Data and Tools
 
@@ -22,34 +22,34 @@ The database structure, as seen below, consists of four tables: orders, customer
 
 ## Executive Summary
 
-#### **Overall Sales Trends (2019 - 2022):**
+#### **Sales Trends:**
 <img src="https://github.com/user-attachments/assets/fb0665ce-3252-491d-994a-70f18e7f5a1c" alt="Sales Trends">
-* **2020 sales surge in all the metrics - revenue, order count, and AOV: highest growth in revenue and order count started in March when the pandemic hit and people started buying electronic products to set up their home offices or deal with lockdown.
-* Post-2020 sales decline: 
-    * In 2021, only order count momentum continued. Our customers placed more orders but for less expensive items compared to 2020.
-    * In 2022, all metrics trended downward to pre-pandemic normalization.
-* **Q4 2022 underperformance** compared to 2019 revenue average: Oct. 2022 marked the lowest growth rate of -55.2% and considering the fact that revenue in November and December during the holiday season is still below the pre-pandemic level, this performance looks alarming.
 
-* **Volatile growth rate**: MoM revenue growth fluctuated across all the years, not just limited to the pandemic years. This can be related to the seasonality trends below.
+* **2020 sales surge in all the metrics - revenue, order count, and AOV**: highest growth in revenue and order count started in March when the pandemic hit and people started buying electronic products to set up their home offices or deal with lockdown.
+* **Post-2020 sales decline**: 
+    * In 2021, revenue and AOV started declining while only order count momentum continued. Our customers placed more orders but for less expensive items compared to 2020.
+    * In 2022, all metrics trended downward to pre-pandemic level.
+* **Q4 2022 underperformance** compared to 2019 revenue average: Oct. 2022 marked the lowest growth rate of -55.2% and considering the fact that revenue in November and December during the holiday season is still below the pre-pandemic average, this performance looks alarming.
 
-* **Seasonality:** both revenue and order count dropped in February, increased through September, dropped again in October and increased again passing by November and December. Our top four products - 27in 4K gaming monitors, Apple Airpods Headphones, Macbook Air Laptops, and Lenovo ThinkPad Laptops - followed these trends. Also, these trends applied to region and loyalty program. The high growth in September and December could be related to the school and holiday seasons.
+* **Volatile MoM growth rate and seasonality**:
+    * Month-over-month revenue growth fluctuated across all the years, not just limited to the pandemic years. This can be related to the seasonal trends.
+    * both revenue and order count showed a dip in February and October and a surge in September and during November and December. The high growth in September and December could be related to the school and holiday seasons.
+      <img width="60%" heighth="60%" alt="Seasonal Trends Chart" src="https://github.com/user-attachments/assets/688939d6-d379-46f1-a6c1-8cc086aaa467" />
   
-[image: monthly, yearly trends + excel conditional formatting monthly table] or [image - tableau: monthly yearly trends + same graph by product, region, and loyalty program]
+[image:  + excel conditional formatting monthly table] 
  
-#### **Product Performance:**
-In 2020, YoY growth rates in both sales and order count were positive for all eight products, then a mix of positive and negative rates among the products in 2021, and in 2022, all products showed negative growth rate ranging from around -30% to -90%.
-* High Performance: 27in 4K gaming monitor maintained the highest revenue throughout the four years while Apple Airpods Headphones the highest order count. As for the YoY growth rate, Macbook Air Laptops showed the highest of 400% in revenue and order count in 2020, followed by Lenovo ThinkPad Laptops of 200%.
-* Worst Performance: Bose Soundsport Headphone, ever since it was brought into the product line in 2020, had had the highest negative growth rates in revenue and order count, ending up with only one order in 2022. We should consider replacing it with other new products.
-* also iphone's underperformance. why?
-* product variety:
-* march 2020 (macbook) vs. october 2022 (gaming monitor)
+#### **Product Segmentation:**
+* All-time high performance: 27in 4K gaming monitor maintained the highest revenue throughout the four years while Apple Airpods Headphones the highest order count. As for the YoY growth rate, Macbook Air Laptops showed the highest of 400% in revenue and order count in 2020, followed by Lenovo ThinkPad Laptops of 200%.
+* Worst Performance:
+   * Bose Soundsport Headphone, ever since it was brought into the product line in 2020, had had the highest negative growth rates in revenue and order count, ending up with only one order in 2022. 
+   * Apple iPhones have been underperforming given its popularity and high AOV, only accounting for less than 1% in both revenue and order count. The fact that we only curate one model with no variety might explain it. 
+* Sales surge in March 2020 (macbook) vs. Sales dip in October 2022 (gaming monitor) - slope chart
   
-#### **Regional Performance:** 
+#### **Regional Segmentation:** 
 * **Overall Trends:** North America had been the biggest market, accounting for 51-52% of order count and sales on avearage every year, followed by EMEA(Europe, the Middle East and Africa), LATAM(Latin America), and APAC(Asia Pacific). However, APAC had the highest average order value on average across the years, which means that customers from APAC purchased more expensive products.
 
-* **Growth Rate:** In 2020, yearly growth rates in both reveunue and order count were positive across all regions with APAC and LATAM showing the highest of more than 200%, then revenue growth turned to negative in 2021 while order count growth remained positive during the same period, and in 2022, both metrics showed negative growth rates with LATAM, the highest negative growth rates.
 
-[image?]
+[image-MAP? TABLE?]
 
 #### **Loyalty Program Performance:**
 Our loyalty membership is given to a customer who creates an account and then purchases a certain number of orders. Out of 87,628 customers who ever made a purchase during 2019 through 2022, registered or not, 37% was loyalty members. 
@@ -261,7 +261,7 @@ The data showed no refunds in 2022. Whether it's accurate or an error needs to b
 #### Product Team
 * Introduce new products in lower price range (under $100 and $100 - $500) that customers could purchase with less hesitation and financial risk for themsevles and gifts like Apple Airpods. <- shorter lifespan or easy to lose item
 * Curate products pairing with our top-selling gaming moniotors and Macbook Air laptops, such as gaming keyboards/headsets or laptop case, so that customers who bought/are buying the monitors and laptops could be tempted to buy their accessories.
-* Remove Bose Soundsport Headphones from our product line because of its underperformance in every metric across the years.
+* Remove Bose Soundsport Headphones from our product line because of its underperformance in every metric across the years. (or resarch reviews among our customers or in general to assess the reason behind it. also ihpone.
 * Bring more variety into Apple iPhone or more recent iPhone model. We have only one model/color/storage capacity which might be a reason for its underperformance compared to the other Apple products.
 * display reviews
   
