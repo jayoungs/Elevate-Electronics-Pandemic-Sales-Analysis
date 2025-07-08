@@ -16,7 +16,7 @@ The key metrics used in this analysis were revenue, average order value, and ord
 
 ## About Data and Tools
 
-The database structure, as seen below, consists of four tables: orders, customers, geo_lookup, and order_status. The main table for this analysis was consolidated from these four tables with a total of 108,127 records and Excel and SQL(BigQuery) were used as analysis tools.
+The database structure, as seen below, consists of four tables: `orders`, `customers`, `geo_lookup`, and `order_status`. The main table for this analysis was consolidated from these four tables with a total of 108,127 records and Excel and SQL(BigQuery) were used as analysis tools.
 
 <img src="ERD.png" alt="Image" width="60%">
 
