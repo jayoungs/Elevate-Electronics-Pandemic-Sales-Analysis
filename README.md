@@ -1,9 +1,10 @@
-<img src="https://github.com/user-attachments/assets/cfe088a1-4680-46fe-aa52-82aaec17f745">
+<img align="left" src="https://github.com/user-attachments/assets/4dc8bae9-5640-4614-bc6a-92272de9a069" alt="Company Logo" width="20%" length="20%">
+
 
 Founded in 2018, Elevate Electronics is a fictional e-commerce company that sells popular electronics products and accessories at a competitive price and has since expanded to a global customer base from 192 countries. This project aims to:
-* understand Elevate Electronics' performance during the period from 2019 to 2022, around the pandemic,
-* deliver insights on improvements across the company, including sales, product, marketing, IT and customer support team, and
-* find a niche in the market to curate selective products based on the needs of our expanded customers.
+  * understand Elevate Electronics' performance during the period from 2019 to 2022, around the pandemic,
+  * deliver insights on improvements across the company, including sales, product, marketing, IT and customer support team, and
+  * find a niche in the market to curate selective products based on the needs of our expanded customers.
 
 **< Stakeholder Questions >**
 * What were the overall trends in sales during this time?
@@ -22,15 +23,16 @@ The database structure, as seen below, consists of four tables: orders, customer
 ## Executive Summary
 
 #### **Overall Sales Trends (2019 - 2022):**
-The revenue drastically increased from $3.8M in 2019 to $10M in 2020 by 163% and declined gradually in 2021 and sharply in 2022, ending up at $5M. The surge in 2020 started in March when the pandemic hit and people started buying electrinic products to set up their home offices or deal with lockdown, and so March shows the highest month-over_month growth rate in both revenue and order count. This upward revenue trend continued until 2021. On the contrary, order count's momentum continued longer through 2021, which means that in 2021, people placed more orders but for less expensive items compared to 2020.
+<img src="https://github.com/user-attachments/assets/fb0665ce-3252-491d-994a-70f18e7f5a1c" alt="Sales Trends">
+* **2020 sales surge in all the metrics - revenue, order count, and AOV: highest growth in revenue and order count started in March when the pandemic hit and people started buying electronic products to set up their home offices or deal with lockdown.
+* Post-2020 sales decline: 
+    * In 2021, only order count momentum continued. Our customers placed more orders but for less expensive items compared to 2020.
+    * In 2022, all metrics trended downward to pre-pandemic normalization.
+* **Q4 2022 underperformance** compared to 2019 revenue average: Oct. 2022 marked the lowest growth rate of -55.2% and considering the fact that revenue in November and December during the holiday season is still below the pre-pandemic level, this performance looks alarming.
 
-As much as Marh 2020 surge, we need to pay attention to drops in the last quarter of 2022 when we had the highest negative growth rates in revenue and order count. After the initial emergency phase had passed, in 2022 revenues trends went back to the pre-pandemic 2019 level but even worse, in Q4, it started underperforming compared to that of 2019. Not being able to capitalizing on the pandemic sales boom and showing worst performance throughout the four years is alarming. Hence, it will be explored further in details in Deep Dive Insights below.
+* **Volatile growth rate**: MoM revenue growth fluctuated across all the years, not just limited to the pandemic years. This can be related to the seasonality trends below.
 
-[image]
-
-* **Growth Volatility:** Surprisingly, month-over-month growth rates were volatile each year, not just limited to the panedmic years. March 2020 recorded the highest growth rates of 50% and 46% in both revenue and order count while October 2022 the lowest growth rates of -55%, -16%, and -47% in all metrics, revenue, AOV, and order count. 
-
-* **Seasonality:** Both revenue and order count showed a similar seasonal pattern: they dropped in February, increased through September, dropped again in October and increased again during November and December. Our top four products - 27in 4K gaming monitors, Apple Airpods Headphones, Macbook Air Laptops, and Lenovo ThinkPad Laptops - followed these trends. Also, these trends applied to region and loyalty program. The high growth in September and December could be related to the school and holiday seasons.
+* **Seasonality:** both revenue and order count dropped in February, increased through September, dropped again in October and increased again passing by November and December. Our top four products - 27in 4K gaming monitors, Apple Airpods Headphones, Macbook Air Laptops, and Lenovo ThinkPad Laptops - followed these trends. Also, these trends applied to region and loyalty program. The high growth in September and December could be related to the school and holiday seasons.
   
 [image: monthly, yearly trends + excel conditional formatting monthly table] or [image - tableau: monthly yearly trends + same graph by product, region, and loyalty program]
  
@@ -40,6 +42,7 @@ In 2020, YoY growth rates in both sales and order count were positive for all ei
 * Worst Performance: Bose Soundsport Headphone, ever since it was brought into the product line in 2020, had had the highest negative growth rates in revenue and order count, ending up with only one order in 2022. We should consider replacing it with other new products.
 * also iphone's underperformance. why?
 * product variety:
+* march 2020 (macbook) vs. october 2022 (gaming monitor)
   
 #### **Regional Performance:** 
 * **Overall Trends:** North America had been the biggest market, accounting for 51-52% of order count and sales on avearage every year, followed by EMEA(Europe, the Middle East and Africa), LATAM(Latin America), and APAC(Asia Pacific). However, APAC had the highest average order value on average across the years, which means that customers from APAC purchased more expensive products.
