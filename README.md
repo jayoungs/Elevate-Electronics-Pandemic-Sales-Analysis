@@ -1,10 +1,8 @@
 <img align="left" src="https://github.com/user-attachments/assets/4dc8bae9-5640-4614-bc6a-92272de9a069" alt="Company Logo" width="20%" length="20%">
 
 
-Founded in 2018, Elevate Electronics is a fictional e-commerce company that sells popular electronics products and accessories at a competitive price and has since expanded to a global customer base for 192 countries. This project aims to:
-  * understand Elevate Electronics' performance during the period from 2019 to 2022, around the pandemic,
-  * deliver insights on improvements across the company, including sales, product, marketing, IT and customer support team, and
-  * find a niche in the market to curate selective products based on the needs of our expanded customers.
+Founded in 2018, Elevate Electronics is a fictional e-commerce company that sells popular electronics products and accessories at a competitive price and has since rapidly expanded to a global customer base for 192 countries. This project aims to understand Elevate Electronics' performance during the period from 2019 to 2022, around the pandemic, and deliver insights on improvements across the company, including sales, product, marketing, IT and customer support team.
+* find a niche in the market to curate selective products based on the needs of our expanded customers.
 
 **< Stakeholder Questions >**
 * What were the overall trends in sales during this time?
@@ -34,16 +32,19 @@ The database structure, as seen below, consists of four tables: `orders`, `custo
 * **Volatile MoM growth rate and seasonality**:
     * Month-over-month revenue growth fluctuated across all the years, not just limited to the pandemic years. This can be related to the seasonal trends.
     * both revenue and order count showed a dip in February and October and a surge in September and during November and December. The high growth in September and December could be related to the school and holiday seasons.
-      <img width="60%" heighth="60%" alt="Seasonal Trends Chart" src="https://github.com/user-attachments/assets/688939d6-d379-46f1-a6c1-8cc086aaa467" />
+      <img align="middle" width="800" length="600" alt="Image" src="https://github.com/user-attachments/assets/688939d6-d379-46f1-a6c1-8cc086aaa467" />
   
 [image:  + excel conditional formatting monthly table] 
  
 #### **Product Segmentation:**
-* All-time high performance: 27in 4K gaming monitor maintained the highest revenue throughout the four years while Apple Airpods Headphones the highest order count. As for the YoY growth rate, Macbook Air Laptops showed the highest of 400% in revenue and order count in 2020, followed by Lenovo ThinkPad Laptops of 200%.
-* Worst Performance:
-   * Bose Soundsport Headphone, ever since it was brought into the product line in 2020, had had the highest negative growth rates in revenue and order count, ending up with only one order in 2022. 
-   * Apple iPhones have been underperforming given its popularity and high AOV, only accounting for less than 1% in both revenue and order count. The fact that we only curate one model with no variety might explain it. 
-* Sales surge in March 2020 (macbook) vs. Sales dip in October 2022 (gaming monitor) - slope chart
+<img align="middle" width="800" length="200" alt="Image" src="https://github.com/user-attachments/assets/ae1c3337-e0a4-4eea-91e4-929734656d3c">
+
+* Products that failed to achieve sales expectations:
+   * Bose Soundsport Headphones, ever since it was brought into the product line in 2020, had had the highest negative growth rates in revenue and order count, ending up with only one order in 2022. 
+   * Surprisingly, Apple iPhone was underperforming despite its general popularity and higher price range, only accounting for less than 1% in both revenue and order count.
+     * Lack of iPhone variations might be the possible reason behind this. We sell only one model with one color and storage capacity option as opposed to 27in 4K Gaming Monitor and Apple Airpods Headphone with at least 14 options.
+* Product performance in Q4 2022 compared to the previous Q4: gross sales declined across all the products by a range of -51% and -83%.
+  [maybe add a conditional formatting table?]
   
 #### **Regional Segmentation:** 
 * **Overall Trends:** North America had been the biggest market, accounting for 51-52% of order count and sales on avearage every year, followed by EMEA(Europe, the Middle East and Africa), LATAM(Latin America), and APAC(Asia Pacific). However, APAC had the highest average order value on average across the years, which means that customers from APAC purchased more expensive products.
@@ -59,14 +60,6 @@ By its nature, since it took time to become a loyalty member, revenue and order 
 we should continue loyalty program?
 
 
-#### **Return Rate for Apple Products:**
-Three Apple products - Airpod headphones, Macbook Air laptops, and iPhone - accounted for 49% of all orders each year on average. The refund rate of both Apple products and non-Apple products went up in 2020 and down in 2021 and average annual refund rates were 5.25% and 4.01% respectively. 
-
-Specifically among Apple products, it turned out that the more expensive the product was, the higher the refund rate was: Macbook Air laptops (AOV $1,588) > iPhone (AOV $736) > Airpod headphones (AOV $159). This is because a high-ticket purchase has a high finanicial risk so custoemrs are more likely to seek a refund despite inconvience.
-
-laptops 11% > iphone 8% -> have to do something with laptops
-
-The data showed no refunds in 2022. Whether it's accurate or an error needs to be checked with the operations team.
 
 [image?]
 
