@@ -26,7 +26,7 @@ The database structure, as seen below, consists of four tables: `orders`, `custo
 * **2020 sales surge in all the metrics - revenue, order count, and AOV**: highest growth in revenue and order count started in March when the pandemic hit and people started buying electronic products to set up their home offices or deal with lockdown.
 * **Post-2020 sales decline**: 
     * In 2021, revenue and AOV started declining while only order count momentum continued. Our customers placed more orders but for less expensive items compared to 2020.
-    * In 2022, all metrics trended downward to pre-pandemic level.
+    * In 2022, all metrics trended downward to pre-pandemic level or potentially worse.
 * **Q4 2022 underperformance** compared to 2019 revenue average: Oct. 2022 marked the lowest growth rate of -55.2% and considering the fact that revenue in November and December during the holiday season is still below the pre-pandemic average, this performance looks alarming.
 
 * **Volatile MoM growth rate and seasonality**:
@@ -42,12 +42,13 @@ The database structure, as seen below, consists of four tables: `orders`, `custo
 * Products that failed to achieve sales expectations:
    * Bose Soundsport Headphones, ever since it was brought into the product line in 2020, had had the highest negative growth rates in revenue and order count, ending up with only one order in 2022. 
    * Surprisingly, Apple iPhone was underperforming despite its general popularity and higher price range, only accounting for less than 1% in both revenue and order count.
-     * Lack of iPhone variations might be the possible reason behind this. We sell only one model with one color and storage capacity option as opposed to 27in 4K Gaming Monitor and Apple Airpods Headphone with at least 14 options.
+     * Lack of iPhone's variation might be the possible reason behind this. We sell only one model with one color and storage capacity option as opposed to 27in 4K Gaming Monitor and Apple Airpods Headphone with at least 14 options.
 * Product performance in Q4 2022 compared to the previous Q4: gross sales declined across all the products by a range of -51% and -83%.
   [maybe add a conditional formatting table?]
   
 #### **Regional Segmentation:** 
 * **Overall Trends:** North America had been the biggest market, accounting for 51-52% of order count and sales on avearage every year, followed by EMEA(Europe, the Middle East and Africa), LATAM(Latin America), and APAC(Asia Pacific). However, APAC had the highest average order value on average across the years, which means that customers from APAC purchased more expensive products.
+* Regional performance in Q4 2022 compared to the previous Q4: gross sales declined across all the regions by a range of <- need to confirm
 
 
 [image-MAP? TABLE?]
