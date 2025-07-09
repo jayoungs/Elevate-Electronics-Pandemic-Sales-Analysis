@@ -2,7 +2,7 @@
 
 
 Founded in 2018, Elevate Electronics is a fictional e-commerce company that sells popular electronics products and accessories at a competitive price and has since rapidly expanded to a global customer base for 192 countries. This project aims to understand Elevate Electronics' performance during the period from 2019 to 2022, around the pandemic, and deliver insights on improvements across the company, including sales, product, marketing, IT and customer support team.
-* find a niche in the market to curate selective products based on the needs of our expanded customers.
+* assess our competibility/position in the market, find a niche in the market to curate selective products based on the needs of our expanded customers.
 
 **< Stakeholder Questions >**
 * What were the overall trends in sales during this time?
