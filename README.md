@@ -1,7 +1,7 @@
 <img align="left" src="https://github.com/user-attachments/assets/4dc8bae9-5640-4614-bc6a-92272de9a069" alt="Company Logo" width="20%" length="20%">
 
 
-Founded in 2018, Elevate Electronics is a fictional e-commerce company that sells popular electronics products and accessories at a competitive price and has since rapidly expanded to a global customer base for 192 countries. This project aims to understand Elevate Electronics' performance during the period from 2019 to 2022, around the pandemic, and deliver insights on improvements across the company, including sales, product, marketing, IT and customer support team.
+Founded in 2018, Elevate Electronics is a fictional e-commerce company that sells popular electronics products and accessories at a competitive price and has since rapidly expanded to a global customer base from 192 countries. This project aims to understand Elevate Electronics' performance during the period from 2019 to 2022, around the pandemic, and deliver insights on improvements across the company, including sales, product, marketing, IT and customer support team.
 * assess our competibility/position in the market, find a niche in the market to curate selective products based on the needs of our expanded customers.
 
 **< Stakeholder Questions >**
@@ -32,12 +32,12 @@ The database structure, as seen below, consists of four tables: `orders`, `custo
 * **Volatile MoM growth rate and seasonality**:
     * Month-over-month revenue growth fluctuated across all the years, not just limited to the pandemic years. This can be related to the seasonal trends.
     * both revenue and order count showed a dip in February and October and a surge in September and during November and December. The high growth in September and December could be related to the school and holiday seasons.
-      <img align="middle" width="800" length="600" alt="Image" src="https://github.com/user-attachments/assets/688939d6-d379-46f1-a6c1-8cc086aaa467" />
+      <img align="middle" width="800" length="800" alt="Image" src="https://github.com/user-attachments/assets/688939d6-d379-46f1-a6c1-8cc086aaa467" />
   
 [image:  + excel conditional formatting monthly table] 
  
 #### **Product Segmentation:**
-<img align="middle" width="800" length="200" alt="Image" src="https://github.com/user-attachments/assets/ae1c3337-e0a4-4eea-91e4-929734656d3c">
+<img align="middle" width="800" length="800" alt="Image" src="https://github.com/user-attachments/assets/ae1c3337-e0a4-4eea-91e4-929734656d3c">
 
 * Products that failed to achieve sales expectations:
    * Bose Soundsport Headphones, ever since it was brought into the product line in 2020, had had the highest negative growth rates in revenue and order count, ending up with only one order in 2022. 
@@ -47,11 +47,12 @@ The database structure, as seen below, consists of four tables: `orders`, `custo
   [maybe add a conditional formatting table?]
   
 #### **Regional Segmentation:** 
-* **Overall Trends:** North America had been the biggest market, accounting for 51-52% of order count and sales on avearage every year, followed by EMEA(Europe, the Middle East and Africa), LATAM(Latin America), and APAC(Asia Pacific). However, APAC had the highest average order value on average across the years, which means that customers from APAC purchased more expensive products.
-* Regional performance in Q4 2022 compared to the previous Q4: gross sales declined across all the regions by a range of <- need to confirm
+<img align="middle" width="800" height="800" alt="Screenshot 2025-07-10 at 5 06 12 PM" src="https://github.com/user-attachments/assets/c9e45ddd-e59d-479c-95d6-d720e6c16721" />
 
-
-[image-MAP? TABLE?]
+* North America had been the largest market, accounting for about a half of gross sales and order count every year, followed by EMEA(Europe, the Middle East and Africa), LATAM(Latin America), and APAC(Asia Pacific).
+* Potential market opportunity in APAC: customers in APAC purchased more expensive products, compared to those in the other regions, and APAC showed the highest sales growth rate of 226% in 2020. Plus, APAC has the largest total population of 4.8 billion people among the four regions.
+* Regional performance in Q4 2022 compared to the previous Q4: gross sales declined across all the regions by a range of -68% and -82%.
+  [maybe add a conditional formatting table?]
 
 #### **Loyalty Program Performance:**
 Our loyalty membership is given to a customer who creates an account and then purchases a certain number of orders. Out of 87,628 customers who ever made a purchase during 2019 through 2022, registered or not, 37% was loyalty members. 
