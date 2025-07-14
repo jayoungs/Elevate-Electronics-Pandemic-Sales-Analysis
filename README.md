@@ -10,7 +10,7 @@ Founded in 2018, Elevate Electronics is a fictional e-commerce company that sell
 * How was the new loyalty program performing? Should we keep using it?
 * What were our refund rates for Apple Products?
 
-The key metrics used in this analysis were revenue, average order value, and order count. 
+The key metrics used in this analysis were gross sales, average order value (AOV), and order count. 
 
 ## About Data and Tools
 
@@ -21,45 +21,52 @@ The database structure, as seen below, consists of four tables: `orders`, `custo
 ## Executive Summary
 
 #### **Sales Trends:**
-<img src="https://github.com/user-attachments/assets/fb0665ce-3252-491d-994a-70f18e7f5a1c" alt="Sales Trends">
+<img src="https://github.com/user-attachments/assets/fb0665ce-3252-491d-994a-70f18e7f5a1c" alt="2020 Gross Sales Surged and Subsequently Declined to Pre-Pandemic Level. Gross Sales Growth was Persistenty Volatile Every Year, Not Limited to 2020">
 
-* **2020 sales surge in all the metrics - revenue, order count, and AOV**: highest growth in revenue and order count started in March when the pandemic hit and people started buying electronic products to set up their home offices or deal with lockdown.
+* **2020 surge in all sales metrics - gross sales, order count, and AOV**: especially the highest growth in gross sales and order count happened in March when the pandemic hit, and people started buying electronics to set up their home offices or deal with the lockdown.
 * **Post-2020 sales decline**: 
-    * In 2021, revenue and AOV started declining while only order count momentum continued. Our customers placed more orders but for less expensive items compared to 2020.
-    * In 2022, all metrics trended downward to pre-pandemic level or potentially worse.
-* **Q4 2022 underperformance** compared to 2019 revenue average: Oct. 2022 marked the lowest growth rate of -55.2% and considering the fact that revenue in November and December during the holiday season is still below the pre-pandemic average, this performance looks alarming.
-
-* **Volatile MoM growth rate and seasonality**:
-    * Month-over-month revenue growth fluctuated across all the years, not just limited to the pandemic years. This can be related to the seasonal trends.
-    * both revenue and order count showed a dip in February and October and a surge in September and during November and December. The high growth in September and December could be related to the school and holiday seasons.
-      <img align="middle" width="800" length="800" alt="Image" src="https://github.com/user-attachments/assets/688939d6-d379-46f1-a6c1-8cc086aaa467" />
+    * In 2021, gross sales and AOV started declining, but order count momentum continued. Our customers placed more orders but for less expensive items compared to 2020.
+    * In 2022, all metrics trended downwards to pre-pandemic level or potentially worse across all products and regions.
+* **Alarming Q4 2022 underperformance** compared to 2019 gross sales average: October 2022 marked the lowest growth rate of -55.2%, and the seasonal sales increase during the holiday season was not sufficient to bounce back from this dip to reach at least the 2019 average level. Further analysis on Q4 2022 underperformance will be presented later here.
+* **Persistent month-over-month gross sales growth rate volatility and its possible link to seasonality**: both revenue and order count showed a dip in February and October and a surge in September and during November and December. This surge could be related to the school and holiday seasons.
+      <img align="middle" width="800" length="800" alt="Image" src="https://github.com/user-attachments/assets/688939d6-d379-46f1-a6c1-8cc086aaa467" alt="Seasonality in Gross Sales: Decrease in Feb. and Oct. vs. Increase in Sep., Nov., and Dec.">
   
 [image:  + excel conditional formatting monthly table] 
  
 #### **Product Segmentation:**
-<img align="middle" width="800" length="800" alt="Image" src="https://github.com/user-attachments/assets/ae1c3337-e0a4-4eea-91e4-929734656d3c">
+<img align="middle" width="800" length="800" alt="Image" src="https://github.com/user-attachments/assets/ae1c3337-e0a4-4eea-91e4-929734656d3c" Alt="Top 3 Products: Gaming Monitor, Apple Airpods, Macbook Air">
+[add slope chart for driving force in march 2020 and oct 2022.]
 
-* Products that failed to achieve sales expectations:
-   * Bose Soundsport Headphones, ever since it was brought into the product line in 2020, had had the highest negative growth rates in revenue and order count, ending up with only one order in 2022. 
-   * Surprisingly, Apple iPhone was underperforming despite its general popularity and higher price range, only accounting for less than 1% in both revenue and order count.
-     * Lack of iPhone's variation might be the possible reason behind this. We sell only one model with one color and storage capacity option as opposed to 27in 4K Gaming Monitor and Apple Airpods Headphone with at least 14 options.
-* Product performance in Q4 2022 compared to the previous Q4: gross sales declined across all the products by a range of -51% and -83%.
+* **Products that failed to achieve sales expectations**:
+   * Bose Soundsport Headphones, ever since it was brought into the product line in 2020, had had the highest negative growth rates in sales, ending up with only one order in 2022. 
+   * Surprisingly, Apple iPhone had underperformed despite its general popularity and higher price range, only accounting for less than 1% in both revenue and order count. Lack of the product variation might be the possible reason behind this. We sell only one model with one color and storage capacity option as opposed to 27in 4K Gaming Monitor and Apple Airpods Headphone with at least 14 options.
+
+   | **Apple iPhone** | Bose Soundsport Headphones | Macbook Air Laptop | ThinkPad Laptop | Samsung Webcam | Samsung Charging Cable Pack | 27in 4K Gaming Monitor | Apple Airpods Headphones |
+   |:---|:---|:---|:---|:---|:---|:---|:---|
+   |**1**|2|5|5|7|8|14|16|
+
+* Product performance in Q4 2022 compared to Q4: gross sales declined across all the products by a range of -51% (ThinkPad Laptop) and -83% (Macbook Air Laptop).
   [maybe add a conditional formatting table?]
   
 #### **Regional Segmentation:** 
 <img align="middle" width="800" height="800" alt="Screenshot 2025-07-10 at 5 06 12 PM" src="https://github.com/user-attachments/assets/c9e45ddd-e59d-479c-95d6-d720e6c16721" />
 
-* North America had been the largest market, accounting for about a half of gross sales and order count every year, followed by EMEA(Europe, the Middle East and Africa), LATAM(Latin America), and APAC(Asia Pacific).
-* Potential market opportunity in APAC: customers in APAC purchased more expensive products, compared to those in the other regions, and APAC showed the highest sales growth rate of 226% in 2020. Plus, APAC has the largest total population of 4.8 billion people among the four regions.
-* Regional performance in Q4 2022 compared to the previous Q4: gross sales declined across all the regions by a range of -68% and -82%.
-  [maybe add a conditional formatting table?]
+
+* Potential market opportunity in APAC:
+   * Customers in APAC purchased more expensive products, compared to those in the other regions.
+   * APAC showed the highest sales growth rate of 226% in 2020.
+   * APAC has the largest total population of 4.8 billion people among the four regions.
+* Regional performance in Q4 2022 compared to the previous Q4: gross sales declined across all the regions by a range of -68% (NA) and -82% (APAC).
+
+   [maybe add a conditional formatting table?]
 
 #### **Loyalty Program Performance:**
+Cusotmers with accounts automatically join our loyalty membership after spending $--. 
 Our loyalty membership is given to a customer who creates an account and then purchases a certain number of orders. Out of 87,628 customers who ever made a purchase during 2019 through 2022, registered or not, 37% was loyalty members. 
 By its nature, since it took time to become a loyalty member, revenue and order count from loyalty members had been lower than those from non-loyalty members during the first two years and then loyalty members were catching up by growing five times more than non-loyalty members in 2020 and finally outperforming in both revenue and order count in 2021 and 2022 and AOV in 2022. However, when zooming into monthly trends, we see that in the last few months in 2022 the performance between the two groups reversed with loyalty members underperforming again in all metrics.
 
 
-we should continue loyalty program?
+we should continue loyalty program? not conclusive answer.
 
 
 
