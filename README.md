@@ -34,8 +34,7 @@ The database structure, as seen below, consists of four tables: `orders`, `custo
 [image:  + excel conditional formatting monthly table] 
  
 #### **Product Segmentation:**
-<img align="middle" width="800" length="800" alt="Image" src="https://github.com/user-attachments/assets/ae1c3337-e0a4-4eea-91e4-929734656d3c" Alt="Top 3 Products: Gaming Monitor, Apple Airpods, Macbook Air">
-[add slope chart for driving force in march 2020 and oct 2022.]
+<img align="middle" width="1205" height="612" alt="Screenshot 2025-07-14 at 6 16 10 PM" src="https://github.com/user-attachments/assets/37721165-6198-4ec0-903e-7db8c4a4f422" />
 
 * **Products that failed to achieve sales expectations**:
    * Bose Soundsport Headphones, ever since it was brought into the product line in 2020, had had the highest negative growth rates in sales, ending up with only one order in 2022. 
@@ -61,8 +60,8 @@ The database structure, as seen below, consists of four tables: `orders`, `custo
    [maybe add a conditional formatting table?]
 
 #### **Loyalty Program Performance:**
-Cusotmers with accounts automatically join our loyalty membership after spending $--. 
-Our loyalty membership is given to a customer who creates an account and then purchases a certain number of orders. Out of 87,628 customers who ever made a purchase during 2019 through 2022, registered or not, 37% was loyalty members. 
+<img width="1198" height="596" alt="Loyalty Members Caught Up and Outperformed Non-Loyalty Members in All Sales Metrics in 2021 and 2022 but Reversed in Recent Months" src="https://github.com/user-attachments/assets/4bf45dad-4040-4a55-b960-99569ed0e3f8" />
+
 By its nature, since it took time to become a loyalty member, revenue and order count from loyalty members had been lower than those from non-loyalty members during the first two years and then loyalty members were catching up by growing five times more than non-loyalty members in 2020 and finally outperforming in both revenue and order count in 2021 and 2022 and AOV in 2022. However, when zooming into monthly trends, we see that in the last few months in 2022 the performance between the two groups reversed with loyalty members underperforming again in all metrics.
 
 
