@@ -1,13 +1,14 @@
-<img align="left" src="https://github.com/user-attachments/assets/4dc8bae9-5640-4614-bc6a-92272de9a069" alt="Company Logo" width="20%" length="20%"> 
-Founded in 2018, Elevate Electronics is a sample e-commerce company that sells popular electronics products and accessories at a competitive price and has since rapidly expanded to a global customer base from 192 countries. This project aims to understand Elevate Electronics' performance during the period from 2019 to 2022, around the pandemic, and deliver insights on improvements across the company, including sales, product, marketing, IT and customer support team.
+<img align="left" src="https://github.com/user-attachments/assets/4dc8bae9-5640-4614-bc6a-92272de9a069" alt="Company Logo" width="15%" length="15%"> 
+Founded in 2018, Elevate Electronics is an e-commerce company that sells popular electronics products and accessories at a competitive price and has since rapidly expanded to a global customer base from 192 countries.  
+This project aims to:  
 
-assess our competibility/position in the market, find a niche in the market to curate selective products based on the needs of our expanded customers.
+   * Understand Elevate Electronics' performance during the period from 2019 to 2022, around the pandemic, and
+   * Deliver insights on improvements across the company to differentiate itself in the highly competitive market and to build credibility and loyalty from its expanded customer base.
 
 **< Stakeholder Questions >**
 * What were the overall trends in sales during this time?
 * What were our monthly and yearly growth rates?
 * How was the new loyalty program performing? Should we keep using it?
-* What were our refund rates for Apple Products?
 
 The key sales metrics used in this analysis were gross sales, average order value (AOV), and order count. 
 
@@ -275,7 +276,7 @@ The key sales metrics used in this analysis were gross sales, average order valu
 ## Recommendations: how to position ourselves unique in this market.
 #### Product Team
 * Introduce new products in lower price range (under $100 and $100 - $500) that customers could purchase with less hesitation and financial risk for themsevles and gifts like Apple Airpods. <- shorter lifespan or easy to lose item
-* Curate products pairing with our top-selling gaming moniotors and Macbook Air laptops, such as gaming keyboards/headsets or laptop case, so that customers who bought/are buying the monitors and laptops could be tempted to buy their accessories.
+* Curate products pairing with our top-selling gaming moniotors and Macbook Air laptops, such as gaming keyboards/headsets or laptop case, so that customers who bought/are buying the monitors and laptops could be tempted to buy their accessories. (cross-selling)
 * Remove Bose Soundsport Headphones from our product line because of its underperformance in every metric across the years. (or resarch reviews among our customers or in general to assess the reason behind it. also ihpone.
 * Bring more variety into Apple iPhone or more recent iPhone model. We have only one model/color/storage capacity which might be a reason for its underperformance compared to the other Apple products.
 * display reviews
