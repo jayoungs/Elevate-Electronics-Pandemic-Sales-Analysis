@@ -1,9 +1,9 @@
 <img align="left" src="https://github.com/user-attachments/assets/4dc8bae9-5640-4614-bc6a-92272de9a069" alt="Company Logo" width="15%" length="15%"> 
-Founded in 2018, Elevate Electronics is an e-commerce company that sells popular electronics products and accessories at a competitive price and has since rapidly expanded to a global customer base from 192 countries.  
+Founded in 2018, Elevate Electronics is an e-commerce company that sells popular electronic products and accessories at a competitive price and has since rapidly expanded to a global customer base from 192 countries.  
 This project aims to:  
 
    * Understand Elevate Electronics' performance during the period from 2019 to 2022, around the pandemic, and
-   * Deliver insights on improvements across the company to differentiate itself in the highly competitive market and to build credibility and loyalty from its expanded customer base.
+   * Deliver insights on improvements across the company to guide it to remain competitive in the market and differentiate itself further from competitors and to build credibility and loyalty from its expanded customer base.
 
 **< Stakeholder Questions >**
 * What were the overall trends in sales during this time?
@@ -11,6 +11,12 @@ This project aims to:
 * How was the new loyalty program performing? Should we keep using it?
 
 The key sales metrics used in this analysis were gross sales, average order value (AOV), and order count. 
+
+<details>
+<summary>Table of Content: Click to expand</summary> 
+<img src="ERD.png" alt="Image" width="60%">
+</details>
+
 
 ## About Data and Tools
 
@@ -72,7 +78,7 @@ The key sales metrics used in this analysis were gross sales, average order valu
 
    [maybe add a conditional formatting table?]
 
-#### **Loyalty Program:** Customers who created accounts and met minimum purchase frequency 
+### **Loyalty Program:** Customers who created accounts and met minimum purchase frequency 
 <img align="middle" width="2398" height="1198" alt="loyalty program" src="https://github.com/user-attachments/assets/72274986-f155-4bdc-af95-cb66c6ece622" />
 
 * Our loyalty program was introduced in 2019 for **customers who created accounts and met minimum purhcase frequency**.
@@ -83,7 +89,7 @@ The key sales metrics used in this analysis were gross sales, average order valu
    * Loyalty members might simply have no other products to buy from our product variety of 8 different products.
 * We should **continue the loyalty program** for further observation and strategic refinement rather than discontinuing it prematurely.
 
-#### Customer Behavior Analysis
+### Customer Behavior Analysis
 
 * Top 5 Customer Behavior in terms of spend (untapped potential): each of them all purchased 3-4 laptops within 4 years. there might be a possibility that they were  small businesses. Investigate further to determine and develop B2B strategies.
 * Top 5 Customer Behavior in terms of order count
