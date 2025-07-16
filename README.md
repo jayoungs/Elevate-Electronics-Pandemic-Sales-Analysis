@@ -35,7 +35,7 @@ The key sales metrics used in this analysis were gross sales, average order valu
 ### **Overall Sales Trends:**
 <img src="https://github.com/user-attachments/assets/fb0665ce-3252-491d-994a-70f18e7f5a1c" alt="2020 Gross Sales Surged and Subsequently Declined to Pre-Pandemic Level. Gross Sales Growth was Persistenty Volatile Every Year, Not Limited to 2020">
 
-* **2020 surge in all sales metrics - gross sales, order count, and AOV**: especially the highest growth in gross sales and order count happened in March when the pandemic hit, and people started buying electronics to set up their home offices or deal with the lockdown.
+* **2020 surge in all sales metrics - gross sales, order count, and AOV**: especially the highest growth in gross sales and order count happened in March when the pandemic hit and people started buying electronics to set up their home offices or deal with the lockdown.
 * **Post-2020 sales decline**: 
     * In 2021, gross sales and AOV started declining, but order count momentum continued. Our customers placed more orders but for less expensive items compared to 2020.
     * In 2022, all metrics trended downwards to **pre-pandemic level or potentially worse** across all products and regions.
@@ -71,31 +71,27 @@ The key sales metrics used in this analysis were gross sales, average order valu
 
    [maybe add a conditional formatting table?]
 
-#### **Loyalty Program Performance:**
+#### **Loyalty Program:** Customers who created accounts and met minimum purchase frequency 
 <img align="middle" width="2398" height="1198" alt="loyalty program" src="https://github.com/user-attachments/assets/72274986-f155-4bdc-af95-cb66c6ece622" />
 
-* Mixed performance: While initially lagging behind non-loyalty members in gross sales and order count during 2019-2020, the program exhibited remarkable growth in 2021, with loyalty members significantly outperforming non-loyalty members in key metrics. However, recent monthly data from late 2022 indicates a reversal of this trend, with loyalty members experiencing a decline in performance across all metrics, aligning with an overall downward sales trend for the business in 2022. T
-* Yearly performance: Since its foundational years (2019-2020), gross sales and order count from loyalty members had been lower than those from non-loyalty members during the first two years, 2019-2020, and then loyalty members were catching up by growing five times more than non-loyalty members in 2020 and finally outperforming in both revenue and order count in 2021 and 2022 and AOV in 2022.
-* Potential for Impact:
-* voerall sales downturn:
-* conclusion:
-* Monthly performance: however, when zooming into monthly trends, we see that in the last few months in 2022 the performance between the two groups reversed with loyalty members underperforming again in all metrics.
-* Considering the above performance contrast betweeen yearly and recent months performance and the fact that our sales metrics trended downwards in 2022, it's hard to make a conclusion on solid, promising loyalty program performance but for now, we can continue the program for further data collection and assess it again at a later point.
-* 
-* Potential 
-
-
-
-
+* Our loyalty program was introduced in 2019 for **customers who created accounts and met minimum purhcase frequency**.
+* **Mixed performance**: after the first two years, loyalty members finally outperformed non-loyalty members in all the sales metrics for at least 17 months throughout 2021 and 2022. However, this trend reversed again in later months in 2022 with loyalty members experiencing a decline in performance across all metrics.
+* **Potential for impact**: The five-fold and twelve-fold growth in gross sales and order count repectively indicate that the loyalty program, when effective, can significantly contribute to sales.
+* **Unclear cause of the recent decline in loyalty member performance**:
+   * The simultaneous decline in loyalty member performance and overall sales in Q4 2022 makes it challenging to determine if the loyalty program itself is losing appeal or if its members are simply reflecting the broader market slowdown affecting all customer segments.
+   * Loyalty members might simply have no other products to buy from our product variety of 8 different products.
+* We should **continue the loyalty program** for further observation and strategic refinement rather than discontinuing it prematurely.
 
 #### Customer Behavior Analysis
 
-* Top 5 Customer Behavior (untapped potential): each of them all purchased 3-4 laptops within 4 years. there might be a possibility that they were  small businesses. Investigate further to determine and develop B2B strategies.
+* Top 5 Customer Behavior in terms of spend (untapped potential): each of them all purchased 3-4 laptops within 4 years. there might be a possibility that they were  small businesses. Investigate further to determine and develop B2B strategies.
+* Top 5 Customer Behavior in terms of order count
 * how many registered customers? how many customers, registered or not, purchased? 
 * Inactive customers and low customer engagement confirmed:
     * 83% of customers who created accounts purchased products within three months, including 13% of those who did in less than one month.
     * 269 registered customers with no purchase history yet.
-* purchase frequency: 
+* purchase frequency:
+* how many prodcuts did they buy?
 
 ## Tableau Interactive Dashboard
 
