@@ -9,20 +9,28 @@ assess our competibility/position in the market, find a niche in the market to c
 * How was the new loyalty program performing? Should we keep using it?
 * What were our refund rates for Apple Products?
 
-The key metrics used in this analysis were gross sales, average order value (AOV), and order count. 
+The key sales metrics used in this analysis were gross sales, average order value (AOV), and order count. 
 
 ## About Data and Tools
 
 * The database structure, as seen below, consists of four tables: `orders`, `customers`, `geo_lookup`, and `order_status`. The main table for this analysis was consolidated from these four tables with a total of 108,127 records. 
 
 <details>
-<summary>Click to expand</summary> 
+<summary>ERD: Click to expand</summary> 
 <img src="ERD.png" alt="Image" width="60%">
 </details>
    
 * Excel and SQL(BigQuery) were used for analysis and Tableau for visualization.
 
 ## Executive Summary
+* overall sales: to pre-pandemic level or potentially worse. across all regions and products.
+* seasonality:
+* product:
+* region:
+* loyalty:
+* deeper insight son underperformance on q4 2022:
+  
+## Summary Insights
 
 ### **Overall Sales Trends:**
 <img src="https://github.com/user-attachments/assets/fb0665ce-3252-491d-994a-70f18e7f5a1c" alt="2020 Gross Sales Surged and Subsequently Declined to Pre-Pandemic Level. Gross Sales Growth was Persistenty Volatile Every Year, Not Limited to 2020">
@@ -30,7 +38,7 @@ The key metrics used in this analysis were gross sales, average order value (AOV
 * **2020 surge in all sales metrics - gross sales, order count, and AOV**: especially the highest growth in gross sales and order count happened in March when the pandemic hit, and people started buying electronics to set up their home offices or deal with the lockdown.
 * **Post-2020 sales decline**: 
     * In 2021, gross sales and AOV started declining, but order count momentum continued. Our customers placed more orders but for less expensive items compared to 2020.
-    * In 2022, all metrics trended downwards to pre-pandemic level or potentially worse across all products and regions.
+    * In 2022, all metrics trended downwards to **pre-pandemic level or potentially worse** across all products and regions.
 * **Alarming Q4 2022 underperformance** compared to 2019 gross sales average: October 2022 marked the lowest growth rate of -55.2%, and the seasonal sales increase during the holiday season was not sufficient to bounce back from this dip to reach at least the 2019 average level. Further analysis on Q4 2022 underperformance will be presented later here.
 * **Persistent month-over-month gross sales growth rate volatility and its possible link to seasonality**: both revenue and order count showed a dip in February and October and a surge in September and during November and December. This surge could be related to the school and holiday seasons.
 <img align="middle" width="800" length="800" alt="Image" src="https://github.com/user-attachments/assets/688939d6-d379-46f1-a6c1-8cc086aaa467" alt="Seasonality in Gross Sales: Decrease in Feb. and Oct. vs. Increase in Sep., Nov., and Dec.">
@@ -64,12 +72,20 @@ The key metrics used in this analysis were gross sales, average order value (AOV
    [maybe add a conditional formatting table?]
 
 #### **Loyalty Program Performance:**
-<img align="middle" width="962" height="713" alt="Screenshot 2025-07-15 at 4 13 01 PM" src="https://github.com/user-attachments/assets/e7c6d2e7-6389-48e0-a889-a08a0bce1ccb" />
+<img align="middle" width="2398" height="1198" alt="loyalty program" src="https://github.com/user-attachments/assets/72274986-f155-4bdc-af95-cb66c6ece622" />
 
-
-* Yearly performance: Since its loyalty program introduction in 2019, gross sales and order count from loyalty members had been lower than those from non-loyalty members during the first two years, 2019-2020, and then loyalty members were catching up by growing five times more than non-loyalty members in 2020 and finally outperforming in both revenue and order count in 2021 and 2022 and AOV in 2022.
+* Mixed performance: While initially lagging behind non-loyalty members in gross sales and order count during 2019-2020, the program exhibited remarkable growth in 2021, with loyalty members significantly outperforming non-loyalty members in key metrics. However, recent monthly data from late 2022 indicates a reversal of this trend, with loyalty members experiencing a decline in performance across all metrics, aligning with an overall downward sales trend for the business in 2022. T
+* Yearly performance: Since its foundational years (2019-2020), gross sales and order count from loyalty members had been lower than those from non-loyalty members during the first two years, 2019-2020, and then loyalty members were catching up by growing five times more than non-loyalty members in 2020 and finally outperforming in both revenue and order count in 2021 and 2022 and AOV in 2022.
+* Potential for Impact:
+* voerall sales downturn:
+* conclusion:
 * Monthly performance: however, when zooming into monthly trends, we see that in the last few months in 2022 the performance between the two groups reversed with loyalty members underperforming again in all metrics.
 * Considering the above performance contrast betweeen yearly and recent months performance and the fact that our sales metrics trended downwards in 2022, it's hard to make a conclusion on solid, promising loyalty program performance but for now, we can continue the program for further data collection and assess it again at a later point.
+* 
+* Potential 
+
+
+
 
 
 #### Customer Behavior Analysis
