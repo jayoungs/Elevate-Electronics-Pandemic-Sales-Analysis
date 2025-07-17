@@ -120,7 +120,7 @@ The key sales metrics used in this analysis were gross sales, average order valu
   |4-6 months|4,111|5%|
   |0-3 months|2,231|3%|
 * **Declining repeat purchase rate** over the years: 20% (2019) > 19% (2020) > 18% (2021) > 15% (2022).
-* **Single-item purchase**: 94.6% of our customers only purchased one unique product and 5.2% two unique products.
+* **Single-item purchase behavior**: 94.6% of our customers only purchased one unique product and 5.2% two unique products.
 * Conclusion: given their long purchase hiatus, declining repeat purchase, and single-item purchase behavior, our existing customers seemed disengaged and inactive.
 
     <details>
