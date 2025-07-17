@@ -1,5 +1,5 @@
 <img align="left" src="https://github.com/user-attachments/assets/4dc8bae9-5640-4614-bc6a-92272de9a069" alt="Company Logo" width="15%" length="15%"> 
-Founded in 2018, Elevate Electronics is an e-commerce company that sells popular electronic products and accessories at a competitive price and has since rapidly expanded to a global customer base from 192 countries.  
+Founded in 2018, Elevate Electronics is an e-commerce company that curates and sells selective electronic products and accessories at a competitive price and has since rapidly expanded to a global customer base from 192 countries.  
 This project aims to:  
 
    * Understand Elevate Electronics' performance during the period from 2019 to 2022, around the pandemic, and
@@ -61,9 +61,9 @@ The key sales metrics used in this analysis were gross sales, average order valu
    * **Bose Soundsport Headphones**, ever since it was brought into the product line in 2020, had had the highest negative growth rates in sales, ending up with only one order in 2022. 
    * Surprisingly, **Apple iPhone** had underperformed despite its general popularity and higher price range, only accounting for less than 1% in both gross sales and order count. The **lack of the product variation** might be the possible reason behind this. We sell only one model with one color and storage capacity option as opposed to 27in 4K Gaming Monitor and Apple Airpods Headphone with at least 14 options.
 
-   | ***Apple iPhone*** | Bose Soundsport Headphones | Macbook Air Laptop | ThinkPad Laptop | Samsung Webcam | Samsung Charging Cable Pack | 27in 4K Gaming Monitor | Apple Airpods Headphones |
+   | <ins>Apple iPhone</ins> | Bose Soundsport Headphones | Macbook Air Laptop | Lenovo ThinkPad Laptop | Samsung Webcam | Samsung Charging Cable Pack | 27in 4K Gaming Monitor | Apple Airpods Headphones |
    |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-   |***1***|2|5|5|7|8|14|16|
+   |<ins>1</ins>|2|5|5|7|8|14|16|
 
 * **Product performance in Q4 2022** compared to the previous Q4: gross sales declined across all the products by a range of -51% (ThinkPad Laptop) and -83% (Macbook Air Laptop).
   [maybe add a conditional formatting table?]
@@ -110,58 +110,25 @@ The key sales metrics used in this analysis were gross sales, average order valu
 > platform is crucial. 
 
 #### Hypothesis 1. Were existing customers no longer active over time?
-* Long purchase hiatus between last purchase and January 1, 2023: 79% of customers hadn't purchased anything since at least 24 months ago.
-      (table?)
-* Declining repeat purchase rate over the years: 20% (2019) > 19% (2020) > 18% (2021) > 15% (2022).
-* Low variety-seeking customer behavior: 95% of our customers only purchased one unique product and 5% two unique products.
+> Here, we define exiting customers as those whoever placed at least one order from 2019 to 2022, guests or members who created accounts.
+* **Long hiatus** between the last purchase date and January 1, 2023: 79% of customers hadn't made another purchase since their last order from at least 13 months ago.
+  |`Hiatus Period`|`Number of Customers`|`Percentage`|
+  |---:|---:|---:|
+  | <ins>"24+ months</ins> |39,600| <ins>45%</ins> |
+  | <ins>13-24 months</ins> |29,500|<ins>34%<ins> |
+  |7-12 months|12,186|14%|
+  |4-6 months|4,111|5%|
+  |0-3 months|2,231|3%|
+* **Declining repeat purchase rate** over the years: 20% (2019) > 19% (2020) > 18% (2021) > 15% (2022).
+* **Single-item purchase**: 94.6% of our customers only purchased one unique product and 5.2% two unique products.
+* Conclusion: given their long purchase hiatus, declining repeat purchase, and single-item purchase behavior, our existing customers seemed disengaged and inactive.
 
     <details>
-    <summary><sub>Click to expand</sub></summary> 
+    <summary><sub>SQL queries: Click to expand</sub></summary> 
     
     ```sql
-    -- calculate the distribution of how long it took for customers who created accounts to place their first order
-    WITH earliest_purchase AS (
-      SELECT DISTINCT customers.id,
-        customers.created_on,
-        MIN(orders.purchase_ts) AS earliest_purchase_date
-      FROM core.customers 
-      LEFT JOIN core.orders 
-        ON customers.id = orders.customer_id
-      WHERE customers.created_on <= orders.purchase_ts AND EXTRACT(YEAR FROM customers.created_on) BETWEEN 2019 AND 2022
-      GROUP BY 1, 2), -- 61664
-    cal_month_diff AS (
-      SELECT id,
-        DATE_DIFF(earliest_purchase_date, created_on, MONTH) AS month_diff
-      FROM earliest_purchase),
-    recategorized AS (
-        SELECT id,
-          (CASE
-            WHEN month_diff = 0 THEN "1) less than 1 month"
-            WHEN month_diff BETWEEN 1 AND 3 THEN "2) 1 to 3 months"
-            WHEN month_diff BETWEEN 4 AND 6 THEN "3) 4 to 6 months"
-            WHEN month_diff BETWEEN 6 AND 12 THEN  "4) 6 to 12 months"
-            ELSE "5) 12+ months" 
-            END) AS month_to_purchase,
-          COUNT(id) OVER () AS total_num_customers
-        FROM cal_month_diff)
-      
-      SELECT month_to_purchase,
-        total_num_customers,
-        COUNT(month_to_purchase) AS num_customers,
-        ROUND(100.00 * COUNT(month_to_purchase) / total_num_customers, 2) AS percentage
-      FROM recategorized
-      GROUP BY 1, 2
-      ORDER BY 1; 
-
-    -- calculate the number of inactive customers who created accounts but hadn't yet purchased anything.
-    SELECT COUNT(DISTINCT customers.id) AS customer_no_purchase
-    FROM core.customers 
-    WHERE NOT EXISTS (
-      SELECT orders.customer_id
-      FROM core.orders 
-      WHERE customers.id = orders.customer_id); -- 269
-
-    -- calculate purchase hiatus
+    
+  -- calculate purchase hiatus
     WITH calculate_inactivity AS (
       SELECT customer_id,
         MAX(purchase_ts) AS latest_purchase,
@@ -170,10 +137,10 @@ The key sales metrics used in this analysis were gross sales, average order valu
       GROUP BY 1),
     aggregate_customer_num AS (
       SELECT (CASE 
-        WHEN inactive_period <=3 THEN '3 months'
-        WHEN inactive_period BETWEEN 4 AND 6 THEN '6 months'
-        WHEN inactive_period BETWEEN 7 AND 12 THEN '12 months'
-        WHEN inactive_period BETWEEN 13 AND 24 THEN '24 months'
+        WHEN inactive_period <=3 THEN '0-3 months'
+        WHEN inactive_period BETWEEN 4 AND 6 THEN '4-6 months'
+        WHEN inactive_period BETWEEN 7 AND 12 THEN '7-12 months'
+        WHEN inactive_period BETWEEN 13 AND 24 THEN '13-24 months'
         ELSE '24+ months'
         END) AS inactive_period_category,
         COUNT(customer_id) AS num_customers
@@ -189,35 +156,30 @@ The key sales metrics used in this analysis were gross sales, average order valu
     ORDER BY 1;
 
     -- calculate repeat purchase rate per year
-    WITH customers_per_year AS (
-      SELECT 
-        EXTRACT(YEAR FROM purchase_ts) AS year,
-        COUNT(DISTINCT customer_id) AS total_num_customers
-      FROM core.orders
-      GROUP BY 1),
-    repeat_purchase_customer AS (
-      SELECT EXTRACT(YEAR FROM purchase_ts) AS year,
-        customer_id,
-        COUNT(DISTINCT id) AS order_count
-      FROM core.orders
-      GROUP BY 1, 2
-      HAVING order_count >= 2
-    ),
-    joined_table AS (
-      SELECT repeat_purchase_customer.year,
-        total_num_customers,
-        COUNT(DISTINCT customer_id) AS num_customer_repeat_purchase
-      FROM repeat_purchase_customer
-      LEFT JOIN customers_per_year
-        ON repeat_purchase_customer.year = customers_per_year.year
-      GROUP BY 1, 2
-      ORDER BY 1)
+  WITH customers_per_year AS (
+    SELECT 
+      EXTRACT(YEAR FROM purchase_ts) AS year,
+      COUNT(DISTINCT customer_id) AS total_num_customers
+    FROM core.orders
+    GROUP BY 1),
+  repeat_purchase_customer AS (
+    SELECT EXTRACT(YEAR FROM purchase_ts) AS year,
+      customer_id,
+      COUNT(DISTINCT id) AS order_count
+    FROM core.orders
+    GROUP BY 1, 2
+    HAVING order_count >= 2)
+  
+  SELECT repeat_purchase_customer.year,
+    total_num_customers,
+    COUNT(DISTINCT customer_id) AS num_customer_repeat_purchase,
+    ROUND(100.00 * COUNT(DISTINCT customer_id) / total_num_customers, 2) AS percentage
+  FROM repeat_purchase_customer
+  LEFT JOIN customers_per_year
+    ON repeat_purchase_customer.year = customers_per_year.year
+  GROUP BY 1, 2
+  ORDER BY 1;
     
-    SELECT *,
-      ROUND(100.00 * num_customer_repeat_purchase / total_num_customers, 2) AS percentage
-    FROM joined_table
-    ORDER BY year;
-
     -- the number of unique products customers purchased
     WITH cleaned_table AS (
       SELECT customer_id, 
@@ -247,7 +209,7 @@ The key sales metrics used in this analysis were gross sales, average order valu
 * Customers from the most successful channel, direct marketing, showed the similar pattern with a plummet in its effect from March 2022 on.
   
     <details>
-    <summary><sub>Click to expand</sub></summary> 
+    <summary><sub>SQL queries: Click to expand</sub></summary> 
     
     ```sql
 
