@@ -1,7 +1,6 @@
 <img align="left" src="https://github.com/user-attachments/assets/4dc8bae9-5640-4614-bc6a-92272de9a069" alt="Company Logo" width="15%" length="15%"> 
-Founded in 2018, Elevate Electronics is an e-commerce company that curates and sells selective electronic products and accessories at a competitive price and has since rapidly expanded to a global customer base from 192 countries.  
+Founded in 2018, Elevate Electronics is an e-commerce company that curates and sells selective electronic products and accessories at a competitive price and has since rapidly expanded to a global customer base from 192 countries.    
 This project aims to:  
-
    * Understand Elevate Electronics' performance during the period from 2019 to 2022, around the pandemic, and
    * Deliver insights on improvements across the company to differentiate itself in the highly competitive market and build loyalty among its growing customer base.
 
@@ -61,9 +60,9 @@ The key sales metrics used in this analysis were gross sales, average order valu
    * **Bose Soundsport Headphones**, ever since it was brought into the product line in 2020, had had the highest negative growth rates in sales, ending up with only one order in 2022. 
    * Surprisingly, **Apple iPhone** had underperformed despite its general popularity and higher price range, only accounting for less than 1% in both gross sales and order count. The **lack of the product variation** might be the possible reason behind this. We sell only one model with one color and storage capacity option as opposed to 27in 4K Gaming Monitor and Apple Airpods Headphone with at least 14 options.
 
-   | <ins>Apple iPhone</ins> | Bose Soundsport Headphones | Macbook Air Laptop | Lenovo ThinkPad Laptop | Samsung Webcam | Samsung Charging Cable Pack | 27in 4K Gaming Monitor | Apple Airpods Headphones |
-   |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-   |<ins>1</ins>|2|5|5|7|8|14|16|
+     | <ins><sub>Apple iPhone</sub></ins> | <sub>Bose Soundsport Headphones</sub> | <sub>Macbook Air Laptop</sub> | <sub>Lenovo ThinkPad Laptop</sub> | <sub>Samsung Webcam</sub> | <sub>Samsung Charging Cable Pack</sub> | <sub>27in 4K Gaming Monitor</sub> | <sub>Apple Airpods Headphones</sub> |
+     |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+     |<ins><sub>1</sub></ins>|<sub>2</sub>|<sub>5</sub>|<sub>5</sub>|<sub>7</sub>|<sub>8</sub>|<sub>14</sub>|<sub>16</sub>|
 
 * **Product performance in Q4 2022** compared to the previous Q4: gross sales declined across all the products by a range of -51% (ThinkPad Laptop) and -83% (Macbook Air Laptop).
   [maybe add a conditional formatting table?]
@@ -109,22 +108,21 @@ The key sales metrics used in this analysis were gross sales, average order valu
 > whether **existing customers** stay engaged - by revisiting to **buy different products** - and attracting **new customers** to our
 > platform is crucial. 
 
-#### Hypothesis 1. Were existing customers no longer active over time?
+#### Hypothesis 1. Were existing customers no longer active over time? - Yes
 > Here, we define exiting customers as those whoever placed at least one order from 2019 to 2022, guests or members who created accounts.
 * **Long hiatus** between the last purchase date and January 1, 2023: 79% of customers hadn't made another purchase since their last order from at least 13 months ago.
-  |`Hiatus Period`|`Number of Customers`|`Percentage`|
+  |`Hiatus Period`|<sub>Number of Customers</sub>|<sub>Percentage</sub>|
   |---:|---:|---:|
-  | <ins>"24+ months</ins> |39,600| <ins>45%</ins> |
-  | <ins>13-24 months</ins> |29,500|<ins>34%<ins> |
-  |7-12 months|12,186|14%|
-  |4-6 months|4,111|5%|
-  |0-3 months|2,231|3%|
+  | <ins><sub>24+ months</sub></ins> |<sub>39,600</sub>| <ins><sub>45%</sub></ins> |
+  | <ins><sub>13-24 months</sub></ins> |<sub>29,500</sub>|<ins><sub>34%</sub><ins> |
+  |<sub>7-12 months</sub>|<sub>12,186</sub>|<sub>14%</sub>|
+  |<sub>4-6 months</sub>|<sub>4,111</sub>|<sub>5%</sub>|
+  |<sub>0-3 months</sub>|<sub>2,231</sub>|<sub>3%</sub>|
 * **Declining repeat purchase rate** over the years: 20% (2019) > 19% (2020) > 18% (2021) > 15% (2022).
 * **Single-item purchase behavior**: 94.6% of our customers only purchased one unique product and 5.2% two unique products.
-* Conclusion: given their long purchase hiatus, declining repeat purchase, and single-item purchase behavior, our existing customers seemed disengaged and inactive.
 
     <details>
-    <summary><sub>SQL queries: Click to expand</sub></summary> 
+    <summary>SQL queries: Click to expand</summary> 
     
     ```sql
     
@@ -203,13 +201,13 @@ The key sales metrics used in this analysis were gross sales, average order valu
     
     ```
 
-#### Hypothesis 2. Were fewer newly registered customers coming in over time?
+#### Hypothesis 2. Were fewer newly registered customers coming in over time? - Yes
 ==(graphs showing both?)==
 * Declining number of registered customers in an accelerated pace during 2021 and 2022: hit low at 36 in December 2022.
 * Customers from the most successful channel, direct marketing, showed the similar pattern with a plummet in its effect from March 2022 on.
   
     <details>
-    <summary><sub>SQL queries: Click to expand</sub></summary> 
+    <summary>SQL queries: Click to expand</summary> 
     
     ```sql
 
@@ -242,7 +240,8 @@ The key sales metrics used in this analysis were gross sales, average order valu
 
 ## Recommendations: how to position ourselves unique in this market.
 #### Product Team
-* Introduce new products in lower price range (under $100 and $100 - $500) that customers could purchase with less hesitation and financial risk for themsevles and gifts like Apple Airpods. <- shorter lifespan or easy to lose item
+* Improve product variety:
+  * Introduce new products in lower price range (under $100 and $100 - $500) that customers could purchase with less hesitation and financial risk for themsevles and gifts like Apple Airpods. <- shorter lifespan or easy to lose item
 * Curate products pairing with our top-selling gaming moniotors and Macbook Air laptops, such as gaming keyboards/headsets or laptop case, so that customers who bought/are buying the monitors and laptops could be tempted to buy their accessories. (cross-selling)
 * Remove Bose Soundsport Headphones from our product line because of its underperformance in every metric across the years. (or resarch reviews among our customers or in general to assess the reason behind it. also ihpone.
 * Bring more variety into Apple iPhone or more recent iPhone model. We have only one model/color/storage capacity which might be a reason for its underperformance compared to the other Apple products.
