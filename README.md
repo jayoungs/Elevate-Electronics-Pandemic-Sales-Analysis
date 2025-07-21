@@ -104,14 +104,13 @@ The key sales metrics used in this analysis were gross sales, average order valu
 ## Deep Dive Insights on Underperformance in Q4 2022 
 
 > **Factors to consider**:  
-> Electronic products, such as our top products - gaming monitors and latops -, have **a long lifespan** of at least 3-5 years. Hence,to boost sales,
-> whether **existing customers** stay engaged - by revisiting to **buy different products** - and attracting **new customers** to our
-> platform is crucial. 
+> Electronic products, such as our top products - gaming monitors and latops -, have **a long lifespan** of at least 3-5 years. Hence, to boost sales,
+> whether **existing customers** stay engaged - by revisiting to **buy different products** - and attracting **new customers** is crucial. 
 
 #### Hypothesis 1. Were existing customers no longer active over time? - Yes
 > Here, we define exiting customers as those whoever placed at least one order from 2019 to 2022, guests or members who created accounts.
 * **Long hiatus** between the last purchase date and January 1, 2023: 79% of customers hadn't made another purchase since their last order from at least 13 months ago.
-  |`Hiatus Period`|<sub>Number of Customers</sub>|<sub>Percentage</sub>|
+  |<sub>**Hiatus Period**</sub>|<sub>**Number of Customers**</sub>|<sub>**Percentage**</sub>|
   |---:|---:|---:|
   | <ins><sub>24+ months</sub></ins> |<sub>39,600</sub>| <ins><sub>45%</sub></ins> |
   | <ins><sub>13-24 months</sub></ins> |<sub>29,500</sub>|<ins><sub>34%</sub><ins> |
@@ -241,11 +240,17 @@ The key sales metrics used in this analysis were gross sales, average order valu
 ## Recommendations: how to position ourselves unique in this market.
 #### Product Team
 * Improve product variety:
+  * To prepare upgraded replacements For our top products such as 27in 4K Gaming Monitors and Macbook Air Laptops, conduct research on what gaming monitors and Apple laptops are currently popular in the market and will create the highest profitality to us.
   * Introduce new products in lower price range (under $100 and $100 - $500) that customers could purchase with less hesitation and financial risk for themsevles and gifts like Apple Airpods. <- shorter lifespan or easy to lose item
+    |<sub>**AOV Range**</sub>|<sub>**Products**</sub>|
+    |:---|:---|
+    |<sub>Under $100</sub>|<sub>Samsung Charging Cable Pack ($20), Samsung Webcam ($50)</sub>|
+    |<sub>$100+</sub>|<sub>Bose Soundsport Headphones ($124), Apple Airpods Headphones ($160), 27in 4K Gaming Monitor ($421)</sub>|
+    |<sub>$500+</sub>|<sub>Apple iPhone ($741)</sub>|
+    |<sub>$1000+</sub>|<sub>Lenovo ThinkPad Laptop ($1,100), Macbook Air Laptop ($1,588)</sub>|
+* Improve iPhone variation: Bring more variety into Apple iPhone or more recent iPhone model. We have only one model/color/storage capacity which might be a reason for its underperformance compared to the other Apple products. 
 * Curate products pairing with our top-selling gaming moniotors and Macbook Air laptops, such as gaming keyboards/headsets or laptop case, so that customers who bought/are buying the monitors and laptops could be tempted to buy their accessories. (cross-selling)
 * Remove Bose Soundsport Headphones from our product line because of its underperformance in every metric across the years. (or resarch reviews among our customers or in general to assess the reason behind it. also ihpone.
-* Bring more variety into Apple iPhone or more recent iPhone model. We have only one model/color/storage capacity which might be a reason for its underperformance compared to the other Apple products.
-* display reviews
   
 #### Marketing Team
 * Improve seasonal promotions for the school and holiday season to take advantage of seasonal growth volatility.
