@@ -1,8 +1,10 @@
-<img align="left" src="https://github.com/user-attachments/assets/4dc8bae9-5640-4614-bc6a-92272de9a069" alt="Company Logo" width="15%" length="15%"> 
-Founded in 2018, Elevate Electronics is an e-commerce company that curates and sells selective electronic products and accessories at a competitive price and has since rapidly expanded to a global customer base from 192 countries.    
-This project aims to:  
-   * Understand Elevate Electronics' performance during the period from 2019 to 2022, around the pandemic, and
-   * Deliver insights on improvements across the company to differentiate itself in the highly competitive market and build loyalty among its growing customer base.
+<img align="left" src="https://github.com/user-attachments/assets/4dc8bae9-5640-4614-bc6a-92272de9a069" alt="Company Logo" width="35%" length="35%"> 
+Founded in 2018, Elevate Electronics is an e-commerce company that curates and sells selective electronic products and accessories at a competitive price and has since rapidly expanded to a global customer base from 192 countries.  
+  
+    
+This project aims to:
+* Understand Elevate Electronics' performance during the period from 2019 to 2022, around the pandemic, and
+* Deliver insights on improvements across the company to differentiate itself in the highly competitive market and build loyalty among its growing customer base.
 
 **< Stakeholder Questions >**
 * What were the overall trends in sales during this time?
