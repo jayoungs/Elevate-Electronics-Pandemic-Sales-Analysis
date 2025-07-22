@@ -104,7 +104,7 @@ The key sales metrics used in this analysis were gross sales, average order valu
 Electronic products, such as gaming monitors and latops have **a long lifespan** of at least 3-5 years. Hence, to boost sales consistently, keeping **existing customers** engaged to revisiting and buy different products and attracting **new customers** are crucial. 
 
 #### Hypothesis 1. Had existing customers been no longer active over time? - Yes
-> Here, we define exiting customers as those **whoever placed at least one order** from 2019 to 2022, regardless of whether they were guests or members who created accounts.
+> Here, we define exiting customers as those **whoever placed at least one order** from 2019 to 2022, either as guests or members.
 * **Long hiatus** between the last purchase date and January 1, 2023: 79% of customers hadn't made another purchase since at least 13 months ago.
   |**Hiatus Period**|**Number of Customers**|**Percentage**|
   |---:|---:|---:|
@@ -196,11 +196,11 @@ Electronic products, such as gaming monitors and latops have **a long lifespan**
     
     ```
 
-#### Hypothesis 2. Had we had fewer newly registered customers over time? - Yes
-> Here, we define new customers as those **who created accounts** from 2019 to 2022.
+#### Hypothesis 2. Had we had fewer leads over time? - Yes
+> Here, we define new leads as those **who created accounts** from 2019 to 2022 and customers as those who ever made a purchase either as a guest or a registered user.
 ==(graphs showing both?)==
-* The number of new customers had declined in an accelerated pace from 2021 to 2022, hitting low at 36 in December 2022.
-* Customers from our most successful channel, direct marketing, showed the similar pattern with a plummet in its effect from March 2022 on.
+* The number of new leads had declined in an accelerated pace from 2021 to 2022, hitting low at 36 in December 2022.
+* The number of new customers through our most successful channel, direct marketing, showed the similar pattern with a plummet from March 2022 on. However, we don't have data yet to determine 
   
     <details>
     <summary>SQL queries: Click to expand</summary> 
@@ -232,11 +232,12 @@ Electronic products, such as gaming monitors and latops have **a long lifespan**
     ORDER BY 1, 2;
     
     ```
-#### funnel? - purchased > members > loyalty members
+    -- proportion of purchase between registered or guest.
+#### funnel? - (visitoer) > who created accounts (lead, close to MQL) > purchased ((paying) customers > loyalty members
 
 ## Recommendations
 #### Product Team
-* Improve product variety:
+* Widen product variety:
   * Prepare **product upgrades** for our top-selling products, 27in 4K Gaming Monitors and Macbook Air Laptops, by conducting market research on what gaming monitors and Apple laptops are currently popular and could have the highest profitality.
   * Introduce new products 1) in **lower price range (under $500)** that customers could purchase with less hesitation and financial risk and/or 2) for **cross-selling**: e.g., gaming keyboards, gaming headsets, or (gaming) mouse.
     |<sub>**AOV Range**</sub>|<sub>**Products** (* Top 3 Products Underlined)</sub>|
@@ -245,18 +246,22 @@ Electronic products, such as gaming monitors and latops have **a long lifespan**
     |<sub>$100+</sub>|<sub>Bose Soundsport Headphones ($124), <ins>Apple Airpods Headphones ($160)</ins>, <ins>27in 4K Gaming Monitor ($421)</ins></sub>|
     |<sub>$500+</sub>|<sub>Apple iPhone ($741)</sub>|
     |<sub>$1000+</sub>|<sub>Lenovo ThinkPad Laptop ($1,100), <ins>Macbook Air Laptop ($1,588)</ins></sub>|
-* Improve iPhone variation: Bring more variations in terms of models, colors, and storage capacity. 
-* Remove Bose Soundsport Headphones.
+* Extend product variations for Apple iPhone in terms of models, colors, and storage capacity. 
+* Discontinue Bose Soundsport Headphones.
   
 #### Marketing Team
 * Refine seasonal marketing strategies for the back-to-school season and holidays.
 * Plan personalized promotions for product upgrade targeting customers who purchased gaming monitors and laptops in our first year.
-* Introduce a referral program to engage our customers in our new customer acquisition efforts.
-* promotion for inactive customesrs?
-  * Inactive customers and low customer engagement confirmed:
+* Launch a referral program to capitalize on our expanded customer base to acquire new customers.
+* Map our customer journey to further understand their experience, pain points, and motivations behind their decisions by
+  * Surveying customers after their purchase or people who didn’t buy, and/or
+  * Using customers' website/app behavior and marketing email behavior.
+* Further investigate on why our best marketing channel, direct marketing, failed to bring more new customers and invest more resources into it if necessary.
+* Develop tailored promotions for members with low engagement based on the fact that:
+  * Among customers who created accounts and then made a purchase later, only 13$ of them
       * 83% of customers who created accounts purchased products within three months, including 13% of those who did in less than one month.
       * 269 registered customers with no purchase history yet.   
-* Further investigate on why our best marketing channel, direct marketing, failed to bring more new customers and invest more resources into it if necessary.
+
 * * Conduct customer research targeted for top customers and loyalty members to further surface insights on improvements and opportunities.
 
 (* content creation to keep customers engaged: recommendation on how to maintain your appliance. create more vlaues.
