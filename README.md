@@ -1,4 +1,4 @@
-<img align="left" src="https://github.com/user-attachments/assets/4dc8bae9-5640-4614-bc6a-92272de9a069" alt="Company Logo" width="35%" length="35%"> 
+<img width="2014" height="568" alt="ElevateElectronicsLogo" src="https://github.com/user-attachments/assets/6bd1e6b1-3669-4b34-bff3-8d8e14e57aef" alt="Company Logo"> 
 Founded in 2018, Elevate Electronics is an e-commerce company that curates and sells selective electronic products at a competitive price and has since rapidly expanded to a global customer base from 192 countries.<br />  
 <br />
 This project aims to:<br />  
@@ -11,7 +11,6 @@ This project aims to:<br />
 * What were the overall trends in sales during this time?<br />
 * What were our monthly and yearly growth rates?<br />
 * How was the new loyalty program performing? Should we keep using it?<br />
-<br />
 
 The key sales metrics used in this analysis were gross sales, average order value (AOV), and order count.<br /> 
 
@@ -35,8 +34,8 @@ The key sales metrics used in this analysis were gross sales, average order valu
 * Excel and SQL(BigQuery) were used for analysis and Tableau for visualization.
 
 ## Executive Summary
-* Gross sales surged in 2020, the first year of the Covid-19 pandemic, with a peak at $1.3M and then declined gradually in 2021 and sharply in 2022 to the pre-pandeic level. AOV and order count also followed the similar trends, except for the fact that order count continued increasing in 2021. A granular examination of monthly trends reveals underperformance in Q4 2022 even compared to the pre-pandemic level.  
-* The month-over-month sales growth rate was volitle each year, not limited to the pandemic years, and seaonally, decreases in February and October and increases in September, November, and December were noticeable.
+* Gross sales surged in 2020, the first year of the Covid-19 pandemic, with a peak at $1.3M and then declined gradually in 2021 and sharply in 2022 to the pre-pandeic level. A granular examination of monthly trends reveals underperformance in Q4 2022 even compared to the pre-pandemic level.  
+* The month-over-month sales growth rate was volitle each year, not just limited to the pandemic years, and this could be related to seaonality: decreases in February and October vs. increases in September, November, and December.
 * The most popular products were 27in 4K Gaming Monitor, Apple Airpods Headphone, and Macbook Air Notebook. On the other hand, Bose Soundsport Headphone and Apple iPhone failed to meet sales expectations.
 * North America was the largest market in terms of both gross sales and order count while APAC's highest AOV and sales growth in 2020 suggests a strong underlying potential.
 * loyalty:
@@ -101,7 +100,7 @@ The key sales metrics used in this analysis were gross sales, average order valu
 ## Deep Dive Insights on Underperformance in Q4 2022 
 
 **Factor to consider**:  
-Electronic products, such as gaming monitors and latops have **a long lifespan** of at least 3-5 years. Hence, to boost sales consistently, keeping **existing customers** engaged to revisiting and buy different products and attracting **new customers** are crucial. 
+Electronic products, such as gaming monitors and latops have **a long lifespan** of at least 3-5 years. Hence, to boost sales consistently, keeping **existing customers** engaged to revisit and buy different products and acquiring **new customers** are crucial. 
 
 #### Hypothesis 1. Had existing customers been no longer active over time? - Yes
 > Here, we define exiting customers as those **whoever placed at least one order** from 2019 to 2022, either as guests or members.
@@ -117,7 +116,7 @@ Electronic products, such as gaming monitors and latops have **a long lifespan**
 * **Single-item purchase behavior**: 94.6% of our customers only purchased one unique product and 5.2% two unique products during this period.
 
     <details>
-    <summary>SQL queries: Click to expand</summary> 
+    <summary>SQL Queries: Click to expand</summary> 
     
     ```sql
     
@@ -195,16 +194,15 @@ Electronic products, such as gaming monitors and latops have **a long lifespan**
     ORDER BY 1 DESC;
     
     ```
+    </details>
 
-#### Hypothesis 2. Had we had fewer new registered users over time? - Yes
+#### Hypothesis 2. Had we had fewer new registered users over time? - Yes but Further Investigation Required
 > With the given data that does not contain orders made prior to 2019, it's not possible to determine new customers, registered or not, who made the first purchase for the period, 2019 - 2022. Given this limitation, this analysis simply focusd on newly **registered** users who created accounts 2019 - 2022 regardless of whether they made a purchase or not.
-
-==(graphs showing both?)==
-* The number of registrations had declined in an accelerated pace from 2021 to 2022, hitting low at 36 in December 2022.
-* The number of registrations through our most successful channel, direct marketing, mirrored the similar pattern above with a plummet from March 2022 on. However,it's unclear that this downfall of registrations in late 2022 was related to direct marketing performance or visitors not appealed to sign up. Further investigation on marketing performance and customer journey is needed.
+(chart)
+* Plummet in customer registrations through our most successful channel, direct marketing, in 2022. However, it's unclear that this downfall was related to direct marketing performance itself or visitors not appealed to sign up. Further investigation on marketing performance and customer journey is needed.
   
     <details>
-    <summary>SQL queries: Click to expand</summary> 
+    <summary>SQL Queries: Click to expand</summary> 
     
     ```sql
 
@@ -233,7 +231,7 @@ Electronic products, such as gaming monitors and latops have **a long lifespan**
     ORDER BY 1, 2;
     
     ```
-    -- proportion of purchase between registered or guest.
+    </details>
 
 ## Recommendations
 #### Product Team
@@ -258,24 +256,112 @@ Electronic products, such as gaming monitors and latops have **a long lifespan**
   * Using data on visitor & customer website/app behavior and marketing email behavior.
 * Further investigate on why our best marketing channel, direct marketing, failed to bring more new customers and invest more resources into it if necessary.
 * Develop tailored promotions for registered users with low engagement based on the fact that:
-  * Among customers who created accounts and then made a purchase later, only 13$ of them
-      * 83% of customers who created accounts purchased products within three months, including 13% of those who did in less than one month.
-      * 269 registered customers with no purchase history yet.   
+  * Only 13% of customers who created accounts took less than one month to make a purchase and 70% took one to three months.
+  * 269 registered users had't yet made any purchase. <br />
+  <br />
+  
+  <details>
+  <summary>SQL Queries: Click to expand</summary> 
+    
+  ```sql
 
-* * Conduct customer research targeted for top customers and loyalty members to further surface insights on improvements and opportunities.
+  -- Calculate time to purhcase from account creation, categorized in months
+  WITH earliest_purchase AS (
+  SELECT DISTINCT c.id,
+    c.created_on,
+    MIN(o.purchase_ts) AS earliest_purchase_date
+  FROM core.customers c
+  LEFT JOIN core.orders o
+    ON c.id = o.customer_id
+  WHERE c.created_on <= o.purchase_ts AND EXTRACT(YEAR FROM c.created_on) BETWEEN 2019 AND 2022
+  GROUP BY 1, 2), -- 61664
+  cal_month_diff AS (
+  SELECT id,
+    DATE_DIFF(earliest_purchase_date, created_on,MONTH) AS month_diff
+  FROM earliest_purchase),
+  recategorized AS (
+    SELECT id,
+      (CASE
+        WHEN month_diff = 0 THEN "Less Than 1 Month"
+        WHEN month_diff BETWEEN 1 AND 3 THEN "1 ~ 3 Months"
+        WHEN month_diff BETWEEN 4 AND 6 THEN "4 ~ 6 Months"
+        WHEN month_diff BETWEEN 6 AND 12 THEN  "6 ~ 12 Months"
+        ELSE "12+ Months" 
+        END) AS month_to_purchase,
+      COUNT(id) OVER () AS total_num_customers
+    FROM cal_month_diff),
+  customers_per_category AS (
+  SELECT month_to_purchase,
+    total_num_customers,
+    COUNT(month_to_purchase) AS num_customers
+  FROM recategorized
+  GROUP BY 1, 2
+  ORDER BY 1)
+  
+  SELECT month_to_purchase,
+    num_customers,
+    ROUND(100.00 * num_customers / total_num_customers, 2) AS percentage
+  FROM customers_per_category
+  ORDER BY 3 DESC;
 
-(* content creation to keep customers engaged: recommendation on how to maintain your appliance. create more vlaues.
-
+  -- Identify customers who created account but hadn't made any purchase yet
+  SELECT COUNT(DISTINCT customers.id) AS customer_no_purchase
+  FROM core.customers 
+  WHERE NOT EXISTS (
+    SELECT orders.customer_id
+    FROM core.orders 
+    WHERE customers.id = orders.customer_id);
+  
+  ```
+  </details>
 
 #### Sales Team
-* potential opportunity for business customers? who bought more than 3?) B2B? review our pricing strategies.
-* * Top 5 Customer Behavior in terms of spend (untapped potential): each of them all purchased 3-4 laptops within 4 years. there might be a possibility that they were  small businesses. Investigate further to determine and develop B2B strategies.
+* Conduct surveys or interviews for top customers in terms of total spend who had purhased multiple laptops. This might pose potential opportunities from small-size business customers
+
+   <details>
+   <summary>Top 3 Customers: Click to expand</summary> 
+    
+   |Customer ID|Purchase Date|Products|Total Spend|
+   |:---:|:---:|:---:|:---:|
+   |5d678d3d|2022-05-27, 2019-12-23, 2019-12-23, 2019-02-17|Macbook Air Laptop, Macbook Air Laptop, Macbook Air Laptop, Macbook Air Laptop|7,200|
+   |5af6c8a2|2022-06-16, 2019-06-27, 2019-01-24, 2019-01-24|ThinkPad Laptop, Macbook Air Laptop, Macbook Air Laptop, Macbook Air Laptop|6,256|
+   |b8a3621b|2020-12-24, 2020-12-24, 2020-12-24|Macbook Air Laptop, Macbook Air Laptop, Macbook Air Laptop|6,022|
+   
+   </details>
+  
+   <details>
+   <summary>SQL Queries: Click to expand</summary> 
+   
+    ```sql 
+     WITH clean_table AS (
+       SELECT customer_id,
+         (CASE
+           WHEN product_name LIKE "27%" THEN "27in 4K Gaming Monitor"
+           WHEN product_name LIKE "bose%" THEN INITCAP(product_name)
+           ELSE product_name
+           END) AS product_name_cleaned,
+           id,
+           purchase_ts,
+           usd_price
+       FROM core.orders)
+     
+     SELECT customer_id,
+       STRING_AGG(CAST(purchase_ts AS STRING), ', ') AS purchase_dates,
+       STRING_AGG(product_name_cleaned, ', ') AS unique_products,
+       COUNT(id) AS total_order_count,
+       ROUND(SUM(usd_price), 0) AS total_spend,
+     FROM clean_table
+     GROUP BY 1
+     ORDER BY total_spend DESC
+     LIMIT 5;
+   ```
+   </details>
 
 
 ## Caveats
-* The main matric used in this analysis was sales revenue, not profits. Further analysis based on profits is recommended.
-* * Check possible data integrity issues suggested in Caveats and improve data integrity.
-2023-2024 data, profit data rather than sales, data quality (refund data for 2022)
-  * customer level analysis
-
+* Profit is missing as a key sales metric in this analysis due to the limitation of data. Profit analysis should be followed.
+* If time and data were permitted, customer segmentation would have surfaced insights to help us understand different customer needs and preferences.
+* To follow up on underperformance in Q4 2022, we should analyze more recent data from 2023 on.
+* Improve data integrity and quality
+  
 ## Tableau Interactive Dashboard
