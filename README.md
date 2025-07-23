@@ -34,12 +34,12 @@ The key sales metrics used in this analysis were gross sales, average order valu
 * Excel and SQL(BigQuery) were used for analysis and Tableau for visualization.
 
 ## Executive Summary
-* Gross sales surged in 2020, the first year of the Covid-19 pandemic, with a peak at $1.3M and then declined gradually in 2021 and sharply in 2022 to the pre-pandeic level. A granular examination of monthly trends reveals underperformance in Q4 2022 even compared to the pre-pandemic level.  
-* The month-over-month sales growth rate was volitle each year, not just limited to the pandemic years, and this could be related to seaonality: decreases in February and October vs. increases in September, November, and December.
-* The most popular products were 27in 4K Gaming Monitor, Apple Airpods Headphone, and Macbook Air Notebook. On the other hand, Bose Soundsport Headphone and Apple iPhone failed to meet sales expectations.
-* North America was the largest market in terms of both gross sales and order count while APAC's highest AOV and sales growth in 2020 suggests a strong underlying potential.
-* loyalty:
-* deeper insight son underperformance on q4 2022:
+* **Overall Sales Trends and Growth**: Gross sales surged in 2020, the first year of the Covid-19 pandemic, with a peak at $1.3M and then declined gradually in 2021 and sharply in 2022 to the pre-pandeic level. A granular examination of monthly trends reveals underperformance in Q4 2022 even compared to the pre-pandemic level.  
+* **Volatility and Seasonality**: The month-over-month sales growth rate was volitle each year, not just limited to the pandemic years, and this could be related to seaonality: decreases in February and October vs. increases in September, November, and December.
+* **Products**: The most popular products were 27in 4K Gaming Monitor, Apple Airpods Headphone, and Macbook Air Notebook. On the other hand, Bose Soundsport Headphone and Apple iPhone failed to meet sales expectations.
+* **Region**: North America was the largest market in terms of both gross sales and order count while APAC's highest AOV and sales growth in 2020 suggests a strong underlying potential.
+* **Loyalty Program**: Since its launch in 2019, it showed mix performance trajectory, especially underperforming in the most recent months in 2022. However, its high growth rate in 2020 shows its potential for impact.
+** **Reason behind Underperformance on Q4 2022**: Our existing customers had been disengaged over time considering their long purchase hiatus, decreasing repeat purchase rate, and single-item purchase behavior. On top of that, the number of registrations plummeted throughout 2022.
   
 ## Summary Insights
 
@@ -87,15 +87,6 @@ The key sales metrics used in this analysis were gross sales, average order valu
    * Loyalty members might simply have no other products left to buy from our limited variety of 8 different products.
 * **Potential for impact**: The five-fold and twelve-fold growth in gross sales and order count respectively in 2020 indicate that the loyalty program, when effective, can significantly contribute to sales.
 * We should **continue the loyalty program** for further observation and strategic refinement rather than discontinuing it prematurely.
-
-### Customer Behavior Analysis
-
-
-* Top 5 Customer Behavior in terms of order count
-* how many registered customers? how many customers, registered or not, purchased? 
-
-* purchase frequency:
-* how many prodcuts did they buy?
 
 ## Deep Dive Insights on Underperformance in Q4 2022 
 
