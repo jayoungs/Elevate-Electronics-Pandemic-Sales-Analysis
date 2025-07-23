@@ -196,11 +196,12 @@ Electronic products, such as gaming monitors and latops have **a long lifespan**
     
     ```
 
-#### Hypothesis 2. Had we had fewer leads over time? - Yes
-> Here, we define new leads as those **who created accounts** from 2019 to 2022 and customers as those who ever made a purchase either as a guest or a registered user.
+#### Hypothesis 2. Had we had fewer new registered users over time? - Yes
+> With the given data that does not contain orders made prior to 2019, it's not possible to determine new customers, registered or not, who made the first purchase for the period, 2019 - 2022. Given this limitation, this analysis simply focusd on newly **registered** users who created accounts 2019 - 2022 regardless of whether they made a purchase or not.
+
 ==(graphs showing both?)==
-* The number of new leads had declined in an accelerated pace from 2021 to 2022, hitting low at 36 in December 2022.
-* The number of new customers through our most successful channel, direct marketing, showed the similar pattern with a plummet from March 2022 on. However, we don't have data yet to determine 
+* The number of registrations had declined in an accelerated pace from 2021 to 2022, hitting low at 36 in December 2022.
+* The number of registrations through our most successful channel, direct marketing, mirrored the similar pattern above with a plummet from March 2022 on. However,it's unclear that this downfall of registrations in late 2022 was related to direct marketing performance or visitors not appealed to sign up. Further investigation on marketing performance and customer journey is needed.
   
     <details>
     <summary>SQL queries: Click to expand</summary> 
@@ -257,7 +258,7 @@ Electronic products, such as gaming monitors and latops have **a long lifespan**
   * Surveying customers after their purchase or people who didn’t buy, and/or
   * Using customers' website/app behavior and marketing email behavior.
 * Further investigate on why our best marketing channel, direct marketing, failed to bring more new customers and invest more resources into it if necessary.
-* Develop tailored promotions for members with low engagement based on the fact that:
+* Develop tailored promotions for registered users with low engagement based on the fact that:
   * Among customers who created accounts and then made a purchase later, only 13$ of them
       * 83% of customers who created accounts purchased products within three months, including 13% of those who did in less than one month.
       * 269 registered customers with no purchase history yet.   
