@@ -234,7 +234,6 @@ Electronic products, such as gaming monitors and latops have **a long lifespan**
     
     ```
     -- proportion of purchase between registered or guest.
-#### funnel? - (visitoer) > who created accounts (lead, close to MQL) > purchased ((paying) customers > loyalty members
 
 ## Recommendations
 #### Product Team
@@ -256,7 +255,7 @@ Electronic products, such as gaming monitors and latops have **a long lifespan**
 * Launch a referral program to capitalize on our expanded customer base to acquire new customers.
 * Map our customer journey to further understand their experience, pain points, and motivations behind their decisions by
   * Surveying customers after their purchase or people who didn’t buy, and/or
-  * Using customers' website/app behavior and marketing email behavior.
+  * Using data on visitor & customer website/app behavior and marketing email behavior.
 * Further investigate on why our best marketing channel, direct marketing, failed to bring more new customers and invest more resources into it if necessary.
 * Develop tailored promotions for registered users with low engagement based on the fact that:
   * Among customers who created accounts and then made a purchase later, only 13$ of them
@@ -277,5 +276,6 @@ Electronic products, such as gaming monitors and latops have **a long lifespan**
 * The main matric used in this analysis was sales revenue, not profits. Further analysis based on profits is recommended.
 * * Check possible data integrity issues suggested in Caveats and improve data integrity.
 2023-2024 data, profit data rather than sales, data quality (refund data for 2022)
+  * customer level analysis
 
 ## Tableau Interactive Dashboard
