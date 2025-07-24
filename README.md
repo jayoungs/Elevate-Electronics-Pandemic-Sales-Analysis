@@ -93,16 +93,8 @@ The key sales metrics used in this analysis were gross sales, average order valu
 Electronic products, such as gaming monitors and laptops, have a **long lifespan** of at least 3-5 years. Hence, to boost sales constantly, 1) keeping **existing customers** engaged to revisit and buy different products and 2) acquiring **new customers** are crucial.
 
 #### Hypothesis 1. Had existing customers been disengaged over time? - Yes
-> Here, we define existing customers as those who **placed at least one order between 2019 and 2022, whether as guests or members**.
+Here, we define existing customers as those who **placed at least one order between 2019 and 2022, whether as guests or members**.
 * **Long hiatus** between the last purchase date and January 1, 2023: 79% of customers hadn't made another purchase since at least 13 months ago.
-  |**Hiatus Period**|**Number of Customers**|**Percentage**|
-  |---:|---:|---:|
-  |<ins>24+ months</ins>|39,600| <ins>45%</ins> |
-  |<ins>13-24 months</ins>|29,500|<ins>34%<ins> |
-  |7-12 months|12,186|14%|
-  |4-6 months|4,111|5%|
-  |0-3 months|2,231|3%|
-  
 * **Declining repeat purchase rate** over the years: 20% (2019) > 19% (2020) > 18% (2021) > 15% (2022).
 * **Single-item purchase behavior**: 94.6% of our customers purchased only one unique product, and 5.2% purchased two distinctive products.
   
@@ -188,9 +180,9 @@ Electronic products, such as gaming monitors and laptops, have a **long lifespa
     </details>
 
 #### Hypothesis 2. Had we had fewer newly registered users over time? - Yes, but Further Investigation Required
-> With the given data, which does not contain orders made before 2019, it's not possible to determine new customers, whether registered or not, who made their first purchase
-> during the period 2019-2022. Given this limitation, this analysis focused on **newly registered users who created accounts between 2019 and 2022, regardless of whether they made
-> a purchase or not.**
+
+> Due to data limitations, this analysis focused on **newly registered users who created accounts between 2019 and 2022, regardless of whether they made
+a purchase or not.**
 
 <img width="60%" height="60%" align="middle" src="https://github.com/user-attachments/assets/ef9044ad-4645-4718-b076-54c61c7d00a5" />
 
@@ -233,14 +225,6 @@ Electronic products, such as gaming monitors and laptops, have a **long lifespa
 * **Widen product variety**:
   * **Prepare upgraded products** for our top-selling products, the 27in 4K Gaming Monitors and MacBook Air Laptops, by conducting market research on the current popularity and profitability potential.
   * Introduce new products 1) in a **lower price range** (under $500) that customers could purchase with less hesitation and financial risk, and 2) for **cross-selling**: e.g., gaming keyboards, gaming headsets, or (gaming) mouse.
- 
-    |<sub>**AOV Range**</sub>|<sub>**Products** (* Top 3 Products Underlined)</sub>|
-    |:---|:---|
-    |<sub>Under $100</sub>|<sub>Samsung Charging Cable Pack ($20), Samsung Webcam ($50)</sub>|
-    |<sub>$100+</sub>|<sub>Bose Soundsport Headphones ($124), <ins>Apple Airpods Headphones ($160)</ins>, <ins>27in 4K Gaming Monitor ($421)</ins></sub>|
-    |<sub>$500+</sub>|<sub>Apple iPhone ($741)</sub>|
-    |<sub>$1000+</sub>|<sub>Lenovo ThinkPad Laptop ($1,100), <ins>Macbook Air Laptop ($1,588)</ins></sub>|
-
 * Extend product variations for Apple iPhone in terms of models, colors, and storage capacity.
 * Discontinue Bose Soundsport Headphones.
   
@@ -312,49 +296,6 @@ Electronic products, such as gaming monitors and laptops, have a **long lifespa
   
   ```
   </details>
-
-#### Sales Team
-* Conduct **surveys or interviews with top customers**, based on total spend, who had purchased multiple laptops. This suggests the potential presence of small business customers.
-
-   <details>
-   <summary>Top 3 Customers: Click to expand</summary> 
-    
-   |Customer ID|Purchase Date|Products|Total Spend|
-   |:---:|:---:|:---:|:---:|
-   |5d678d3d|2022-05-27, 2019-12-23, 2019-12-23, 2019-02-17|Macbook Air Laptop, Macbook Air Laptop, Macbook Air Laptop, Macbook Air Laptop|$7,200|
-   |5af6c8a2|2022-06-16, 2019-06-27, 2019-01-24, 2019-01-24|ThinkPad Laptop, Macbook Air Laptop, Macbook Air Laptop, Macbook Air Laptop|$6,256|
-   |b8a3621b|2020-12-24, 2020-12-24, 2020-12-24|Macbook Air Laptop, Macbook Air Laptop, Macbook Air Laptop|$6,022|
-   
-   </details>
-  
-   <details>
-   <summary>SQL Queries: Click to expand</summary> 
-   
-    ```sql 
-     WITH clean_table AS (
-       SELECT customer_id,
-         (CASE
-           WHEN product_name LIKE "27%" THEN "27in 4K Gaming Monitor"
-           WHEN product_name LIKE "bose%" THEN INITCAP(product_name)
-           ELSE product_name
-           END) AS product_name_cleaned,
-           id,
-           purchase_ts,
-           usd_price
-       FROM core.orders)
-     
-     SELECT customer_id,
-       STRING_AGG(CAST(purchase_ts AS STRING), ', ') AS purchase_dates,
-       STRING_AGG(product_name_cleaned, ', ') AS unique_products,
-       COUNT(id) AS total_order_count,
-       ROUND(SUM(usd_price), 0) AS total_spend,
-     FROM clean_table
-     GROUP BY 1
-     ORDER BY total_spend DESC
-     LIMIT 5;
-   ```
-   </details>
-
 
 ## Caveats (in progress)
 * Profit is missing as a key sales metric in this analysis due to the limitations of the data. Profit analysis should be followed.
