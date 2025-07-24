@@ -44,7 +44,7 @@ The key sales metrics used in this analysis were gross sales, average order valu
 ## Summary Insights
 
 ### **Overall Sales Trends:**
-<img src="https://github.com/user-attachments/assets/fb0665ce-3252-491d-994a-70f18e7f5a1c" alt="2020 Gross Sales Surged and Subsequently Declined to Pre-Pandemic Level. Gross Sales Growth was Persistenty Volatile Every Year, Not Limited to 2020">
+<img align="middle" src="https://github.com/user-attachments/assets/a8c131fe-892c-40f1-8238-16ecfaf675ca" alt="2020 Gross Sales Surged and Subsequently Declined to Pre-Pandemic Level. Gross Sales Growth was Persistenty Volatile Every Year, Not Limited to 2020">
 
 * **2020 surge in all sales metrics** - gross sales, order count, and AOV: especially the highest growth in gross sales and order count occurred in March, when the pandemic hit and people started buying electronics to set up their home offices or cope with the lockdown.
 * **Post-2020 sales decline**:
@@ -52,10 +52,10 @@ The key sales metrics used in this analysis were gross sales, average order valu
   * In 2022, all metrics trended downwards to the pre-pandemic level or potentially worse across all products and regions.
 * **Alarming Q4 2022 underperformance** compared to the 2019 gross sales average: October 2022 marked the lowest growth rate of -55.2%, and the sales increase during the following holiday season was insufficient to bounce back and reach at least the 2019 average level. Further analysis on Q4 2022 underperformance can be found [here](https://github.com/jayoungs/PicoTech_Electronics_Pandemic_Sales_Analyasis/edit/main/README.md#deep-dive-insights-on-underperformance-in-q4-2022).
 * **Persistent MoM gross sales growth rate volatility and its possible link to seasonality**: both gross sales and order count showed a dip in February and October, and a surge in September and during November and December. This surge appears to be related to the back-to-school season, Labor Day sales, and the holiday season.
-<img align="middle" width="800" length="800" alt="Image" src="https://github.com/user-attachments/assets/688939d6-d379-46f1-a6c1-8cc086aaa467" alt="Seasonality in Gross Sales: Decrease in Feb. and Oct. vs. Increase in Sep., Nov., and Dec.">
+<img align="middle" width="60%" height="50%" alt="Screenshot 2025-07-14 at 6 16 10 PM" src="https://github.com/user-attachments/assets/a6922a0e-6f02-46ef-b964-953601175794" />
  
 ### **Product Segmentation:**
-<img align="middle" width="1205" height="612" alt="Screenshot 2025-07-14 at 6 16 10 PM" src="https://github.com/user-attachments/assets/37721165-6198-4ec0-903e-7db8c4a4f422" />
+<img align="middle" width="1206" height="609" src="https://github.com/user-attachments/assets/844f390a-79aa-4921-ba86-60b63b5a6c3f" />
 
 * **Products that failed to achieve sales expectations**:
   * **Bose Soundsport Headphones**, since being introduced to the product line in 2020, had experienced the highest negative growth rates in both gross sales and order count over the following two years, ultimately resulting in only one order in 2022.
@@ -68,8 +68,7 @@ The key sales metrics used in this analysis were gross sales, average order valu
  * **Product performance in Q4 2022** compared to the previous Q4: gross sales declined across all the products by a range of -51% (Lenovo ThinkPad Laptop) and -83% (MacBook Air Laptop).
   
 ### **Regional Segmentation:** 
-<img align="middle" width="800" height="800" alt="Screenshot 2025-07-10 at 5 06 12 PM" src="https://github.com/user-attachments/assets/c9e45ddd-e59d-479c-95d6-d720e6c16721" />
-
+<img width="60%" height="60%" align="middle" src="https://github.com/user-attachments/assets/27e9c8a9-a093-4636-842c-fbbd388dcfa8" />
 
 * **Potential market opportunity in APAC**:
   * APAC Customers purchased more expensive products, compared to those in the other regions.
@@ -78,7 +77,8 @@ The key sales metrics used in this analysis were gross sales, average order valu
 * **Regional performance in Q4 2022** compared to the previous Q4: gross sales declined across all the regions by a range of -68% (NA) and -82% (APAC).
 
 ### **Loyalty Program:** 
-<img align="middle" width="2398" height="1198" alt="loyalty program" src="https://github.com/user-attachments/assets/72274986-f155-4bdc-af95-cb66c6ece622" />
+<img align="middle" width="2398" height="1198" alt="loyalty program" src="https://github.com/user-attachments/assets/a509aadd-fc83-44b8-89c3-932acb9bfd30" />
+ />
 
 * Our loyalty program, launched in 2019, is designed for **customers who have created accounts and met a minimum purchase frequency**.
 * **Mixed performance trajectory**: after the first two years, loyalty members finally outperformed non-loyalty members in all the sales metrics for at least 17 months throughout 2021 and 2022. However, this trend reversed again in the later months of 2022, with loyalty members experiencing a decline in performance across all metrics.
@@ -193,7 +193,8 @@ Electronic products, such as gaming monitors and laptops, have a **long lifespa
 > during the period 2019-2022. Given this limitation, this analysis focused on **newly registered users who created accounts between 2019 and 2022, regardless of whether they made
 > a purchase or not.**
 
-(chart)
+<img width="60%" height="60%" align="middle" src="https://github.com/user-attachments/assets/ef9044ad-4645-4718-b076-54c61c7d00a5" />
+
 * A plummet in customer registrations through our most successful channel, direct marketing, in 2022: however, it's **unclear whether this downfall was related to the direct marketing performance itself or whether visitors were not being sufficiently appealed to sign up.** Further investigation on marketing performance and customer journey is needed.
   
     <details>
@@ -232,7 +233,7 @@ Electronic products, such as gaming monitors and laptops, have a **long lifespa
 #### Product Team
 * **Widen product variety**:
   * **Prepare product upgrades** for our top-selling products, the 27in 4K Gaming Monitors and MacBook Air Laptops, by conducting market research on the current popularity and profitability potential.
-  * **Introduce new products** 1) in a **lower price range** (under $500) that customers could purchase with less hesitation and financial risk, and 2) for **cross-selling**: e.g., gaming keyboards, gaming headsets, or (gaming) mouse.
+  * Introduce new products 1) in a **lower price range** (under $500) that customers could purchase with less hesitation and financial risk, and 2) for **cross-selling**: e.g., gaming keyboards, gaming headsets, or (gaming) mouse.
  
     |<sub>**AOV Range**</sub>|<sub>**Products** (* Top 3 Products Underlined)</sub>|
     |:---|:---|
@@ -245,15 +246,15 @@ Electronic products, such as gaming monitors and laptops, have a **long lifespa
 * Discontinue Bose Soundsport Headphones.
   
 #### Marketing Team
-* Refine seasonal marketing strategies for the back-to-school season and holidays.
-* Target APAC customers for high-ticket products.
-* Plan personalized promotions for product upgrades targeting customers who purchased gaming monitors and laptops in our first year, 2018.
-* Launch a referral program to capitalize on our expanded customer base to acquire new customers.
-* Map our customer journey to further understand their experience, pain points, and motivations behind their decisions by
+* Refine **seasonal marketing strategies** for the back-to-school season and holidays.
+* Target **APAC customers for high-ticket products**.
+* Plan **personalized promotions for product upgrades** targeting customers who purchased gaming monitors and laptops in our first year, 2018.
+* Launch a **referral program** to capitalize on our expanded customer base to acquire new customers.
+* **Map our customer journey** to further understand their experience, pain points, and motivations behind their decisions by
   * Surveying customers after their purchase or people who didn't buy, and/or
   * Using data on visitor & customer website/app behavior and marketing email behavior.
-* Further analyze our marketing channel performance to determine its impact on leads, registrations, and customer acquisition.
-* Develop tailored promotions for registered but disengaged users based on the fact that:
+* Further **analyze our marketing channel performance** to determine its impact on leads, registrations, and customer acquisition.
+* Develop tailored **promotions for registered but disengaged users** based on the fact that:
   * Only 13% of customers who created accounts made a purchase within one month, and 70% made a purchase within one to three months.
   * 269 registered users hadn't yet made any purchase.<br />
   <br />
@@ -314,7 +315,7 @@ Electronic products, such as gaming monitors and laptops, have a **long lifespa
   </details>
 
 #### Sales Team
-* Conduct surveys or interviews with top customers, based on total spend, who had purchased multiple laptops. This suggests the potential presence of small business customers.
+* Conduct **surveys or interviews with top customers**, based on total spend, who had purchased multiple laptops. This suggests the potential presence of small business customers.
 
    <details>
    <summary>Top 3 Customers: Click to expand</summary> 
