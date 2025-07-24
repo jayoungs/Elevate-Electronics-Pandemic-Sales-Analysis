@@ -231,7 +231,7 @@ Electronic products, such as gaming monitors and laptops, have a **long lifespa
 ## Recommendations
 #### Product Team
 * **Widen product variety**:
-  * **Prepare product upgrades** for our top-selling products, the 27in 4K Gaming Monitors and MacBook Air Laptops, by conducting market research on the current popularity and profitability potential.
+  * **Prepare upgraded products** for our top-selling products, the 27in 4K Gaming Monitors and MacBook Air Laptops, by conducting market research on the current popularity and profitability potential.
   * Introduce new products 1) in a **lower price range** (under $500) that customers could purchase with less hesitation and financial risk, and 2) for **cross-selling**: e.g., gaming keyboards, gaming headsets, or (gaming) mouse.
  
     |<sub>**AOV Range**</sub>|<sub>**Products** (* Top 3 Products Underlined)</sub>|
