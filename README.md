@@ -60,12 +60,7 @@ The key sales metrics used in this analysis were gross sales, average order valu
 * **Products that failed to achieve sales expectations**:
   * **Bose Soundsport Headphones**, since being introduced to the product line in 2020, had experienced the highest negative growth rates in both gross sales and order count over the following two years, ultimately resulting in only one order in 2022.
   * Surprisingly, **Apple iPhone** had underperformed despite its general popularity, accounting for less than 1% of both gross sales and order volume. The lack of product variation might be the possible reason behind this. We sell only one model with one color and storage capacity option, as opposed to 27in 4K Gaming Monitor and Apple Airpods Headphone, which offer at least 14 options.
-
-     | <ins><sub>Apple iPhone</sub></ins> | <sub>Bose Soundsport Headphones</sub> | <sub>Macbook Air Laptop</sub> | <sub>Lenovo ThinkPad Laptop</sub> | <sub>Samsung Webcam</sub> | <sub>Samsung Charging Cable Pack</sub> | <sub>27in 4K Gaming Monitor</sub> | <sub>Apple Airpods Headphones</sub> |
-     |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-     |<ins><sub>1</sub></ins>|<sub>2</sub>|<sub>5</sub>|<sub>5</sub>|<sub>7</sub>|<sub>8</sub>|<sub>14</sub>|<sub>16</sub>|
-
- * **Product performance in Q4 2022** compared to the previous Q4: gross sales declined across all the products by a range of -51% (Lenovo ThinkPad Laptop) and -83% (MacBook Air Laptop).
+* **Product performance in Q4 2022** compared to the previous Q4: gross sales declined across all the products by a range of -51% (Lenovo ThinkPad Laptop) and -83% (MacBook Air Laptop).
   
 ### **Regional Segmentation:** 
 <img width="60%" height="60%" align="middle" src="https://github.com/user-attachments/assets/27e9c8a9-a093-4636-842c-fbbd388dcfa8" />
@@ -80,7 +75,6 @@ The key sales metrics used in this analysis were gross sales, average order valu
 <img align="middle" width="2398" height="1198" alt="loyalty program" src="https://github.com/user-attachments/assets/a509aadd-fc83-44b8-89c3-932acb9bfd30" />
 
 * Our loyalty program, launched in 2019, is designed for **customers who have created accounts and met a minimum purchase frequency**.
-* **Mixed performance trajectory**: after the first two years, loyalty members finally outperformed non-loyalty members in all the sales metrics for at least 17 months throughout 2021 and 2022. However, this trend reversed again in the later months of 2022, with loyalty members experiencing a decline in performance across all metrics.
 * **Unclear cause of the recent decrease** in loyalty member performance:
   * **The simultaneous decline in loyalty member performance and overall sales in Q4 2022** made it challenging to determine if the loyalty program itself was losing appeal or if its members were reflecting the broader market slowdown affecting all customer segments.
   * Loyalty members may have no other products in their interests, given our limited variety of eight different products and their proven purchase history.
@@ -93,7 +87,7 @@ The key sales metrics used in this analysis were gross sales, average order valu
 Electronic products, such as gaming monitors and laptops, have a **long lifespan** of at least 3-5 years. Hence, to boost sales constantly, 1) keeping **existing customers** engaged to revisit and buy different products and 2) acquiring **new customers** are crucial.
 
 #### Hypothesis 1. Had existing customers been disengaged over time? - Yes
-Here, we define existing customers as those who **placed at least one order between 2019 and 2022, whether as guests or members**.
+> Here, we define existing customers as those who **placed at least one order between 2019 and 2022, whether as guests or members**.
 * **Long hiatus** between the last purchase date and January 1, 2023: 79% of customers hadn't made another purchase since at least 13 months ago.
 * **Declining repeat purchase rate** over the years: 20% (2019) > 19% (2020) > 18% (2021) > 15% (2022).
 * **Single-item purchase behavior**: 94.6% of our customers purchased only one unique product, and 5.2% purchased two distinctive products.
