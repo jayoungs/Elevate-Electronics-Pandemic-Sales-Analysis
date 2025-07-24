@@ -356,7 +356,7 @@ Electronic products, such as gaming monitors and laptops, have a **long lifespa
    </details>
 
 
-## Caveats
+## Caveats (in progress)
 * Profit is missing as a key sales metric in this analysis due to the limitations of the data. Profit analysis should be followed.
 * If time and data were available, customer segmentation would have provided valuable insights to help us understand the diverse needs and preferences of our customers.
 * To follow up on underperformance in Q4 2022, we should analyze more recent data from 2023 on.
