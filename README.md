@@ -1,10 +1,10 @@
 <img width="2014" height="568" alt="ElevateElectronicsLogo" src="https://github.com/user-attachments/assets/6bd1e6b1-3669-4b34-bff3-8d8e14e57aef" alt="Company Logo"> 
-Founded in 2018, Elevate Electronics is an e-commerce company that curates and sells selective electronic products at a competitive price and has since rapidly expanded to a global customer base from 192 countries.<br />  
+Founded in 2018, Elevate Electronics is an e-commerce company that curates and sells a select range of electronic products at competitive prices, and has since rapidly expanded to a global customer base spanning 192 countries.<br />  
 <br />
 This project aims to:<br />  
 
-  * Understand Elevate Electronics' performance during the period from 2019 to 2022, around the COVID-19 pandemic, and<br /> 
-  * Deliver insights on improvements across the company including product, marketing, sales, and IT teams.<br />
+  * Understand Elevate Electronics' performance during the period from 2019 to 2022, around the COVID-19 pandemic, and
+  * Deliver insights on improvements across the company, including product, marketing, and sales teams.
 
 **< Stakeholder Questions >**<br />
 
@@ -24,78 +24,78 @@ The key sales metrics used in this analysis were gross sales, average order valu
 
 ## About Data and Tools
 
-* The database structure, as seen below, consists of four tables: `orders`, `customers`, `geo_lookup`, and `order_status`. The main table for this analysis was consolidated from these four tables with a total of 108,127 records. 
+* The database structure, as seen below, consists of four tables: `orders`, `customers`, `geo_lookup`, and `order_status`. The main table for this analysis was compiled from these four tables, totaling 108,127 records.
 
 <details>
 <summary>ERD: Click to expand</summary> 
 <img src="ERD.png" alt="Image" width="60%">
 </details>
    
-* Excel and SQL(BigQuery) were used for analysis and Tableau for visualization.
+* Excel and SQL (BigQuery) were used for analysis, and Tableau was used for visualization.
 
 ## Executive Summary
-* **Overall Sales Trends and Growth**: Gross sales surged in 2020, the first year of the Covid-19 pandemic, with a peak at $1.3M and then declined gradually in 2021 and sharply in 2022 to the pre-pandeic level. A granular examination of monthly trends reveals underperformance in Q4 2022 even compared to the pre-pandemic level.  
-* **Volatility and Seasonality**: The month-over-month sales growth rate was volitle each year, not just limited to the pandemic years, and this could be related to seaonality: decreases in February and October vs. increases in September, November, and December.
-* **Products**: The most popular products were 27in 4K Gaming Monitor, Apple Airpods Headphone, and Macbook Air Notebook. On the other hand, Bose Soundsport Headphone and Apple iPhone failed to meet sales expectations.
-* **Region**: North America was the largest market in terms of both gross sales and order count while APAC's highest AOV and sales growth in 2020 suggests a strong underlying potential.
-* **Loyalty Program**: Since its launch in 2019, it showed mix performance trajectory, especially underperforming in the most recent months in 2022. However, its high growth rate in 2020 shows its potential for impact.
-** **Reason behind Underperformance on Q4 2022**: Our existing customers had been disengaged over time considering their long purchase hiatus, decreasing repeat purchase rate, and single-item purchase behavior. On top of that, the number of registrations plummeted throughout 2022.
+* **Overall Sales Trends and Growth**: Gross sales surged in 2020, the first year of the COVID-19 pandemic, reaching a peak of $1.3M, and then declined gradually in 2021 and sharply in 2022 to return to the pre-pandemic level. A granular examination of monthly trends reveals underperformance in Q4 2022, even compared to the pre-pandemic level.
+* **Volatility and Seasonality**: The month-over-month sales growth rate was volatile each year, not just during the pandemic years, and this could be related to seasonality, as evidenced by decreases in February and October and increases in September, November, and December.
+* **Products**: The most popular products were 27in 4K Gaming Monitor, Apple Airpods Headphone, and MacBook Air Laptop. On the other hand, Bose Soundsport Headphone and Apple iPhone failed to meet sales expectations.
+* **Region**: North America was the largest market in terms of both gross sales and order count. Meanwhile, APAC's highest AOV and sales growth in 2020 suggest a strong underlying potential.
+* **Loyalty Program**: Since its launch in 2019, the program had exhibited a mixed performance trajectory, with underperforming results in the most recent months of 2022. However, its high growth rate in 2020 suggests its potential for impact. 
+* **Reason behind Underperformance on Q4 2022**: Our existing customers had been disengaged over time, considering their long purchase hiatus, decreasing repeat purchase rate, and single-item purchase behavior. Additionally, the number of registrations plummeted throughout 2022.
   
 ## Summary Insights
 
 ### **Overall Sales Trends:**
 <img src="https://github.com/user-attachments/assets/fb0665ce-3252-491d-994a-70f18e7f5a1c" alt="2020 Gross Sales Surged and Subsequently Declined to Pre-Pandemic Level. Gross Sales Growth was Persistenty Volatile Every Year, Not Limited to 2020">
 
-* **2020 surge in all sales metrics - gross sales, order count, and AOV**: especially the highest growth in gross sales and order count happened in March when the pandemic hit and people started buying electronics to set up their home offices or deal with the lockdown.
-* **Post-2020 sales decline**: 
-    * In 2021, gross sales and AOV started declining gradually, but order count momentum continued. This means that our customers placed more orders but for less expensive items compared to 2020.
-    * In 2022, all metrics trended downwards to the **pre-pandemic level or potentially worse** across all products and regions.
-* **Alarming Q4 2022 underperformance** compared to 2019 gross sales average: October 2022 marked the lowest growth rate of -55.2%, and the sales increase during the following holiday season was not sufficient enough to bounce back and reach at least the 2019 average level. Further analysis on Q4 2022 underperformance can be found [here](https://github.com/jayoungs/PicoTech_Electronics_Pandemic_Sales_Analyasis/edit/main/README.md#deep-dive-insights-on-underperformance-in-q4-2022).
-* **Persistent MoM gross sales growth rate volatility and its possible link to seasonality**: both gross sales and order count showed a dip in February and October and a surge in September and during November and December. This surge seems related to the back-to-school season, Labor Day sales, and holiday season.
+* **2020 surge in all sales metrics** - gross sales, order count, and AOV: especially the highest growth in gross sales and order count occurred in March, when the pandemic hit and people started buying electronics to set up their home offices or cope with the lockdown.
+* **Post-2020 sales decline**:
+  * In 2021, gross sales and AOV started declining gradually, but order count momentum continued. This means that our customers placed more orders but for less expensive items compared to 2020.
+  * In 2022, all metrics trended downwards to the pre-pandemic level or potentially worse across all products and regions.
+* **Alarming Q4 2022 underperformance** compared to the 2019 gross sales average: October 2022 marked the lowest growth rate of -55.2%, and the sales increase during the following holiday season was insufficient to bounce back and reach at least the 2019 average level. Further analysis on Q4 2022 underperformance can be found [here](https://github.com/jayoungs/PicoTech_Electronics_Pandemic_Sales_Analyasis/edit/main/README.md#deep-dive-insights-on-underperformance-in-q4-2022).
+* **Persistent MoM gross sales growth rate volatility and its possible link to seasonality**: both gross sales and order count showed a dip in February and October, and a surge in September and during November and December. This surge appears to be related to the back-to-school season, Labor Day sales, and the holiday season.
 <img align="middle" width="800" length="800" alt="Image" src="https://github.com/user-attachments/assets/688939d6-d379-46f1-a6c1-8cc086aaa467" alt="Seasonality in Gross Sales: Decrease in Feb. and Oct. vs. Increase in Sep., Nov., and Dec.">
  
 ### **Product Segmentation:**
 <img align="middle" width="1205" height="612" alt="Screenshot 2025-07-14 at 6 16 10 PM" src="https://github.com/user-attachments/assets/37721165-6198-4ec0-903e-7db8c4a4f422" />
 
 * **Products that failed to achieve sales expectations**:
-   * **Bose Soundsport Headphones**, ever since it was brought into the product line in 2020, had had the highest negative growth rates in both gross sales and order count in the following two years, ending up with only one order in 2022. 
-   * Surprisingly, **Apple iPhone** had underperformed despite its general popularity, only accounting for less than 1% in both gross sales and order count. The **lack of the product variation** might be the possible reason behind this. We sell only one model with one color and storage capacity option as opposed to 27in 4K Gaming Monitor and Apple Airpods Headphone with at least 14 options.
+  * **Bose Soundsport Headphones**, since being introduced to the product line in 2020, had experienced the highest negative growth rates in both gross sales and order count over the following two years, ultimately resulting in only one order in 2022.
+  * Surprisingly, **Apple iPhone** had underperformed despite its general popularity, accounting for less than 1% of both gross sales and order volume. The lack of product variation might be the possible reason behind this. We sell only one model with one color and storage capacity option, as opposed to 27in 4K Gaming Monitor and Apple Airpods Headphone, which offer at least 14 options.
 
      | <ins><sub>Apple iPhone</sub></ins> | <sub>Bose Soundsport Headphones</sub> | <sub>Macbook Air Laptop</sub> | <sub>Lenovo ThinkPad Laptop</sub> | <sub>Samsung Webcam</sub> | <sub>Samsung Charging Cable Pack</sub> | <sub>27in 4K Gaming Monitor</sub> | <sub>Apple Airpods Headphones</sub> |
      |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
      |<ins><sub>1</sub></ins>|<sub>2</sub>|<sub>5</sub>|<sub>5</sub>|<sub>7</sub>|<sub>8</sub>|<sub>14</sub>|<sub>16</sub>|
 
-* **Product performance in Q4 2022** compared to the previous Q4: gross sales declined across all the products by a range of -51% (Lenovo ThinkPad Laptop) and -83% (Macbook Air Laptop).
+ * **Product performance in Q4 2022** compared to the previous Q4: gross sales declined across all the products by a range of -51% (Lenovo ThinkPad Laptop) and -83% (MacBook Air Laptop).
   
 ### **Regional Segmentation:** 
 <img align="middle" width="800" height="800" alt="Screenshot 2025-07-10 at 5 06 12 PM" src="https://github.com/user-attachments/assets/c9e45ddd-e59d-479c-95d6-d720e6c16721" />
 
 
 * **Potential market opportunity in APAC**:
-   * Customers in APAC purchased more expensive products, compared to those in the other regions.
-   * APAC showed the highest sales growth rate of 226% in 2020.
-   * APAC has the largest total population of 4.8 billion people among the four regions.
-* **Regional performance in Q4 2022** compared to the previous Q4: gross sales declined across all the regions by a range of -68% (NA) and -82% (APAC).
+  * APAC Customers purchased more expensive products, compared to those in the other regions.
+  * APAC showed the highest sales growth rate of 226% in 2020.
+  * APAC has the largest total population of 4.8 billion people among the four regions.
+* **Regional performance in Q4 2022** compared to the previous Q4: gross sales declined across all the regions by a range of -68% (NA) and -82% (APAC).
 
 ### **Loyalty Program:** 
 <img align="middle" width="2398" height="1198" alt="loyalty program" src="https://github.com/user-attachments/assets/72274986-f155-4bdc-af95-cb66c6ece622" />
 
-* Our loyalty program was introduced in 2019 for **customers who created accounts and fulfilled minimum purhcase frequency**.
-* **Mixed performance trajectory**: after the first two years, loyalty members finally outperformed non-loyalty members in all the sales metrics for at least 17 months throughout 2021 and 2022. However, this trend reversed again in later months in 2022 with loyalty members experiencing a decline in performance across all metrics.
-* **Unclear cause of the recent decline in loyalty member performance**:
-   * The simultaneous decline in loyalty member performance and overall sales in Q4 2022 make it challenging to determine if the loyalty program itself was losing appeal or if its members were simply reflecting the broader market slowdown affecting all customer segments.
-   * Loyalty members might simply have no other products left to buy from our limited variety of 8 different products.
-* **Potential for impact**: The five-fold and twelve-fold growth in gross sales and order count respectively in 2020 indicate that the loyalty program, when effective, can significantly contribute to sales.
-* We should **continue the loyalty program** for further observation and strategic refinement rather than discontinuing it prematurely.
+* Our loyalty program, launched in 2019, is designed for **customers who have created accounts and met a minimum purchase frequency**.
+* **Mixed performance trajectory**: after the first two years, loyalty members finally outperformed non-loyalty members in all the sales metrics for at least 17 months throughout 2021 and 2022. However, this trend reversed again in the later months of 2022, with loyalty members experiencing a decline in performance across all metrics.
+* **Unclear cause of the recent decrease** in loyalty member performance:
+  * **The simultaneous decline in loyalty member performance and overall sales in Q4 2022** made it challenging to determine if the loyalty program itself was losing appeal or if its members were reflecting the broader market slowdown affecting all customer segments.
+  * Loyalty members may have no other products in their interests, given our limited variety of eight different products and their proven purchase history.
+* **Potential for impact**: The five-fold and twelve-fold growth in gross sales and order count, respectively, in 2020 indicates that the loyalty program, when effective, can significantly contribute to sales.
+* We should **continue the loyalty program** for further observation and strategic refinement rather than discontinuing it prematurely.
 
 ## Deep Dive Insights on Underperformance in Q4 2022 
 
 **Factor to consider**:  
-Electronic products, such as gaming monitors and latops have **a long lifespan** of at least 3-5 years. Hence, to boost sales consistently, keeping **existing customers** engaged to revisit and buy different products and acquiring **new customers** are crucial. 
+Electronic products, such as gaming monitors and laptops, have a **long lifespan** of at least 3-5 years. Hence, to boost sales consistently, 1) keeping **existing customers** engaged to revisit and buy different products and 2) acquiring **new customers** are crucial.
 
-#### Hypothesis 1. Had existing customers been no longer active over time? - Yes
-> Here, we define exiting customers as those **whoever placed at least one order** from 2019 to 2022, either as guests or members.
-* **Long hiatus** between the last purchase date and January 1, 2023: 79% of customers hadn't made another purchase since at least 13 months ago.
+#### Hypothesis 1. Had existing customers been disengaged over time? - Yes
+> Here, we define existing customers as those who **placed at least one order between 2019 and 2022, whether as guests or members**.
+* **Long hiatus** between the last purchase date and January 1, 2023: 79% of customers hadn't made another purchase since at least 13 months ago.
   |**Hiatus Period**|**Number of Customers**|**Percentage**|
   |---:|---:|---:|
   |<ins>24+ months</ins>|39,600| <ins>45%</ins> |
@@ -103,9 +103,10 @@ Electronic products, such as gaming monitors and latops have **a long lifespan**
   |7-12 months|12,186|14%|
   |4-6 months|4,111|5%|
   |0-3 months|2,231|3%|
-* **Declining repeat purchase rate** over the years: 20% (2019) > 19% (2020) > 18% (2021) > 15% (2022).
-* **Single-item purchase behavior**: 94.6% of our customers only purchased one unique product and 5.2% two unique products during this period.
-
+  
+* **Declining repeat purchase rate** over the years: 20% (2019) > 19% (2020) > 18% (2021) > 15% (2022).
+* **Single-item purchase behavior**: 94.6% of our customers purchased only one unique product, and 5.2% purchased two distinctive products.
+  
     <details>
     <summary>SQL Queries: Click to expand</summary> 
     
@@ -187,10 +188,13 @@ Electronic products, such as gaming monitors and latops have **a long lifespan**
     ```
     </details>
 
-#### Hypothesis 2. Had we had fewer new registered users over time? - Yes but Further Investigation Required
-> With the given data that does not contain orders made prior to 2019, it's not possible to determine new customers, registered or not, who made the first purchase for the period, 2019 - 2022. Given this limitation, this analysis simply focusd on newly **registered** users who created accounts 2019 - 2022 regardless of whether they made a purchase or not.
+#### Hypothesis 2. Had we had fewer new registered users over time? - Yes, but Further Investigation Required
+> With the given data, which does not contain orders made before 2019, it's not possible to determine new customers, whether registered or not, who made their first purchase
+> during the period 2019-2022. Given this limitation, this analysis focused on **newly registered users who created accounts between 2019 and 2022, regardless of whether they made
+> a purchase or not.**
+
 (chart)
-* Plummet in customer registrations through our most successful channel, direct marketing, in 2022. However, it's unclear that this downfall was related to direct marketing performance itself or visitors not appealed to sign up. Further investigation on marketing performance and customer journey is needed.
+* A plummet in customer registrations through our most successful channel, direct marketing, in 2022: however, it's **unclear whether this downfall was related to the direct marketing performance itself or whether visitors were not being sufficiently appealed to sign up.** Further investigation on marketing performance and customer journey is needed.
   
     <details>
     <summary>SQL Queries: Click to expand</summary> 
@@ -226,29 +230,32 @@ Electronic products, such as gaming monitors and latops have **a long lifespan**
 
 ## Recommendations
 #### Product Team
-* Widen product variety:
-  * Prepare **product upgrades** for our top-selling products, 27in 4K Gaming Monitors and Macbook Air Laptops, by conducting market research on what gaming monitors and Apple laptops are currently popular and could have the highest profitality.
-  * Introduce new products 1) in **lower price range (under $500)** that customers could purchase with less hesitation and financial risk and/or 2) for **cross-selling**: e.g., gaming keyboards, gaming headsets, or (gaming) mouse.
+* **Widen product variety**:
+  * **Prepare product upgrades** for our top-selling products, the 27in 4K Gaming Monitors and MacBook Air Laptops, by conducting market research on the current popularity and profitability potential.
+  * **Introduce new products** 1) in a **lower price range** (under $500) that customers could purchase with less hesitation and financial risk, and 2) for **cross-selling**: e.g., gaming keyboards, gaming headsets, or (gaming) mouse.
+ 
     |<sub>**AOV Range**</sub>|<sub>**Products** (* Top 3 Products Underlined)</sub>|
     |:---|:---|
     |<sub>Under $100</sub>|<sub>Samsung Charging Cable Pack ($20), Samsung Webcam ($50)</sub>|
     |<sub>$100+</sub>|<sub>Bose Soundsport Headphones ($124), <ins>Apple Airpods Headphones ($160)</ins>, <ins>27in 4K Gaming Monitor ($421)</ins></sub>|
     |<sub>$500+</sub>|<sub>Apple iPhone ($741)</sub>|
     |<sub>$1000+</sub>|<sub>Lenovo ThinkPad Laptop ($1,100), <ins>Macbook Air Laptop ($1,588)</ins></sub>|
-* Extend product variations for Apple iPhone in terms of models, colors, and storage capacity. 
+
+* Extend product variations for Apple iPhone in terms of models, colors, and storage capacity.
 * Discontinue Bose Soundsport Headphones.
   
 #### Marketing Team
 * Refine seasonal marketing strategies for the back-to-school season and holidays.
-* Plan personalized promotions for product upgrade targeting customers who purchased gaming monitors and laptops in our first year.
+* Target APAC customers for high-ticket products.
+* Plan personalized promotions for product upgrades targeting customers who purchased gaming monitors and laptops in our first year, 2018.
 * Launch a referral program to capitalize on our expanded customer base to acquire new customers.
 * Map our customer journey to further understand their experience, pain points, and motivations behind their decisions by
-  * Surveying customers after their purchase or people who didn’t buy, and/or
+  * Surveying customers after their purchase or people who didn't buy, and/or
   * Using data on visitor & customer website/app behavior and marketing email behavior.
-* Further investigate on why our best marketing channel, direct marketing, failed to bring more new customers and invest more resources into it if necessary.
-* Develop tailored promotions for registered users with low engagement based on the fact that:
-  * Only 13% of customers who created accounts took less than one month to make a purchase and 70% took one to three months.
-  * 269 registered users had't yet made any purchase. <br />
+* Further analyze our marketing channel performance to determine its impact on leads, registrations, and customer acquisition.
+* Develop tailored promotions for registered but disengaged users based on the fact that:
+  * Only 13% of customers who created accounts made a purchase within one month, and 70% made a purchase within one to three months.
+  * 269 registered users hadn't yet made any purchase.<br />
   <br />
   
   <details>
@@ -307,7 +314,7 @@ Electronic products, such as gaming monitors and latops have **a long lifespan**
   </details>
 
 #### Sales Team
-* Conduct surveys or interviews for top customers in terms of total spend who had purhased multiple laptops. This might pose potential opportunities from small-size business customers
+* Conduct surveys or interviews with top customers, based on total spend, who had purchased multiple laptops. This suggests the potential presence of small business customers.
 
    <details>
    <summary>Top 3 Customers: Click to expand</summary> 
@@ -350,9 +357,10 @@ Electronic products, such as gaming monitors and latops have **a long lifespan**
 
 
 ## Caveats
-* Profit is missing as a key sales metric in this analysis due to the limitation of data. Profit analysis should be followed.
-* If time and data were permitted, customer segmentation would have surfaced insights to help us understand different customer needs and preferences.
+* Profit is missing as a key sales metric in this analysis due to the limitations of the data. Profit analysis should be followed.
+* If time and data were available, customer segmentation would have provided valuable insights to help us understand the diverse needs and preferences of our customers.
 * To follow up on underperformance in Q4 2022, we should analyze more recent data from 2023 on.
-* Improve data integrity and quality
+* Improve data integrity and quality.
+
   
 ## Tableau Interactive Dashboard
