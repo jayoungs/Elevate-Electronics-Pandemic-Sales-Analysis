@@ -78,7 +78,6 @@ The key sales metrics used in this analysis were gross sales, average order valu
 
 ### **Loyalty Program:** 
 <img align="middle" width="2398" height="1198" alt="loyalty program" src="https://github.com/user-attachments/assets/a509aadd-fc83-44b8-89c3-932acb9bfd30" />
- />
 
 * Our loyalty program, launched in 2019, is designed for **customers who have created accounts and met a minimum purchase frequency**.
 * **Mixed performance trajectory**: after the first two years, loyalty members finally outperformed non-loyalty members in all the sales metrics for at least 17 months throughout 2021 and 2022. However, this trend reversed again in the later months of 2022, with loyalty members experiencing a decline in performance across all metrics.
