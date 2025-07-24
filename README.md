@@ -90,7 +90,7 @@ The key sales metrics used in this analysis were gross sales, average order valu
 ## Deep Dive Insights on Underperformance in Q4 2022 
 
 **Factor to consider**:  
-Electronic products, such as gaming monitors and laptops, have a **long lifespan** of at least 3-5 years. Hence, to boost sales consistently, 1) keeping **existing customers** engaged to revisit and buy different products and 2) acquiring **new customers** are crucial.
+Electronic products, such as gaming monitors and laptops, have a **long lifespan** of at least 3-5 years. Hence, to boost sales constantly, 1) keeping **existing customers** engaged to revisit and buy different products and 2) acquiring **new customers** are crucial.
 
 #### Hypothesis 1. Had existing customers been disengaged over time? - Yes
 > Here, we define existing customers as those who **placed at least one order between 2019 and 2022, whether as guests or members**.
