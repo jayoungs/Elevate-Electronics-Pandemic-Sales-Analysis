@@ -322,9 +322,9 @@ Electronic products, such as gaming monitors and laptops, have a **long lifespa
     
    |Customer ID|Purchase Date|Products|Total Spend|
    |:---:|:---:|:---:|:---:|
-   |5d678d3d|2022-05-27, 2019-12-23, 2019-12-23, 2019-02-17|Macbook Air Laptop, Macbook Air Laptop, Macbook Air Laptop, Macbook Air Laptop|7,200|
-   |5af6c8a2|2022-06-16, 2019-06-27, 2019-01-24, 2019-01-24|ThinkPad Laptop, Macbook Air Laptop, Macbook Air Laptop, Macbook Air Laptop|6,256|
-   |b8a3621b|2020-12-24, 2020-12-24, 2020-12-24|Macbook Air Laptop, Macbook Air Laptop, Macbook Air Laptop|6,022|
+   |5d678d3d|2022-05-27, 2019-12-23, 2019-12-23, 2019-02-17|Macbook Air Laptop, Macbook Air Laptop, Macbook Air Laptop, Macbook Air Laptop|$7,200|
+   |5af6c8a2|2022-06-16, 2019-06-27, 2019-01-24, 2019-01-24|ThinkPad Laptop, Macbook Air Laptop, Macbook Air Laptop, Macbook Air Laptop|$6,256|
+   |b8a3621b|2020-12-24, 2020-12-24, 2020-12-24|Macbook Air Laptop, Macbook Air Laptop, Macbook Air Laptop|$6,022|
    
    </details>
   
