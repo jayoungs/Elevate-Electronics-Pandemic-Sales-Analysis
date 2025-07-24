@@ -187,7 +187,7 @@ Electronic products, such as gaming monitors and laptops, have a **long lifespa
     ```
     </details>
 
-#### Hypothesis 2. Had we had fewer new registered users over time? - Yes, but Further Investigation Required
+#### Hypothesis 2. Had we had fewer newly registered users over time? - Yes, but Further Investigation Required
 > With the given data, which does not contain orders made before 2019, it's not possible to determine new customers, whether registered or not, who made their first purchase
 > during the period 2019-2022. Given this limitation, this analysis focused on **newly registered users who created accounts between 2019 and 2022, regardless of whether they made
 > a purchase or not.**
