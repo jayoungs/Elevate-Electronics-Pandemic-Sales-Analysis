@@ -41,7 +41,7 @@ The key sales metrics used in this analysis were gross sales, average order valu
   
 ## Summary Insights
 
-### **Overall Sales Trends:**
+#### **Overall Sales Trends:**
 <img align="middle" src="https://github.com/user-attachments/assets/a8c131fe-892c-40f1-8238-16ecfaf675ca" alt="2020 Gross Sales Surged and Subsequently Declined to Pre-Pandemic Level. Gross Sales Growth was Persistenty Volatile Every Year, Not Limited to 2020">
 
 * **2020 surge in all sales metrics** - gross sales, order count, and AOV: especially the highest growth in gross sales and order count occurred in March, when the pandemic hit and people started buying electronics to set up their home offices or cope with the lockdown.
@@ -49,10 +49,12 @@ The key sales metrics used in this analysis were gross sales, average order valu
   * In 2021, gross sales and AOV started declining gradually, but order count momentum continued. This means that our customers placed more orders but for less expensive items compared to 2020.
   * In 2022, all metrics trended downwards to the pre-pandemic level or potentially worse across all products and regions.
 * **Alarming Q4 2022 underperformance** compared to the 2019 gross sales average: October 2022 marked the lowest growth rate of -55.2%, and the sales increase during the following holiday season was insufficient to bounce back and reach at least the 2019 average level. Further analysis on Q4 2022 underperformance can be found [here](https://github.com/jayoungs/PicoTech_Electronics_Pandemic_Sales_Analyasis/edit/main/README.md#deep-dive-insights-on-underperformance-in-q4-2022).
-* **Persistent MoM gross sales growth rate volatility and its possible link to seasonality**: both gross sales and order count showed a dip in February and October, and a surge in September and during November and December. This surge appears to be related to the back-to-school season, Labor Day sales, and the holiday season.
+
+#### **Seasonality**
+Persistent MoM gross sales growth rate volatility and its possible link to seasonality**: both gross sales and order count showed a dip in February and October, and a surge in September and during November and December. This surge appears to be related to the back-to-school season, Labor Day sales, and the holiday season.
 <img align="middle" width="60%" height="50%" alt="Screenshot 2025-07-14 at 6 16 10 PM" src="https://github.com/user-attachments/assets/a6922a0e-6f02-46ef-b964-953601175794" />
  
-### **Product Segmentation:**
+#### **Product Segmentation:**
 <img align="middle" width="1206" height="609" src="https://github.com/user-attachments/assets/844f390a-79aa-4921-ba86-60b63b5a6c3f" />
 
 * **Products that failed to achieve sales expectations**:
@@ -60,7 +62,7 @@ The key sales metrics used in this analysis were gross sales, average order valu
   * Surprisingly, **Apple iPhone** had underperformed despite its general popularity, accounting for less than 1% of both gross sales and order volume. The lack of product variation might be the possible reason behind this. We sell only one model with one color and storage capacity option, as opposed to 27in 4K Gaming Monitor and Apple Airpods Headphone, which offer at least 14 options.
 * **Product performance in Q4 2022** compared to the previous Q4: gross sales declined across all the products by a range of -51% (Lenovo ThinkPad Laptop) and -83% (MacBook Air Laptop).
   
-### **Regional Segmentation:** 
+#### **Regional Segmentation:** 
 <img width="60%" height="60%" align="middle" src="https://github.com/user-attachments/assets/27e9c8a9-a093-4636-842c-fbbd388dcfa8" />
 
 * **Potential market opportunity in APAC**:
@@ -69,7 +71,7 @@ The key sales metrics used in this analysis were gross sales, average order valu
   * APAC has the largest total population of 4.8 billion people among the four regions.
 * **Regional performance in Q4 2022** compared to the previous Q4: gross sales declined across all the regions by a range of -68% (NA) and -82% (APAC).
 
-### **Loyalty Program:** 
+#### **Loyalty Program:** 
 <img align="middle" width="2398" height="1198" alt="loyalty program" src="https://github.com/user-attachments/assets/a509aadd-fc83-44b8-89c3-932acb9bfd30" />
 
 * Our loyalty program, launched in 2019, is designed for **customers who have created accounts and met a minimum purchase frequency**.
@@ -213,26 +215,21 @@ a purchase or not.**
     </details>
 
 ## Recommendations
+
 #### Product Team
-* **Widen product variety**:
-  * **Prepare upgraded products** for our top-selling products, the 27in 4K Gaming Monitors and MacBook Air Laptops, by conducting market research on the current popularity and profitability potential.
-  * Introduce new products 1) in a **lower price range** (under $500) that customers could purchase with less hesitation and financial risk, and 2) for **cross-selling**: e.g., gaming keyboards, gaming headsets, or (gaming) mouse.
-* Extend product variations for Apple iPhone in terms of models, colors, and storage capacity.
+* Prepare upgraded products for our top-selling products, the 27in 4K Gaming Monitors and MacBook Air Laptops, by conducting market research on the current popularity and profitability potential.
+* Widen product variety 1) in a **lower price range** (under $500) that customers could purchase with less hesitation and financial risk, and 2) for **cross-selling**: e.g., gaming keyboards, gaming headsets, or (gaming) mouse.
+* Extend Apple iPhone variations and upgrade to the more recent models.
 * Discontinue Bose Soundsport Headphones.
   
 #### Marketing Team
-* Refine **seasonal marketing strategies** for the back-to-school season and holidays.
+* Refine seasonal marketing strategies for the back-to-school season and holidays.
 * Target **APAC customers for high-ticket products**.
-* Plan **personalized promotions for product upgrades** targeting customers who purchased gaming monitors and laptops in our first year, 2018.
-* Launch a **referral program** to capitalize on our expanded customer base to acquire new customers.
-* **Map our customer journey** to further understand their experience, pain points, and motivations behind their decisions by
-  * Surveying customers after their purchase or people who didn't buy, and/or
-  * Using data on visitor & customer website/app behavior and marketing email behavior.
-* Further **analyze our marketing channel performance** to determine its impact on leads, registrations, and customer acquisition.
-* Develop tailored **promotions for registered but disengaged users** based on the fact that:
-  * Only 13% of customers who created accounts made a purchase within one month, and 70% made a purchase within one to three months.
-  * 269 registered users hadn't yet made any purchase.<br />
-  <br />
+* Plan personalized promotions for product upgrades targeting customers who purchased gaming monitors and laptops in our first year, 2018.
+* Launch a referral program to capitalize on our expanded customer base to acquire new customers.
+* Map our customer journey to further understand their experience, pain points, and motivations behind their decisions by surveying customers after their purchase or users who didn't buy, and using existing data on the website/app and marketing email behavior.
+* Further analyze our marketing channel performance to determine its impact on leads, registrations, and customer acquisition.
+* Develop tailored promotions for registered but disengaged users based on the findings that only 13% of customers who created accounts made a purchase within one month and that 269 registered users hadn't yet made any purchase.
   
   <details>
   <summary>SQL Queries: Click to expand</summary> 
