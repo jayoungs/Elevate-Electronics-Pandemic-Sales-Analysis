@@ -73,7 +73,7 @@ The persistent MoM gross sales growth volatility, as seen above, suggested a pos
 
 * **Unclear cause of the recent decrease** in loyalty member performance:
   * **The simultaneous decline in loyalty member performance and overall sales in Q4 2022** made it challenging to determine if the loyalty program itself was losing appeal or if its members were reflecting the broader market slowdown affecting all customer segments.
-  * Otherwise, loyalty members may have no other products in their interests, given our limited variety of eight different products and their previous purchases.
+  * Loyalty members might have had no other products in their interests, given our limited variety of eight different products and their previous purchases.
 * **Potential for impact**: The five-fold and twelve-fold growth in gross sales and order count, respectively, in 2020 indicates that the loyalty program, when effective, can significantly contribute to sales.
 * We should **continue the loyalty program** for further observation and strategic refinement rather than discontinuing it prematurely.
 
@@ -283,7 +283,7 @@ However, it's **unclear whether this downfall was related to the direct marketin
   </details>
 
 #### Sales Team
-* Conduct qualitative research on top customers in terms of total spend who turned out to purchase multiple laptops. There might be opportunities from small business customers/resellers.
+* Conduct qualitative research on top customers in terms of total spend who turned out to purchase multiple laptops. There might be opportunities targeting small business customers/resellers.
 
 ## Caveats (in progress)
 * Profit is missing as a key sales metric in this analysis due to the limitations of the data. Profit analysis should be followed.
