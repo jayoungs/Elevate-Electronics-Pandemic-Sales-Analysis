@@ -13,12 +13,12 @@ This project aims to understand Elevate Electronics' performance during the peri
 The key sales metrics used in this analysis were gross sales, average order value (AOV), and order count.<br /> 
 
 **< Table of Contents >**  
-* [About Data and Tools](https://github.com/jayoungs/PicoTech_Electronics_Pandemic_Sales_Analyasis/edit/main/README.md#about-data-and-tools)  
-* [Executive Summary](https://github.com/jayoungs/PicoTech_Electronics_Pandemic_Sales_Analyasis/edit/main/README.md#executive-summary)  
-* [Summary Insights](https://github.com/jayoungs/PicoTech_Electronics_Pandemic_Sales_Analyasis/edit/main/README.md#summary-insights)  
-* [Deep Dive Insights on Underperformance in Q4 2022](https://github.com/jayoungs/PicoTech_Electronics_Pandemic_Sales_Analyasis/edit/main/README.md#deep-dive-insights-on-underperformance-in-q4-2022)  
-* [Recommendations](https://github.com/jayoungs/PicoTech_Electronics_Pandemic_Sales_Analyasis/edit/main/README.md#recommendations-how-to-position-ourselves-unique-in-this-market)  
-* [Caveats](https://github.com/jayoungs/PicoTech_Electronics_Pandemic_Sales_Analyasis/edit/main/README.md#caveats)  
+[About Data and Tools](https://github.com/jayoungs/PicoTech_Electronics_Pandemic_Sales_Analyasis/edit/main/README.md#about-data-and-tools)  
+[Executive Summary](https://github.com/jayoungs/PicoTech_Electronics_Pandemic_Sales_Analyasis/edit/main/README.md#executive-summary)  
+[Summary Insights](https://github.com/jayoungs/PicoTech_Electronics_Pandemic_Sales_Analyasis/edit/main/README.md#summary-insights)  
+[Deep Dive Insights on Underperformance in Q4 2022](https://github.com/jayoungs/PicoTech_Electronics_Pandemic_Sales_Analyasis/edit/main/README.md#deep-dive-insights-on-underperformance-in-q4-2022)  
+[Recommendations](https://github.com/jayoungs/PicoTech_Electronics_Pandemic_Sales_Analyasis/edit/main/README.md#recommendations-how-to-position-ourselves-unique-in-this-market)  
+[Caveats](https://github.com/jayoungs/PicoTech_Electronics_Pandemic_Sales_Analyasis/edit/main/README.md#caveats)  
 
 ## About Data and Tools
 
@@ -32,6 +32,8 @@ The database structure, as seen below, consists of four tables: `orders`, `custo
 Excel and SQL (BigQuery) were used for analysis, and Tableau was used for visualization.
 
 ## Executive Summary
+<img align="middle" src="https://github.com/user-attachments/assets/a8c131fe-892c-40f1-8238-16ecfaf675ca" alt="2020 Gross Sales Surged and Subsequently Declined to Pre-Pandemic Level. Gross Sales Growth was Persistenty Volatile Every Year, Not Limited to 2020">
+
 * **Overall Sales Trends and Growth**: Gross sales surged in 2020, the first year of the COVID-19 pandemic, reaching a peak of $1.3M, and then declined gradually in 2021 and sharply in 2022 to return to the pre-pandemic level. A granular examination of monthly trends reveals underperformance in Q4 2022, even compared to the pre-pandemic level.
 * **Sales Growth Volatility and Seasonality**: The month-over-month sales growth rate was volatile each year, not just during the pandemic years, and this could be related to seasonal pattern.
 * **Loyalty Program**: Since its launch in 2019, the program had exhibited a mixed performance trajectory, with underperforming results in the most recent months of 2022. However, its high growth rate in 2020 suggests its potential for impact. 
@@ -40,9 +42,7 @@ Excel and SQL (BigQuery) were used for analysis, and Tableau was used for visual
 ## Summary Insights
 
 ### **Overall Sales Trends:**
-<img align="middle" src="https://github.com/user-attachments/assets/a8c131fe-892c-40f1-8238-16ecfaf675ca" alt="2020 Gross Sales Surged and Subsequently Declined to Pre-Pandemic Level. Gross Sales Growth was Persistenty Volatile Every Year, Not Limited to 2020">
-
-* **2020 surge in all sales metrics** - gross sales, order count, and AOV: especially the highest growth in gross sales and order count occurred in March, when the pandemic hit and people started buying electronics to set up their home offices or cope with the lockdown.
+* **2020 surge in all sales metrics** - gross sales, order count, and AOV: Especially the highest growth in gross sales and order count occurred in March, when the pandemic hit and people started buying electronics to set up their home offices or cope with the lockdown.
 * **Post-2020 sales decline**:
   * In 2021, gross sales and AOV started declining gradually, but order count momentum continued. This means that our customers placed more orders but for less expensive items compared to 2020.
   * In 2022, all metrics trended downwards to the pre-pandemic level or potentially worse across all products and regions.
@@ -51,7 +51,7 @@ Excel and SQL (BigQuery) were used for analysis, and Tableau was used for visual
 ### **Seasonality**
 <img align="middle" width="60%" height="50%" alt="Screenshot 2025-07-14 at 6 16 10 PM" src="https://github.com/user-attachments/assets/a6922a0e-6f02-46ef-b964-953601175794" /> <br />
 
-The persistent MoM gross sales growth rate volatility suggested a possible seasonal pattern and in fact, there was. Both gross sales and order count showed dips in February and October, and surges in September and during November and December. These surges coincide with the back-to-school season, Labor Day sales, and the holiday season.
+The persistent MoM gross sales growth volatility, as seen above, suggested a possible seasonal pattern, and in fact, there was. Both gross sales and order count showed dips in February and October, and surges in September and during November and December. These surges coincide with the back-to-school season, Labor Day sales, and the holiday season.
 
 ### **Product Segmentation:**
 <img align="middle" width="1206" height="609" src="https://github.com/user-attachments/assets/844f390a-79aa-4921-ba86-60b63b5a6c3f" />
@@ -59,19 +59,16 @@ The persistent MoM gross sales growth rate volatility suggested a possible seaso
 * **Products that failed to achieve sales expectations**:
   * **Bose Soundsport Headphones**, since being introduced to the product line in 2020, had experienced the highest negative growth rates in both gross sales and order count over the following two years, ultimately resulting in only one order in 2022.
   * Surprisingly, **Apple iPhone** had underperformed despite its general popularity, accounting for less than 1% of both gross sales and order volume. The **lack of product variation** might be the possible reason behind this. We sell only one model with one color and storage capacity option, as opposed to 27in 4K Gaming Monitor and Apple Airpods Headphone, which offer at least 14 options.
-* **Product performance in Q4 2022** compared to the previous Q4: gross sales declined across all the products by a range of -51% (Lenovo ThinkPad Laptop) and -83% (MacBook Air Laptop).
+* **Product performance in Q4 2022** compared to the previous Q4: Gross sales declined across all the products by a range of -51% (Lenovo ThinkPad Laptop) and -83% (MacBook Air Laptop).
   
 ### **Regional Segmentation:** 
 <img width="60%" height="60%" align="middle" src="https://github.com/user-attachments/assets/27e9c8a9-a093-4636-842c-fbbd388dcfa8" />
 
-* **Potential market opportunity in APAC**:
-  * APAC Customers purchased more expensive products, compared to those in the other regions.
-  * APAC showed the highest sales growth rate of 226% in 2020.
-  * APAC has the largest total population of 4.8 billion people among the four regions.
-* **Regional performance in Q4 2022** compared to the previous Q4: gross sales declined across all the regions by a range of -68% (NA) and -82% (APAC).
+* **Potential market opportunity in APAC**: Although comprising a smaller portion of the market, APAC showed the highest sales growth rate of 226% in 2020 and the highest AOV between 2019 and 2022. Its customers purchased more expensive products than those from the other regions. Given their **higher spending power**, APAC can be **a target market for high-ticket products**.
+* **Regional performance in Q4 2022** compared to the previous Q4: Gross sales declined across all the regions by a range of -68% (NA) and -82% (APAC).
 
 ### **Loyalty Program:** 
-> Our loyalty program, launched in 2019, is designed for **customers who have created accounts and met a minimum purchase frequency**.
+> Our loyalty program, launched in 2019, was designed for **customers who have created accounts and met a minimum purchase frequency**.
 <img align="middle" width="2398" height="1198" alt="loyalty program" src="https://github.com/user-attachments/assets/a509aadd-fc83-44b8-89c3-932acb9bfd30" />
 
 * **Unclear cause of the recent decrease** in loyalty member performance:
@@ -174,12 +171,12 @@ Electronic products, such as gaming monitors and laptops, have a **long lifespa
 
 #### Hypothesis 2. Had we had fewer newly registered users over time? - Yes, but Further Investigation Required
 
-> Due to data limitations, this analysis focused on **newly registered users who created accounts between 2019 and 2022, regardless of whether they made
+> Due to the data limitations, this analysis focused on **newly registered users who created accounts between 2019 and 2022, regardless of whether they made
 a purchase or not.**
 
 <img width="60%" height="60%" align="middle" src="https://github.com/user-attachments/assets/ef9044ad-4645-4718-b076-54c61c7d00a5" />
 
-A plummet in customer registrations through our most successful channel, direct marketing, in 2022: however, it's **unclear whether this downfall was related to the direct marketing performance itself or whether visitors were not being sufficiently appealed to sign up.** Further investigation on marketing performance and customer journey is needed.
+However, it's **unclear whether this downfall was related to the direct marketing performance itself or whether visitors were not being sufficiently appealed to sign up.** Further investigation on marketing performance and customer journey is needed.
   
    <details>
    <summary>SQL Queries: Click to expand</summary> 
@@ -284,6 +281,9 @@ A plummet in customer registrations through our most successful channel, direct 
   
   ```
   </details>
+
+#### Sales Team
+* Conduct qualitative research on top customers in terms of total spend who turned out to purchase multiple laptops. There might be opportunities from small business customers/resellers.
 
 ## Caveats (in progress)
 * Profit is missing as a key sales metric in this analysis due to the limitations of the data. Profit analysis should be followed.
