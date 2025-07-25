@@ -35,9 +35,7 @@ The key sales metrics used in this analysis were gross sales, average order valu
 
 ## Executive Summary
 * **Overall Sales Trends and Growth**: Gross sales surged in 2020, the first year of the COVID-19 pandemic, reaching a peak of $1.3M, and then declined gradually in 2021 and sharply in 2022 to return to the pre-pandemic level. A granular examination of monthly trends reveals underperformance in Q4 2022, even compared to the pre-pandemic level.
-* **Volatility and Seasonality**: The month-over-month sales growth rate was volatile each year, not just during the pandemic years, and this could be related to seasonality, as evidenced by decreases in February and October and increases in September, November, and December.
-* **Products**: The most popular products were 27in 4K Gaming Monitor, Apple Airpods Headphone, and MacBook Air Laptop. On the other hand, Bose Soundsport Headphone and Apple iPhone failed to meet sales expectations.
-* **Region**: North America was the largest market in terms of both gross sales and order count. Meanwhile, APAC's highest AOV and sales growth in 2020 suggest a strong underlying potential.
+* **Sales Growth Volatility and Seasonality**: The month-over-month sales growth rate was volatile each year, not just during the pandemic years, and this could be related to seasonal pattern.
 * **Loyalty Program**: Since its launch in 2019, the program had exhibited a mixed performance trajectory, with underperforming results in the most recent months of 2022. However, its high growth rate in 2020 suggests its potential for impact. 
 * **Reason behind Underperformance on Q4 2022**: Our existing customers had been disengaged over time, considering their long purchase hiatus, decreasing repeat purchase rate, and single-item purchase behavior. Additionally, the number of registrations plummeted throughout 2022.
   
