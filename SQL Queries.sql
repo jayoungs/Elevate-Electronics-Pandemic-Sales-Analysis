@@ -1,8 +1,10 @@
--- BigQuery script related to Deep Dive Insights on Underperformance in Q4 2022 
+-- BigQuery Script Used for Deep Dive Insights and Recommendations
+
+-- <Deep Dive Insights on Underperformance in Q4 2022>
 
 -- Hypothesis 1. Had existing customers been disengaged over time?
 
---> 1) purchase hiatus
+--> 1) calculate purchase hiatus
 
 WITH calculate_inactivity AS (
   SELECT 
@@ -34,7 +36,7 @@ SELECT
 FROM aggregate_customer_num
 ORDER BY 1;
 
---> 2) repeat purchase rate per year
+--> 2) calculate repeat purchase rate per year
 
 WITH customers_per_year AS (
   SELECT 
@@ -61,7 +63,7 @@ LEFT JOIN customers_per_year
 GROUP BY 1, 2
 ORDER BY 1;
 
---> 3) the distribution of unique products customers purchased
+--> 3) obtain the distribution of unique products customers purchased
 
 WITH cleaned_table AS (
   SELECT 
@@ -116,3 +118,91 @@ SELECT
 FROM customers_cleaned
 GROUP BY 1, 2
 ORDER BY 1, 2;
+
+
+-- <Recommendations>
+
+-- 1) for marketing team: obtain the customer distribution of time to purchase in months 
+
+
+WITH earliest_purchase AS (
+  SELECT 
+    DISTINCT c.id,
+    c.created_on,
+    MIN(o.purchase_ts) AS earliest_purchase_date
+  FROM core.customers c
+  LEFT JOIN core.orders o
+    ON c.id = o.customer_id
+  WHERE c.created_on <= o.purchase_ts AND EXTRACT(YEAR FROM c.created_on) BETWEEN 2019 AND 2022
+  GROUP BY 1, 2), -- 61664
+
+cal_month_diff AS (
+  SELECT 
+    id,
+    DATE_DIFF(earliest_purchase_date, created_on,MONTH) AS month_diff
+  FROM earliest_purchase),
+
+recategorized AS (
+  SELECT id,
+    (CASE
+      WHEN month_diff = 0 THEN "Less Than 1 Month"
+      WHEN month_diff BETWEEN 1 AND 3 THEN "1 ~ 3 Months"
+      WHEN month_diff BETWEEN 4 AND 6 THEN "4 ~ 6 Months"
+      WHEN month_diff BETWEEN 6 AND 12 THEN  "6 ~ 12 Months"
+      ELSE "12+ Months" 
+      END) AS month_to_purchase,
+    COUNT(id) OVER () AS total_num_customers
+  FROM cal_month_diff),
+
+customers_per_category AS (
+  SELECT 
+    month_to_purchase,
+    total_num_customers,
+    COUNT(month_to_purchase) AS num_customers
+  FROM recategorized
+  GROUP BY 1, 2
+  ORDER BY 1)
+  
+SELECT 
+  month_to_purchase,
+  num_customers,
+  ROUND(100.00 * num_customers / total_num_customers, 2) AS percentage
+FROM customers_per_category
+ORDER BY 3 DESC;
+
+
+-- 2) for marketing team:identify customers who created accounts but did not make any purchase
+
+SELECT 
+  COUNT(DISTINCT customers.id) AS customer_no_purchase
+FROM core.customers 
+WHERE NOT EXISTS (
+  SELECT orders.customer_id
+  FROM core.orders 
+  WHERE customers.id = orders.customer_id);
+
+-- 3) for sales team: identify top 5 customers based on their total spend
+
+WITH clean_table AS (
+  SELECT 
+    customer_id,
+    (CASE
+      WHEN product_name LIKE "27%" THEN "27in 4K Gaming Monitor"
+      WHEN product_name LIKE "bose%" THEN INITCAP(product_name)
+      ELSE product_name
+      END) AS product_name_cleaned,
+    id,
+    purchase_ts,
+    usd_price
+  FROM core.orders)
+     
+SELECT 
+  customer_id,
+  STRING_AGG(CAST(purchase_ts AS STRING), ', ') AS purchase_dates,
+  STRING_AGG(product_name_cleaned, ', ') AS unique_products,
+  COUNT(id) AS total_order_count,
+  ROUND(SUM(usd_price), 0) AS total_spend,
+FROM clean_table
+GROUP BY 1
+ORDER BY total_spend DESC
+LIMIT 5;
