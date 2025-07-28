@@ -113,61 +113,6 @@ However, it's **unclear whether this downfall was related to the direct marketin
 * Map our customer journey to further understand their experience, pain points, and motivations behind their decisions by surveying customers after their purchase or users who didn't buy, and using existing data on the website/app and marketing email behavior.
 * Further analyze our marketing channel performance to determine its impact on leads, registrations, and customer acquisition.
 * Develop tailored promotions for registered but disengaged users based on the findings that only 13% of customers who created accounts made a purchase within one month and that 269 registered users hadn't yet made any purchase.
-  
-  <details>
-  <summary>SQL Queries: Click to expand</summary> 
-    
-  ```sql
-
-  -- Calculate time to purhcase from account creation, categorized in months
-  WITH earliest_purchase AS (
-  SELECT DISTINCT c.id,
-    c.created_on,
-    MIN(o.purchase_ts) AS earliest_purchase_date
-  FROM core.customers c
-  LEFT JOIN core.orders o
-    ON c.id = o.customer_id
-  WHERE c.created_on <= o.purchase_ts AND EXTRACT(YEAR FROM c.created_on) BETWEEN 2019 AND 2022
-  GROUP BY 1, 2), -- 61664
-  cal_month_diff AS (
-  SELECT id,
-    DATE_DIFF(earliest_purchase_date, created_on,MONTH) AS month_diff
-  FROM earliest_purchase),
-  recategorized AS (
-    SELECT id,
-      (CASE
-        WHEN month_diff = 0 THEN "Less Than 1 Month"
-        WHEN month_diff BETWEEN 1 AND 3 THEN "1 ~ 3 Months"
-        WHEN month_diff BETWEEN 4 AND 6 THEN "4 ~ 6 Months"
-        WHEN month_diff BETWEEN 6 AND 12 THEN  "6 ~ 12 Months"
-        ELSE "12+ Months" 
-        END) AS month_to_purchase,
-      COUNT(id) OVER () AS total_num_customers
-    FROM cal_month_diff),
-  customers_per_category AS (
-  SELECT month_to_purchase,
-    total_num_customers,
-    COUNT(month_to_purchase) AS num_customers
-  FROM recategorized
-  GROUP BY 1, 2
-  ORDER BY 1)
-  
-  SELECT month_to_purchase,
-    num_customers,
-    ROUND(100.00 * num_customers / total_num_customers, 2) AS percentage
-  FROM customers_per_category
-  ORDER BY 3 DESC;
-
-  -- Identify customers who created account but hadn't made any purchase yet
-  SELECT COUNT(DISTINCT customers.id) AS customer_no_purchase
-  FROM core.customers 
-  WHERE NOT EXISTS (
-    SELECT orders.customer_id
-    FROM core.orders 
-    WHERE customers.id = orders.customer_id);
-  
-  ```
-  </details>
 
 #### Sales Team
 * Conduct qualitative research on top customers in terms of total spend who turned out to purchase multiple laptops. There might be opportunities targeting small business customers/resellers.
