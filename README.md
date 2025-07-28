@@ -213,7 +213,7 @@ However, it's **unclear whether this downfall was related to the direct marketin
 ## Recommendations
 
 #### Product Team
-* Extend Apple iPhone variations and upgrade to the more recent models.
+* Extend Apple iPhone variations in terms of different models in different colors and storage capacities.
 * Discontinue Bose Soundsport Headphones.
 * Prepare upgraded products for our top-selling products, the 27in 4K Gaming Monitors and MacBook Air Laptops, by conducting market research on the current popularity and profitability potential.
 * Widen product variety in a lower price range that customers could purchase with less hesitation and financial risk, and for cross-selling (e.g., gaming keyboards, gaming headsets, or (gaming) mouse).
