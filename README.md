@@ -87,87 +87,6 @@ Electronic products, such as gaming monitors and laptops, have a **long lifespa
 * **Long hiatus** between the last purchase date and January 1, 2023: 79% of customers hadn't made another purchase since at least 13 months ago.
 * **Declining repeat purchase rate** over the years: 20% (2019) > 19% (2020) > 18% (2021) > 15% (2022).
 * **Single-item purchase behavior**: 94.6% of our customers purchased only one unique product, and 5.2% purchased two distinctive products.
-  
-    <details>
-    <summary>SQL Queries: Click to expand</summary> 
-    
-    ```sql
-    
-  -- calculate purchase hiatus
-    WITH calculate_inactivity AS (
-      SELECT customer_id,
-        MAX(purchase_ts) AS latest_purchase,
-        DATE_DIFF('2023-01-01', MAX(purchase_ts), MONTH) AS inactive_period
-      FROM core.orders
-      GROUP BY 1),
-    aggregate_customer_num AS (
-      SELECT (CASE 
-        WHEN inactive_period <=3 THEN '0-3 months'
-        WHEN inactive_period BETWEEN 4 AND 6 THEN '4-6 months'
-        WHEN inactive_period BETWEEN 7 AND 12 THEN '7-12 months'
-        WHEN inactive_period BETWEEN 13 AND 24 THEN '13-24 months'
-        ELSE '24+ months'
-        END) AS inactive_period_category,
-        COUNT(customer_id) AS num_customers
-      FROM calculate_inactivity
-      GROUP BY 1
-      ORDER BY 1)
-
-    SELECT inactive_period_category,
-      num_customers,
-      SUM(num_customers) OVER () AS total_num,
-      ROUND(100.00 * num_customers / SUM(num_customers) OVER (), 2) AS percentage
-    FROM aggregate_customer_num
-    ORDER BY 1;
-
-    -- calculate repeat purchase rate per year
-  WITH customers_per_year AS (
-    SELECT 
-      EXTRACT(YEAR FROM purchase_ts) AS year,
-      COUNT(DISTINCT customer_id) AS total_num_customers
-    FROM core.orders
-    GROUP BY 1),
-  repeat_purchase_customer AS (
-    SELECT EXTRACT(YEAR FROM purchase_ts) AS year,
-      customer_id,
-      COUNT(DISTINCT id) AS order_count
-    FROM core.orders
-    GROUP BY 1, 2
-    HAVING order_count >= 2)
-  
-  SELECT repeat_purchase_customer.year,
-    total_num_customers,
-    COUNT(DISTINCT customer_id) AS num_customer_repeat_purchase,
-    ROUND(100.00 * COUNT(DISTINCT customer_id) / total_num_customers, 2) AS percentage
-  FROM repeat_purchase_customer
-  LEFT JOIN customers_per_year
-    ON repeat_purchase_customer.year = customers_per_year.year
-  GROUP BY 1, 2
-  ORDER BY 1;
-    
-    -- the number of unique products customers purchased
-    WITH cleaned_table AS (
-      SELECT customer_id, 
-        (CASE
-        WHEN product_name LIKE "27%" THEN "27in 4K Gaming Monitor"
-        WHEN product_name LIKE "bose%" THEN INITCAP(product_name)
-        ELSE product_name
-        END) AS product_name_cleaned
-    FROM core.orders),
-    product_per_customer AS (
-      SELECT customer_id,
-        COUNT(DISTINCT product_name_cleaned) AS num_unique_product_purchased
-      FROM cleaned_table
-      GROUP BY 1) 
-    
-    SELECT num_unique_product_purchased,
-      COUNT(customer_id) AS num_customers
-    FROM product_per_customer
-    GROUP BY 1 
-    ORDER BY 1 DESC;
-    
-    ```
-    </details>
 
 #### Hypothesis 2. Had we had fewer newly registered users over time? - Yes, but Further Investigation Required
 
@@ -177,38 +96,6 @@ a purchase or not.**
 <img width="60%" height="60%" align="middle" src="https://github.com/user-attachments/assets/ef9044ad-4645-4718-b076-54c61c7d00a5" />
 
 However, it's **unclear whether this downfall was related to the direct marketing performance itself or whether visitors were not being sufficiently appealed to sign up.** Further investigation on marketing performance and customer journey is needed.
-  
-   <details>
-   <summary>SQL Queries: Click to expand</summary> 
-    
-    ```sql
-
-    -- how many customers created accounts per year
-    SELECT DATE_TRUNC(created_on, month) AS month,
-      COUNT(DISTINCT id) AS unique_customer_count
-    FROM core.customers 
-    WHERE EXTRACT(YEAR FROM created_on) BETWEEN 2019 AND 2022
-    GROUP BY 1
-    ORDER BY 1;
-    
-    -- how would the results be different by marketing channel?
-    WITH customers_cleaned AS (
-      SELECT 
-        id,
-        COALESCE(marketing_channel, "unknown") AS marketing_channel_cleaned,
-        created_on
-      FROM core.customers
-      WHERE EXTRACT(YEAR FROM created_on) BETWEEN 2019 AND 2022)
-    
-    SELECT marketing_channel_cleaned,
-      DATE_TRUNC(created_on, month) AS month,
-      COUNT(DISTINCT id) AS unique_customer_count
-    FROM customers_cleaned
-    GROUP BY 1, 2
-    ORDER BY 1, 2;
-    
-    ```
-   </details>
 
 ## Recommendations
 
