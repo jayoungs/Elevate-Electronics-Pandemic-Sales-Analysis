@@ -79,7 +79,7 @@ The persistent MoM gross sales growth volatility, as seen above, suggested a pos
 
 ## Deep Dive Insights on Underperformance in Q4 2022 
 
-**Factor to consider**:  
+<**Factor to consider**>  
 Electronic products, such as gaming monitors and laptops, have a **long lifespan** of at least 3-5 years. Hence, to boost sales constantly, 1) keeping **existing customers** engaged to revisit and buy different products and 2) acquiring **new customers** are crucial.
 
 #### Hypothesis 1. Had existing customers been disengaged over time? - Yes
