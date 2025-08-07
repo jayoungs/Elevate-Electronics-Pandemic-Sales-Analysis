@@ -31,7 +31,7 @@ The database structure, as seen below, consists of four tables: `orders`, `custo
 Excel and SQL (BigQuery) were used for analysis, and Tableau was used for visualization.
 
 ## Executive Summary
-<img align="middle" src="https://github.com/user-attachments/assets/a8c131fe-892c-40f1-8238-16ecfaf675ca" alt="2020 Gross Sales Surged and Subsequently Declined to Pre-Pandemic Level. Gross Sales Growth was Persistenty Volatile Every Year, Not Limited to 2020">
+<img align="middle" alt="2020 Gross Sales Surged and Subsequently Declined to Pre-Pandemic Level. 2020 Gross Sales Surged and Subsequently Declined to Pre-Pandemic Level" src="https://github.com/user-attachments/assets/7103bb3d-7cb4-4a0a-9f78-9c37d4b60ee1" />
 
 * Gross sales surged and peaked at $1.25M in 2020 and then declined gradually in 2021 and more sharply in 2022, returning to the pre-pandemic level. On a more granular level, Q4 2022 showed alarming underperformance even compared to the 2019 sales average.
   * All the sales metrics surged in 2020. Especially, **March 2020 showed the highest MoM growth in both gross sales and order count** - 50.3% and 46.2% respectively - when the COVID-19 pandemic hit and people started buying electronics to set up their home offices or cope with the lockdown.
@@ -43,12 +43,12 @@ Excel and SQL (BigQuery) were used for analysis, and Tableau was used for visual
 ## Deep Dive Insights
 
 ### **Seasonality**
-<img align="middle" width="60%" height="50%" alt="Screenshot 2025-07-14 at 6 16 10 PM" src="https://github.com/user-attachments/assets/a6922a0e-6f02-46ef-b964-953601175794" /> <br />
+<img align="middle" width="60%" height="50%" alt="Monthly Gross Sales Pattern" src="https://github.com/user-attachments/assets/8cd18093-b444-4c83-a298-f0e333ca3446" />
 
 The persistent MoM gross sales growth volatility, as seen above, suggested a possible seasonal pattern, and in fact, there was. Both gross sales and order count showed dips in February and October, and surges in September and during November and December. These surges could be related to the back-to-school season, Labor Day sales, and the holiday season.
 
-### **Product Segmentation:**
-<img align="middle" width="1206" height="609" src="https://github.com/user-attachments/assets/844f390a-79aa-4921-ba86-60b63b5a6c3f" />
+### **Product Segmentation**
+<img align="middle" width="60%" height="60%" alt="Top 3 Products: Gaming Monitor, Apple Airpods, Macbook Laptop" src="https://github.com/user-attachments/assets/35cd9e41-575a-4a41-9569-3ac714c860ba" />
 
 * 3 top-selling products - 27in 4K Gaming Monitor, Apple Airpods Headphones, and Macbook Air Laptop - comprised 85% of gross sales and 70% of order count.
 * **Products that failed to achieve sales expectations**:
@@ -56,16 +56,16 @@ The persistent MoM gross sales growth volatility, as seen above, suggested a pos
   * Surprisingly, **Apple iPhone** have underperformed despite its general popularity, accounting for less than 1% of both gross sales and order volume. The **lack of product variation** might be the possible reason behind this. We sell only one model with one color and storage capacity option, as opposed to 27in 4K Gaming Monitor and Apple Airpods Headphone, which offer at least 14 variations.
 * **Product performance in Q4 2022** compared to the previous Q4: Gross sales declined across all the products by a range of -51% (Lenovo ThinkPad Laptop) and -83% (MacBook Air Laptop).
   
-### **Regional Segmentation:** 
-<img width="60%" height="60%" align="middle" src="https://github.com/user-attachments/assets/27e9c8a9-a093-4636-842c-fbbd388dcfa8" />
+### **Regional Segmentation** 
+<img width="60%" height="60%" align="middle" alt="North America is the Largest Market with Highest Sales and Order Count" src="https://github.com/user-attachments/assets/6cc41017-e0cf-4834-bbe2-aa35dfae595d" />
 
 * North America comprised 51% of gross sales, followed by Europe, the Middle East, and Africa (EMEA) of 30%.
 * **Potential market opportunity in APAC**: Despite its smaller market share, APAC showed the highest sales growth rate of 226% in 2020 and the highest AOV between 2019 and 2022. Its customers purchased more expensive products than those from the other regions. Given their **higher spending power**, APAC can be **a target market for high-ticket products**.
 * **Regional performance in Q4 2022** compared to the previous Q4: Gross sales declined across all the regions by a range of -68% (NA) and -82% (APAC).
 
-### **Loyalty Program:** 
+### **Loyalty Program** 
 > Our loyalty program, launched in 2019, was designed for **customers who have created accounts and met a minimum purchase frequency**.
-<img align="middle" width="2398" height="1198" alt="loyalty program" src="https://github.com/user-attachments/assets/a509aadd-fc83-44b8-89c3-932acb9bfd30" />
+<img align="middle" width="2398" height="1198" alt="Contrasting Performance between Program's Strong Annual Growth in 2020 and Outperformance in 2021-2022 and its Recent Monthly Decline" src="https://github.com/user-attachments/assets/7dfade7c-0b1f-4a45-86c8-2a6cfb683617" />
 
 * **Unclear cause of the recent underperformance**:
   * **The simultaneous decline in loyalty member performance and overall sales in Q4 2022** made it challenging to determine if the loyalty program itself was losing appeal or if its members were reflecting the broader market slowdown affecting all customer segments.
@@ -73,10 +73,9 @@ The persistent MoM gross sales growth volatility, as seen above, suggested a pos
 * **Potential for impact**: The five-fold and twelve-fold growth in gross sales and order count, respectively, in 2020 indicates that the loyalty program, when effective, can significantly contribute to sales.
 * We should **continue the loyalty program** for further observation and strategic refinement rather than discontinuing it prematurely.
 
-### Investigation on Underperformance in Q4 2022 
+### **Investigation on Underperformance in Q4 2022** 
 
-< **Factor to consider** >  
-Electronic products, such as gaming monitors and laptops, have a **long lifespan** of at least 3-5 years. Hence, to maintain strong sales, 1) keeping **existing customers** engaged to revisit and buy different products and 2) acquiring **new customers** are crucial.
+**Factor to consider**: Electronic products, such as gaming monitors and laptops, have a **long lifespan** of at least 3-5 years. Hence, to maintain strong sales, 1) keeping **existing customers** engaged to revisit and buy different products and 2) acquiring **new customers** are crucial.
 
 #### Hypothesis 1. Have existing customers been disengaged over time? - Yes
 > Here, we define existing customers as those who **placed at least one order between 2019 and 2022, whether as guests or members**.
@@ -89,7 +88,9 @@ Electronic products, such as gaming monitors and laptops, have a **long lifespa
 > Due to the data limitations, this analysis focused on **newly registered users who created accounts between 2019 and 2022, regardless of whether they made
 a purchase or not.**
 
-<img width="60%" height="60%" align="middle" src="https://github.com/user-attachments/assets/ef9044ad-4645-4718-b076-54c61c7d00a5" />
+<img align="middle" alt="The Number of Customer Signups Plummeted in 2022, Especially Those Through Direct Marketing" src="https://github.com/user-attachments/assets/58910dac-9cd1-48c5-af9d-45804fe715a8" />
+
+
 The number of signups decreased at an accelerated pace in 2022, from 1,737 in January to 36 in December. Although the number from the direct marketing channel reflected a similar downward pattern, it is unclear whether the decline in overall signups was related to the direct marketing performance itself or whether visitors were not being sufficiently appealed to sign up. Further analysis on marketing channel performance along the customer journey should be followed.
 
 ## Recommendations
@@ -107,8 +108,9 @@ The number of signups decreased at an accelerated pace in 2022, from 1,737 in Ja
 * Launch a referral program to capitalize on our expanded customer base to acquire new customers.
 * loyalty program: 
 * Further analyze our marketing channel performance to determine its impact on leads and customer acquisition.
+* Map our customer journey to further understand their experience, pain points, and motivations behind their decisions by using existing data on the website/app and email behavior and surveying loyalty members.
 * Develop tailored promotions for disengaged customers based on the findings that only 13% of customers who created accounts made a purchase within one month, and that 269 registered users hadn't yet made any purchase.
-* Map our customer journey to further understand their experience, pain points, and motivations behind their decisions by surveying customers after their purchase, users who didn't buy, and loyalty members, and using existing data on the website/app and email behavior.
+
 
 #### Sales Team
 * Conduct qualitative research on top-spending customers who have purchased 3-4 laptops. There might be business opportunities for small business customers/resellers.
@@ -116,7 +118,7 @@ The number of signups decreased at an accelerated pace in 2022, from 1,737 in Ja
 ## Caveats (in progress)
 * Profits are missing as a key sales metric in this analysis due to the data limitations. Profit analysis should be followed.
 * If time and data were available, customer segmentation would have provided valuable insights to help us understand the diverse needs and preferences of our customers.
-* To follow up on underperformance in Q4 2022, we should analyze more recent data from 2023 onward.
+* To follow up on underperformance in Q4 2022, we should analyze more recent sales data from 2023 onward.
 * Improve data integrity and quality.
 
   
