@@ -122,7 +122,10 @@ The number of signups decreased at an accelerated pace in 2022, from 1,737 in Ja
 * To follow up on underperformance in Q4 2022, we should analyze more recent sales data from 2023 onward.
 * Missing or nonsensical values were present in our dataset, especially in the critical columns, such as `purchase_date`, `sales_price`, and `region`, but they were left as is for this project because their magnitude was only 0.20% of the entire data. Still, checking on them with relevant stakeholders and improving data integrity and quality overall is required.
 
-## Tableau Self-Service Dashboard
-<img width="970" height="788" alt="Dashboard" src="https://github.com/user-attachments/assets/9b0c3c88-5942-4bbe-a9ba-7d6e5ef56d6d" />
+## Tableau Self-Service Dashboard for Stakeholders
+Link to [the Interactive Dashboard (size 1,200 * 1,000):](https://public.tableau.com/views/2019-2022ElevateElectronicsSalesSelf-ServiceDashboard/Self-ServiceDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+
+<img width="2398" height="1998" alt="Self-Service Dashboard" src="https://github.com/user-attachments/assets/83390625-af6d-4267-a62f-e712d6ca2857" />
+
 
 
