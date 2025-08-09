@@ -33,7 +33,7 @@ Excel was used for preliminary analysis with its pivot table, SQL (BigQuery) for
 ## Executive Summary
 <img align="middle" alt="2020 Gross Sales Surged and Subsequently Declined to Pre-Pandemic Level. 2020 Gross Sales Surged and Subsequently Declined to Pre-Pandemic Level" src="https://github.com/user-attachments/assets/7103bb3d-7cb4-4a0a-9f78-9c37d4b60ee1" />
 
-* Gross sales surged and peaked at $1.25M in 2020 and then declined gradually in 2021 and more sharply in 2022, returning to the pre-pandemic level. On a more granular level, Q4 2022 showed alarming underperformance even compared to the 2019 sales average.
+* Gross sales surged and peaked at $1,252K in 2020 and then declined gradually in 2021 and more sharply in 2022, returning to the pre-pandemic level. On a more granular level, Q4 2022 showed alarming underperformance even compared to the 2019 sales average.
   * All the sales metrics surged in 2020. Especially, **March 2020 showed the highest MoM growth in both gross sales and order count** - 50.3% and 46.2% respectively - when the COVID-19 pandemic hit and people started buying electronics to set up their home offices or cope with the lockdown.
   * In 2021, gross sales and AOV started declining gradually, but order count momentum continued, which means that our customers placed more orders for less expensive items compared to 2020.
   * In 2022, all metrics trended downwards across all products and regions to the pre-pandemic level or worse than the pre-pandemic level. **October 2022 marked the lowest growth rate** of -55.2% in gross sales and -46.9% in order count, and the sales increase during the following holiday season was still insufficient to bounce back and reach at least the 2019 average level. Further analysis on the Q4 2022 underperformance was conducted and presented in [here](https://github.com/jayoungs/PicoTech_Electronics_Pandemic_Sales_Analyasis/edit/main/README.md#deep-dive-insights-on-underperformance-in-q4-2022).
@@ -122,4 +122,7 @@ The number of signups decreased at an accelerated pace in 2022, from 1,737 in Ja
 * To follow up on underperformance in Q4 2022, we should analyze more recent sales data from 2023 onward.
 * Missing or nonsensical values were present in our dataset, especially in the critical columns, such as `purchase_date`, `sales_price`, and `region`, but they were left as is for this project because their magnitude was only 0.20% of the entire data. Still, checking on them with relevant stakeholders and improving data integrity and quality overall is required.
 
-## Tableau Interactive Dashboard
+## Tableau Self-Service Dashboard
+<img width="970" height="788" alt="Dashboard" src="https://github.com/user-attachments/assets/9b0c3c88-5942-4bbe-a9ba-7d6e5ef56d6d" />
+
+
