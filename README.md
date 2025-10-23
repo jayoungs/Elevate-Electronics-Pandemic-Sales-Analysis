@@ -13,12 +13,12 @@ This project aims to understand Elevate Electronics' performance during the peri
 The key sales metrics used in this analysis were gross sales, average order value (AOV), and order count.<br /> 
 
 **< Table of Contents >**  
-* [About Data and Tools](https://github.com/jayoungs/Elevate-Electronics-Pandemic-Sales-Analysis/edit/main/README.md#about-data-and-tools)
-* [Executive Summary](https://github.com/jayoungs/Elevate-Electronics-Pandemic-Sales-Analysis/edit/main/README.md#executive-summary)
-* [Deep Dive Insights](https://github.com/jayoungs/Elevate-Electronics-Pandemic-Sales-Analysis/edit/main/README.md#deep-dive-insights)
-* [Recommendations](https://github.com/jayoungs/Elevate-Electronics-Pandemic-Sales-Analysis/edit/main/README.md#recommendations)
-* [Caveats](https://github.com/jayoungs/Elevate-Electronics-Pandemic-Sales-Analysis/edit/main/README.md#caveats)
-* [Tableau Self-Service Dashboard for Stakeholders](https://github.com/jayoungs/Elevate-Electronics-Pandemic-Sales-Analysis/edit/main/README.md#tableau-self-service-dashboard-for-stakeholders)
+* [About Data and Tools](#about-data-and-tools)
+* [Executive Summary](#executive-summary)
+* [Deep Dive Insights](#deep-dive-insights)
+* [Recommendations](#recommendations)
+* [Caveats](#caveats)
+* [Tableau Self-Service Dashboard for Stakeholders](#tableau-self-service-dashboard-for-stakeholders)
 
 ## About Data and Tools
 
@@ -37,7 +37,7 @@ Excel was used for preliminary analysis with its pivot table, SQL (BigQuery) for
 * Gross sales surged and peaked at $1,252K in 2020 and then declined gradually in 2021 and more sharply in 2022, returning to the pre-pandemic level. On a more granular level, Q4 2022 showed alarming underperformance even compared to the 2019 sales average.
   * All the sales metrics surged in 2020. Especially, **March 2020 showed the highest MoM growth in both gross sales and order count** - 50.3% and 46.2% respectively - when the COVID-19 pandemic hit and people started buying electronics to set up their home offices or cope with the lockdown.
   * In 2021, gross sales and AOV started declining gradually, but order count momentum continued, which means that our customers placed more orders for less expensive items compared to 2020.
-  * In 2022, all metrics trended downwards across all products and regions to the pre-pandemic level or worse than the pre-pandemic level. **October 2022 marked the lowest growth rate** of -55.2% in gross sales and -46.9% in order count, and the sales increase during the following holiday season was still insufficient to bounce back and reach at least the 2019 average level. Further analysis on the Q4 2022 underperformance was conducted and presented in [here](https://github.com/jayoungs/Elevate-Electronics-Pandemic-Sales-Analysis/edit/main/README.md#investigation-on-underperformance-in-q4-2022).
+  * In 2022, all metrics trended downwards across all products and regions to the pre-pandemic level or worse than the pre-pandemic level. **October 2022 marked the lowest growth rate** of -55.2% in gross sales and -46.9% in order count, and the sales increase during the following holiday season was still insufficient to bounce back and reach at least the 2019 average level. Further analysis on the Q4 2022 underperformance was conducted and presented in [here](#investigation-on-underperformance-in-q4-2022).
 * **Loyalty Program**: Since its launch in 2019, the program exhibited a mixed performance trajectory, underperforming, outperforming, and then back to underperforming in the most recent months of 2022. However, its high growth rate in 2020 suggests its potential for impact. 
 * **Possible Reason behind Underperformance in Q4 2022**: Our existing customers have been disengaged over time, considering their long purchase hiatus, decreasing repeat purchase rate, and single-item purchase behavior. Additionally, the number of new customers(signups) plummeted as well throughout 2022.
   
