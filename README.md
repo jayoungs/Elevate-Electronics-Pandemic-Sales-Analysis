@@ -114,9 +114,6 @@ The number of signups decreased at an accelerated pace in 2022, from 1,737 in Ja
 * Map our customer journey to further understand their experience, pain points, and motivations behind their decisions by using existing data on the website/app behavior and conduting qualitative research on loyalty members.
 * Develop tailored promotions for disengaged customers based on the findings that only 13% of customers who created accounts made a purchase within one month, and that 269 registered users hadn't yet made any purchase.
 
-#### Sales Team
-* Conduct qualitative research on top-spending customers who have purchased 3-4 laptops. Their behavior suggests potential business opportunities for small business customers/resellers.
-
 ## Caveats 
 * Profits are missing as a key sales metric in this analysis due to the data limitations. Profit analysis should be followed.
 * If time and data were available, customer segmentation would have provided valuable insights to help us understand the diverse needs and preferences of our customers.
