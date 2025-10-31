@@ -31,7 +31,7 @@ The database structure comprises four tables—`orders`, `customers`, `geo_looku
 
  <details>
  <summary>ERD: Click to expand</summary> 
- <img src="ERD.png" alt="Image" width="80%">
+ <img src="https://github.com/user-attachments/assets/cf2c22f6-5968-4e27-8ec3-bbff76bd4c90" alt="Image" width="80%">
  </details>
 
 ## Executive Summary
